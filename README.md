@@ -12,6 +12,7 @@ Schematic:
 
 ### To Do
 * Pending sort out the high power side switching. Options: standard relay, RF relay (expensive), PIN diode, RF switch (hard to solder and/or expensive)
+* If using a SPDT relay: build the bias network for `TX INH`
 * Build the board layout
 
 ## CHANGELOG
