@@ -7,4 +7,12 @@ Schematic:
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/schematic.png)
 
 ## Maturity level
-Absolutely incomplete and preliminary. But, schematic reached the stage of minimally lovable project.
+* Reached the preliminary "minimally lovable project".
+* I think that with regards to the base components and schematic, this is pretty much it.
+
+### To Do
+* Pending sort out the high power side switching. Options: standard relay, RF relay (expensive), PIN diode, RF switch (hard to solder and/or expensive)
+* Build the board layout
+
+## CHANGELOG
+* Rev. A: Initial release
