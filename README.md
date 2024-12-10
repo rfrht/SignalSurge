@@ -11,8 +11,7 @@ Schematic:
 * I think that with regards to the base components and schematic, this is pretty much it.
 
 ### To Do
-* Pending sort out the high power side switching. Options: standard relay, RF relay (expensive), PIN diode, RF switch (hard to solder and/or expensive)
-* If using a SPDT relay: build the bias network for `TX INH`
+* Sort out the SO-239 connectors
 * Build the board layout
 
 ## CHANGELOG
