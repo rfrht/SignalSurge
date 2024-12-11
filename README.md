@@ -4,14 +4,13 @@ This is an open source (check licensing [here](https://github.com/rfrht/SignalSu
 
 Schematic: 
 
-![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/schematic.png)
+![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 ## Maturity level
 * Reached the preliminary "minimally lovable project".
 * I think that with regards to the base components and schematic, this is pretty much it.
 
 ### To Do
-* Sort out the SO-239 connectors
 * Build the board layout
 
 ## CHANGELOG
