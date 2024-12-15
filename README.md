@@ -12,7 +12,7 @@ Here's the calculated theoretical filter performance, for VHF and UHF bands:
 ![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/bpf-vhf.png)
 ![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/bpf-uhf.png)
 
-Let's see how that work out in the real world.
+We shall see how that work out in the real world.
 
 ## Amplifier performance
 Here's the theoretical BFP460 gain figures as per the application notes:
@@ -20,11 +20,11 @@ Here's the theoretical BFP460 gain figures as per the application notes:
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
 ## Maturity level
-* Reached the preliminary "minimally lovable project".
+* Reached the "minimally lovable project" stage.
 * I think that with regards to the base components and schematic, this is pretty much it.
 
 ### To Do
-* Build the board layout
+* Build the board layout (WIP)
 
 ## CHANGELOG
-* Rev. A: Initial release
+* Rev. A: Initial release (in the making)
