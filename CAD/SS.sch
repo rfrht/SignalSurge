@@ -9498,7 +9498,7 @@ ISOLATION</text>
 <junction x="266.7" y="152.4"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="UHF-OUT" class="0">
 <segment>
 <pinref part="L6" gate="G$1" pin="2"/>
 <wire x1="287.02" y1="185.42" x2="292.1" y2="185.42" width="0.1524" layer="91"/>
@@ -9507,7 +9507,7 @@ ISOLATION</text>
 <wire x1="292.1" y1="170.18" x2="294.64" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="UHF-IN" class="0">
 <segment>
 <pinref part="SW_SEL_V/U-IN" gate="G$1" pin="RF2"/>
 <wire x1="203.2" y1="170.18" x2="205.74" y2="170.18" width="0.1524" layer="91"/>
@@ -9569,7 +9569,7 @@ ISOLATION</text>
 <wire x1="256.54" y1="83.82" x2="261.62" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="VHF-OUT" class="0">
 <segment>
 <pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="RF1"/>
 <wire x1="294.64" y1="160.02" x2="292.1" y2="160.02" width="0.1524" layer="91"/>
@@ -9578,7 +9578,7 @@ ISOLATION</text>
 <wire x1="292.1" y1="152.4" x2="292.1" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="VHF-IN" class="0">
 <segment>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="208.28" y1="152.4" x2="205.74" y2="152.4" width="0.1524" layer="91"/>
