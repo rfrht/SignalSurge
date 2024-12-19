@@ -22,9 +22,13 @@ Here's the theoretical BFP460 gain figures as per the application notes:
 ## Maturity level
 * Reached the "minimally lovable project" stage.
 * I think that with regards to the base components and schematic, this is pretty much it.
+* Still untested, unbuilt - and yes, it is still green.
 
-### To Do
-* Build the board layout (WIP)
+## Library
+Custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
+
+## To Do
+* Finish the board layout (WIP)
 
 ## CHANGELOG
 * Rev. A: Initial release (in the making)
