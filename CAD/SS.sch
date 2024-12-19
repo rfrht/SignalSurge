@@ -2854,7 +2854,7 @@ ISOLATION</text>
 <junction x="269.24" y="185.42"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="FEED-RB" class="0">
 <segment>
 <wire x1="307.34" y1="228.6" x2="307.34" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="D3" gate="G$1" pin="C"/>
@@ -2870,7 +2870,7 @@ ISOLATION</text>
 <junction x="307.34" y="243.84"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="FEED-RA" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
 <pinref part="RL1" gate="A" pin="1"/>
