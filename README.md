@@ -8,19 +8,22 @@ I live in a metropolitan area and **very** RF-polluted. One of these days, only 
 1. The front-end radio filtering is less than great
 2. Out of amateur band signals (and there's **plenty** of them) will desensitize your radio
 3. By filtering out unwanted signals, you give more **dynamic range** to your radio, improving your reception.
-4. [See by yourself here](https://www.reddit.com/r/amateurradio/comments/1gxahma/noticeable_improvement_in_ft991a_2m_rx_when_using/).
+4. [See for yourself here](https://www.reddit.com/r/amateurradio/comments/1gxahma/noticeable_improvement_in_ft991a_2m_rx_when_using/).
 
-That said, the objective of this project is to remove everything outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else between), ensuring that the precious front-end gain by the radio built-in amplifier focus on amateur band signals **only**. 
+That said, the objective of this project is to remove everything outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else between), ensuring that the precious front-end gain by the radio built-in amplifier focus on amateur band signals **only**.
+
+I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive.
 
 ## Features
 * Two selectable sharp amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
-* Selectable [low noise 15 dB amplifier](#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
+* High performance and selectable [low noise 15 dB amplifier](#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
 * The amplifier is shut down when the radio is transmitting by powering off its 5V voltage regulator (by cutting the regulator “Enable” line)
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB)
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
 * [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn’t positioned
 * Static protection on antenna side
 * Small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) on antenna and radio sides
+* [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
 
 ## Schematic: 
 
@@ -40,7 +43,7 @@ Here's the calculated theoretical filter performance, for VHF and UHF bands:
 We shall see how that work out in the real world.
 
 ## Amplifier performance
-Here's the theoretical BFP460 gain figures as per the application notes:
+Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
 
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
