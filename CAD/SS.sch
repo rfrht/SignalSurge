@@ -410,9 +410,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <symbols>
 <symbol name="PE4259">
 <description>Peregrine pSemi PE4259</description>
-<pin name="RF1" x="-12.7" y="5.08" length="middle"/>
+<pin name="NO" x="-12.7" y="5.08" length="middle"/>
 <pin name="GND" x="-12.7" y="0" length="middle"/>
-<pin name="RF2" x="-12.7" y="-5.08" length="middle"/>
+<pin name="NC" x="-12.7" y="-5.08" length="middle"/>
 <pin name="VDD" x="12.7" y="5.08" length="middle" direction="pwr" rot="R180"/>
 <pin name="RFC" x="12.7" y="0" length="middle" rot="R180"/>
 <pin name="CTRL" x="12.7" y="-5.08" length="middle" direction="in" rot="R180"/>
@@ -704,8 +704,8 @@ Features
 <connects>
 <connect gate="G$1" pin="CTRL" pad="4"/>
 <connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="RF1" pad="1"/>
-<connect gate="G$1" pin="RF2" pad="3"/>
+<connect gate="G$1" pin="NC" pad="3"/>
+<connect gate="G$1" pin="NO" pad="1"/>
 <connect gate="G$1" pin="RFC" pad="5"/>
 <connect gate="G$1" pin="VDD" pad="6"/>
 </connects>
@@ -1404,7 +1404,7 @@ chip</description>
 <part name="C18" library="aarf" deviceset="C-0805" device="" value="0.1µ"/>
 <part name="R10" library="aarf" deviceset="R-1206" device="" value="100Ω"/>
 <part name="C19" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
-<part name="UHF" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="UHF"/>
+<part name="VHF" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="VHF"/>
 <part name="R11" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="FB5" library="aarf" deviceset="FB-0805" device="" value="BLM21"/>
 <part name="C20" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
@@ -1446,7 +1446,6 @@ chip</description>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -1483,9 +1482,9 @@ chip</description>
 <wire x1="96.266" y1="227.076" x2="61.976" y2="227.076" width="0.1524" layer="95" style="shortdash"/>
 <text x="67.056" y="169.164" size="2.54" layer="95" rot="R90">RELAY CONTROL</text>
 <text x="355.6" y="256.54" size="2.54" layer="95" rot="R180">RADIO-SIDE RELAY</text>
-<wire x1="106.68" y1="154.94" x2="106.68" y2="83.82" width="0.1524" layer="95" style="shortdash"/>
-<wire x1="106.68" y1="83.82" x2="152.4" y2="83.82" width="0.1524" layer="95" style="shortdash"/>
-<wire x1="152.4" y1="83.82" x2="152.4" y2="154.94" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="106.68" y1="154.94" x2="106.68" y2="81.28" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="106.68" y1="81.28" x2="152.4" y2="81.28" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="152.4" y1="81.28" x2="152.4" y2="154.94" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="152.4" y1="154.94" x2="106.68" y2="154.94" width="0.1524" layer="95" style="shortdash"/>
 <text x="111.76" y="149.86" size="2.54" layer="95">VOLTAGE REGULATOR</text>
 <text x="344.17" y="32.766" size="2.54" layer="94">SignalSurge by PY2RAF</text>
@@ -1526,9 +1525,9 @@ ISOLATION</text>
 <attribute name="NAME" x="198.374" y="155.956" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="195.58" y="175.26" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SW_SEL_LNA-IN" gate="G$1" x="195.58" y="68.58" smashed="yes" rot="MR0">
-<attribute name="NAME" x="204.216" y="58.928" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="199.39" y="77.47" size="1.778" layer="96" rot="MR0"/>
+<instance part="SW_SEL_LNA-IN" gate="G$1" x="195.58" y="78.74" smashed="yes" rot="MR0">
+<attribute name="NAME" x="204.216" y="69.088" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="199.39" y="87.63" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="SW_SEL_V/U-OUT" gate="G$1" x="307.34" y="165.1" smashed="yes" rot="MR180">
 <attribute name="NAME" x="297.688" y="155.956" size="1.778" layer="95" rot="MR180"/>
@@ -1623,9 +1622,9 @@ ISOLATION</text>
 <attribute name="NAME" x="249.428" y="71.12" size="1.778" layer="95"/>
 <attribute name="VALUE" x="263.906" y="74.676" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SW_SEL_LNA-OUT" gate="G$1" x="297.18" y="78.74" smashed="yes">
-<attribute name="NAME" x="284.48" y="68.58" size="1.778" layer="95"/>
-<attribute name="VALUE" x="292.1" y="87.63" size="1.778" layer="96"/>
+<instance part="SW_SEL_LNA-OUT" gate="G$1" x="297.18" y="88.9" smashed="yes">
+<attribute name="NAME" x="284.48" y="78.74" size="1.778" layer="95"/>
+<attribute name="VALUE" x="292.1" y="97.79" size="1.778" layer="96"/>
 </instance>
 <instance part="13.8V" gate="1" x="12.7" y="152.4" smashed="yes">
 <attribute name="NAME" x="9.017" y="149.1742" size="1.778" layer="95"/>
@@ -1739,7 +1738,7 @@ ISOLATION</text>
 <attribute name="NAME" x="11.176" y="83.439" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="22.86" y="83.439" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="UHF" gate="1" x="12.7" y="71.12" smashed="yes">
+<instance part="VHF" gate="1" x="12.7" y="71.12" smashed="yes">
 <attribute name="NAME" x="11.557" y="67.8942" size="1.778" layer="95"/>
 </instance>
 <instance part="R11" gate="G$1" x="27.94" y="71.12" smashed="yes" rot="R180">
@@ -1797,13 +1796,13 @@ ISOLATION</text>
 <attribute name="NAME" x="153.162" y="189.484" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="148.844" y="208.534" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SW_ISOL-RADIO" gate="G$1" x="350.52" y="101.6" smashed="yes" rot="R90">
-<attribute name="NAME" x="361.188" y="91.186" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="341.884" y="96.774" size="1.778" layer="96" rot="R90"/>
+<instance part="SW_ISOL-RADIO" gate="G$1" x="350.52" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="361.188" y="101.346" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="341.884" y="106.934" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="D4" gate="G$1" x="358.14" y="129.54" smashed="yes" rot="R180">
-<attribute name="NAME" x="356.3366" y="125.0696" size="1.778" layer="95"/>
-<attribute name="VALUE" x="364.2614" y="133.7818" size="1.778" layer="96" rot="R180"/>
+<instance part="D4" gate="G$1" x="358.14" y="134.62" smashed="yes" rot="R180">
+<attribute name="NAME" x="356.3366" y="130.1496" size="1.778" layer="95"/>
+<attribute name="VALUE" x="364.2614" y="138.8618" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C25" gate="G$1" x="124.46" y="198.12" smashed="yes" rot="R90">
 <attribute name="NAME" x="124.206" y="196.85" size="1.778" layer="95" rot="R180"/>
@@ -1858,10 +1857,9 @@ ISOLATION</text>
 <instance part="GND13" gate="1" x="58.42" y="96.52" smashed="yes"/>
 <instance part="GND14" gate="1" x="129.54" y="86.36" smashed="yes"/>
 <instance part="GND15" gate="1" x="116.84" y="40.64" smashed="yes"/>
-<instance part="GND16" gate="1" x="210.82" y="58.42" smashed="yes"/>
-<instance part="GND17" gate="1" x="256.54" y="58.42" smashed="yes"/>
-<instance part="GND18" gate="1" x="269.24" y="68.58" smashed="yes"/>
-<instance part="GND20" gate="1" x="350.52" y="81.28" smashed="yes"/>
+<instance part="GND16" gate="1" x="210.82" y="68.58" smashed="yes"/>
+<instance part="GND17" gate="1" x="256.54" y="63.5" smashed="yes"/>
+<instance part="GND20" gate="1" x="350.52" y="91.44" smashed="yes"/>
 <instance part="GND21" gate="1" x="365.76" y="121.92" smashed="yes"/>
 <instance part="GND22" gate="1" x="7.62" y="134.62" smashed="yes"/>
 <instance part="GND23" gate="1" x="7.62" y="114.3" smashed="yes"/>
@@ -1869,7 +1867,7 @@ ISOLATION</text>
 <instance part="GND25" gate="1" x="7.62" y="73.66" smashed="yes"/>
 <instance part="GND26" gate="1" x="7.62" y="53.34" smashed="yes"/>
 <instance part="GND27" gate="1" x="208.28" y="160.02" smashed="yes"/>
-<instance part="GND19" gate="1" x="276.86" y="91.44" smashed="yes"/>
+<instance part="GND19" gate="1" x="276.86" y="76.2" smashed="yes"/>
 <instance part="L9" gate="G$1" x="215.9" y="185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="217.17" y="184.15" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="218.694" y="189.23" size="1.778" layer="96" rot="R180"/>
@@ -1921,13 +1919,13 @@ ISOLATION</text>
 <pinref part="L6" gate="G$1" pin="2"/>
 <wire x1="287.02" y1="185.42" x2="292.1" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="185.42" x2="292.1" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="RF2"/>
+<pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="NC"/>
 <wire x1="292.1" y1="170.18" x2="294.64" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="UHF-IN" class="0">
 <segment>
-<pinref part="SW_SEL_V/U-IN" gate="G$1" pin="RF2"/>
+<pinref part="SW_SEL_V/U-IN" gate="G$1" pin="NC"/>
 <wire x1="203.2" y1="170.18" x2="205.74" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="170.18" x2="205.74" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="L9" gate="G$1" pin="1"/>
@@ -1989,7 +1987,7 @@ ISOLATION</text>
 </net>
 <net name="VHF-OUT" class="0">
 <segment>
-<pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="RF1"/>
+<pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="NO"/>
 <wire x1="294.64" y1="160.02" x2="292.1" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="L5" gate="G$1" pin="2"/>
 <wire x1="289.56" y1="152.4" x2="292.1" y2="152.4" width="0.1524" layer="91"/>
@@ -2001,7 +1999,7 @@ ISOLATION</text>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="208.28" y1="152.4" x2="205.74" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="152.4" x2="205.74" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="SW_SEL_V/U-IN" gate="G$1" pin="RF1"/>
+<pinref part="SW_SEL_V/U-IN" gate="G$1" pin="NO"/>
 <wire x1="205.74" y1="160.02" x2="203.2" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -2110,10 +2108,10 @@ ISOLATION</text>
 <pinref part="SW_ISOL-ANT" gate="G$1" pin="CTRL"/>
 <wire x1="104.14" y1="203.2" x2="132.08" y2="203.2" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="38.1" x2="363.22" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="363.22" y1="38.1" x2="363.22" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="363.22" y1="38.1" x2="363.22" y2="127" width="0.1524" layer="91"/>
 <pinref part="SW_ISOL-RADIO" gate="G$1" pin="CTRL"/>
-<wire x1="363.22" y1="116.84" x2="355.6" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="355.6" y1="116.84" x2="355.6" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="363.22" y1="127" x2="355.6" y2="127" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="127" x2="355.6" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="Q4" gate="G$1" pin="A"/>
 <wire x1="121.92" y1="58.42" x2="104.14" y2="58.42" width="0.1524" layer="91"/>
 <junction x="104.14" y="58.42"/>
@@ -2138,9 +2136,9 @@ ISOLATION</text>
 <wire x1="320.04" y1="165.1" x2="327.66" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="327.66" y1="165.1" x2="327.66" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="327.66" y1="121.92" x2="175.26" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="121.92" x2="175.26" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="121.92" x2="175.26" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="SW_SEL_LNA-IN" gate="G$1" pin="RFC"/>
-<wire x1="175.26" y1="68.58" x2="182.88" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="78.74" x2="182.88" y2="78.74" width="0.1524" layer="91"/>
 <label x="327.66" y="139.7" size="1.778" layer="95" rot="R90" xref="yes"/>
 <label x="175.26" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
@@ -2151,13 +2149,13 @@ ISOLATION</text>
 <wire x1="365.76" y1="228.6" x2="373.38" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="SW_ISOL-RADIO" gate="G$1" pin="RFC"/>
 <wire x1="373.38" y1="228.6" x2="373.38" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="350.52" y1="149.86" x2="350.52" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="149.86" x2="350.52" y2="134.62" width="0.1524" layer="91"/>
 <label x="373.38" y="182.88" size="1.778" layer="95" rot="R270" xref="yes"/>
-<wire x1="350.52" y1="129.54" x2="350.52" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="134.62" x2="350.52" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="373.38" y1="149.86" x2="350.52" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="D4" gate="G$1" pin="C"/>
-<wire x1="350.52" y1="129.54" x2="355.6" y2="129.54" width="0.1524" layer="91"/>
-<junction x="350.52" y="129.54"/>
+<wire x1="350.52" y1="134.62" x2="355.6" y2="134.62" width="0.1524" layer="91"/>
+<junction x="350.52" y="134.62"/>
 </segment>
 </net>
 <net name="N$42" class="0">
@@ -2174,7 +2172,7 @@ ISOLATION</text>
 <wire x1="33.02" y1="50.8" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SEL_BPF_UHF" class="0">
+<net name="SEL_BPF_VHF" class="0">
 <segment>
 <pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="CTRL"/>
 <wire x1="322.58" y1="170.18" x2="320.04" y2="170.18" width="0.1524" layer="91"/>
@@ -2188,36 +2186,10 @@ ISOLATION</text>
 <wire x1="175.26" y1="170.18" x2="99.06" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="170.18" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
 <junction x="175.26" y="170.18"/>
-<label x="317.5" y="190.5" size="1.778" layer="255" rot="R180" xref="yes"/>
+<label x="322.834" y="187.96" size="1.778" layer="255" rot="R180" xref="yes"/>
 <label x="99.06" y="127" size="1.778" layer="95" rot="R270" xref="yes"/>
 <label x="149.86" y="170.18" size="1.778" layer="95" rot="R180" xref="yes"/>
 <label x="71.12" y="71.12" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="LNA_IN" class="0">
-<segment>
-<pinref part="SW_SEL_LNA-IN" gate="G$1" pin="RF1"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="208.28" y1="73.66" x2="213.36" y2="73.66" width="0.1524" layer="91"/>
-<label x="210.82" y="73.66" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
-<net name="LNA_BYPASS" class="0">
-<segment>
-<pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="RF2"/>
-<wire x1="276.86" y1="63.5" x2="276.86" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="276.86" y1="73.66" x2="284.48" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="SW_SEL_LNA-IN" gate="G$1" pin="RF2"/>
-<wire x1="208.28" y1="63.5" x2="276.86" y2="63.5" width="0.1524" layer="91"/>
-<label x="251.46" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="LNA_OUT" class="0">
-<segment>
-<pinref part="C12" gate="G$1" pin="2"/>
-<pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="RF1"/>
-<wire x1="269.24" y1="83.82" x2="284.48" y2="83.82" width="0.1524" layer="91"/>
-<label x="281.94" y="83.82" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="LNA_OFF" class="0">
@@ -2225,11 +2197,11 @@ ISOLATION</text>
 <pinref part="Q4" gate="G$1" pin="Y"/>
 <pinref part="SW_SEL_LNA-IN" gate="G$1" pin="CTRL"/>
 <wire x1="157.48" y1="55.88" x2="175.26" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="55.88" x2="175.26" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="63.5" x2="182.88" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="55.88" x2="175.26" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="73.66" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="55.88" x2="309.88" y2="55.88" width="0.1524" layer="91"/>
 <junction x="175.26" y="55.88"/>
-<wire x1="309.88" y1="55.88" x2="309.88" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="309.88" y1="55.88" x2="309.88" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="CTRL"/>
 <label x="162.56" y="55.88" size="1.778" layer="255" rot="R270" xref="yes"/>
 <label x="248.92" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -2280,24 +2252,24 @@ ISOLATION</text>
 <pinref part="C24" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="139.7" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="139.7" x2="144.78" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="73.66" x2="170.18" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="83.82" x2="170.18" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="SW_SEL_V/U-IN" gate="G$1" pin="VDD"/>
 <wire x1="170.18" y1="139.7" x2="170.18" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="160.02" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="SW_SEL_LNA-IN" gate="G$1" pin="VDD"/>
-<wire x1="170.18" y1="73.66" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="73.66" x2="170.18" y2="63.5" width="0.1524" layer="91"/>
-<junction x="170.18" y="73.66"/>
+<wire x1="170.18" y1="83.82" x2="182.88" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="83.82" x2="170.18" y2="63.5" width="0.1524" layer="91"/>
+<junction x="170.18" y="83.82"/>
 <wire x1="170.18" y1="63.5" x2="170.18" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="50.8" x2="312.42" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="50.8" x2="312.42" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="50.8" x2="312.42" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="VDD"/>
-<wire x1="312.42" y1="83.82" x2="309.88" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="83.82" x2="322.58" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="322.58" y1="83.82" x2="322.58" y2="116.84" width="0.1524" layer="91"/>
-<junction x="312.42" y="83.82"/>
+<wire x1="312.42" y1="93.98" x2="309.88" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="93.98" x2="322.58" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="93.98" x2="322.58" y2="132.08" width="0.1524" layer="91"/>
+<junction x="312.42" y="93.98"/>
 <pinref part="SW_SEL_V/U-OUT" gate="G$1" pin="VDD"/>
-<wire x1="322.58" y1="116.84" x2="322.58" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="132.08" x2="322.58" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="322.58" y1="160.02" x2="320.04" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="160.02" x2="119.38" y2="160.02" width="0.1524" layer="91"/>
 <junction x="170.18" y="160.02"/>
@@ -2309,9 +2281,9 @@ ISOLATION</text>
 <wire x1="132.08" y1="193.04" x2="119.38" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="SW_ISOL-RADIO" gate="G$1" pin="VDD"/>
 <wire x1="119.38" y1="193.04" x2="119.38" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="114.3" x2="345.44" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="116.84" x2="322.58" y2="116.84" width="0.1524" layer="91"/>
-<junction x="322.58" y="116.84"/>
+<wire x1="345.44" y1="124.46" x2="345.44" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="132.08" x2="322.58" y2="132.08" width="0.1524" layer="91"/>
+<junction x="322.58" y="132.08"/>
 <pinref part="Q4" gate="G$1" pin="VCC"/>
 <wire x1="157.48" y1="63.5" x2="170.18" y2="63.5" width="0.1524" layer="91"/>
 <junction x="170.18" y="63.5"/>
@@ -2320,8 +2292,8 @@ ISOLATION</text>
 <wire x1="73.66" y1="193.04" x2="119.38" y2="193.04" width="0.1524" layer="91"/>
 <junction x="119.38" y="193.04"/>
 <pinref part="T1" gate="G$1" pin="E"/>
-<wire x1="78.74" y1="106.68" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="73.66" x2="170.18" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="106.68" x2="78.74" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="83.82" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
 <label x="78.74" y="99.06" size="1.778" layer="95" rot="R270" xref="yes"/>
 <label x="88.9" y="193.04" size="1.778" layer="95" xref="yes"/>
 <label x="137.16" y="160.02" size="1.778" layer="95" xref="yes"/>
@@ -2350,7 +2322,7 @@ ISOLATION</text>
 </net>
 <net name="BPF_IN" class="0">
 <segment>
-<pinref part="SW_ISOL-ANT" gate="G$1" pin="RF2"/>
+<pinref part="SW_ISOL-ANT" gate="G$1" pin="NC"/>
 <wire x1="157.48" y1="203.2" x2="170.18" y2="203.2" width="0.1524" layer="91"/>
 <pinref part="SW_SEL_V/U-IN" gate="G$1" pin="RFC"/>
 <wire x1="170.18" y1="203.2" x2="170.18" y2="165.1" width="0.1524" layer="91"/>
@@ -2361,10 +2333,10 @@ ISOLATION</text>
 <net name="LNA-SW_OUT" class="0">
 <segment>
 <pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="RFC"/>
-<wire x1="309.88" y1="78.74" x2="355.6" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="SW_ISOL-RADIO" gate="G$1" pin="RF2"/>
-<wire x1="355.6" y1="78.74" x2="355.6" y2="88.9" width="0.1524" layer="91"/>
-<label x="340.36" y="78.74" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="309.88" y1="88.9" x2="355.6" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="SW_ISOL-RADIO" gate="G$1" pin="NC"/>
+<wire x1="355.6" y1="88.9" x2="355.6" y2="99.06" width="0.1524" layer="91"/>
+<label x="335.28" y="88.9" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AMP_OFF" class="0">
@@ -2400,7 +2372,7 @@ ISOLATION</text>
 <segment>
 <pinref part="C19" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="81.28" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="UHF" gate="1" pin="P"/>
+<pinref part="VHF" gate="1" pin="P"/>
 <pinref part="R11" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="71.12" x2="20.32" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="71.12" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
@@ -2637,7 +2609,7 @@ ISOLATION</text>
 <pinref part="SW_ISOL-ANT" gate="G$1" pin="GND"/>
 <wire x1="157.48" y1="198.12" x2="160.02" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="198.12" x2="160.02" y2="193.04" width="0.1524" layer="91"/>
-<pinref part="SW_ISOL-ANT" gate="G$1" pin="RF1"/>
+<pinref part="SW_ISOL-ANT" gate="G$1" pin="NO"/>
 <wire x1="160.02" y1="193.04" x2="160.02" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="193.04" x2="160.02" y2="193.04" width="0.1524" layer="91"/>
 <junction x="160.02" y="193.04"/>
@@ -2719,36 +2691,24 @@ ISOLATION</text>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SW_SEL_LNA-IN" gate="G$1" pin="GND"/>
-<wire x1="208.28" y1="68.58" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="68.58" x2="210.82" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="Q5" gate="G$1" pin="E"/>
-<wire x1="256.54" y1="68.58" x2="256.54" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="68.58" x2="256.54" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="GND"/>
-<wire x1="284.48" y1="78.74" x2="269.24" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="78.74" x2="269.24" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="GND18" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="SW_ISOL-RADIO" gate="G$1" pin="GND"/>
-<wire x1="350.52" y1="88.9" x2="350.52" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="SW_ISOL-RADIO" gate="G$1" pin="RF1"/>
-<wire x1="350.52" y1="86.36" x2="350.52" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="88.9" x2="345.44" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="86.36" x2="350.52" y2="86.36" width="0.1524" layer="91"/>
-<junction x="350.52" y="86.36"/>
+<wire x1="350.52" y1="99.06" x2="350.52" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="SW_ISOL-RADIO" gate="G$1" pin="NO"/>
+<wire x1="350.52" y1="96.52" x2="350.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="99.06" x2="345.44" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="96.52" x2="350.52" y2="96.52" width="0.1524" layer="91"/>
+<junction x="350.52" y="96.52"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="D4" gate="G$1" pin="A"/>
-<wire x1="360.68" y1="129.54" x2="365.76" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="365.76" y1="129.54" x2="365.76" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="360.68" y1="134.62" x2="365.76" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="134.62" x2="365.76" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="GND21" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -2807,14 +2767,24 @@ ISOLATION</text>
 <junction x="269.24" y="165.1"/>
 </segment>
 <segment>
+<pinref part="SW_SEL_LNA-IN" gate="G$1" pin="GND"/>
+<wire x1="208.28" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="210.82" y1="78.74" x2="210.82" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="269.24" y1="99.06" x2="276.86" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="276.86" y1="99.06" x2="276.86" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="276.86" y1="111.76" x2="269.24" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="276.86" y1="99.06" x2="276.86" y2="93.98" width="0.1524" layer="91"/>
-<junction x="276.86" y="99.06"/>
 <pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="276.86" y1="99.06" x2="276.86" y2="88.9" width="0.1524" layer="91"/>
+<junction x="276.86" y="99.06"/>
+<pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="GND"/>
+<wire x1="276.86" y1="88.9" x2="276.86" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="88.9" x2="276.86" y2="88.9" width="0.1524" layer="91"/>
+<junction x="276.86" y="88.9"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -2883,6 +2853,32 @@ ISOLATION</text>
 <wire x1="52.07" y1="231.14" x2="50.8" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="231.14" x2="50.8" y2="238.76" width="0.1524" layer="91"/>
 <junction x="50.8" y="238.76"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="C12" gate="G$1" pin="2"/>
+<pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="NC"/>
+<wire x1="269.24" y1="83.82" x2="284.48" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LNA-BYPASS" class="0">
+<segment>
+<pinref part="SW_SEL_LNA-OUT" gate="G$1" pin="NO"/>
+<wire x1="284.48" y1="93.98" x2="281.94" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="93.98" x2="281.94" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="SW_SEL_LNA-IN" gate="G$1" pin="NO"/>
+<wire x1="208.28" y1="83.82" x2="210.82" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="83.82" x2="210.82" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="116.84" x2="281.94" y2="116.84" width="0.1524" layer="91"/>
+<label x="251.46" y="116.84" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="SW_SEL_LNA-IN" gate="G$1" pin="NC"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="73.66" x2="213.36" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
