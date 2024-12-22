@@ -50,7 +50,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 # Relay Logic
 
 ## BPF and Relay control
-### Truth table
+### Truth table (NOR)
 | RADIO_TX | FORCE_BYPASS | Signal Level | Behavior |
 :---|---|---|---:
 | 0 | 0 | 1 | VIA BPF |
@@ -70,7 +70,8 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | Relays  | NC | - |
 | Isolation | NC | - |
 
-## LNA Truth Table
+## LNA 
+### Truth Table (AND)
 | BPF_ON | LNA_ON | Signal Level | Behavior |
 :---|---|---|---:
 | 0 | 0 | 0 | OFF |
