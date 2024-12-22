@@ -101,7 +101,9 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 Custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
 
 ## To Do
-* Finish the board layout (WIP)
+* Create a BOM file
+* Assure the filter operation
+* Have someone else to give it another look
 
 ## CHANGELOG
 * Rev. A: Initial release (in the making)
