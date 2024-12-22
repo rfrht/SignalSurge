@@ -12,7 +12,7 @@ I live in a metropolitan area and **very** RF-polluted. One of these days, only 
 
 That said, the objective of this project is to remove everything outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else between), ensuring that the precious front-end gain by the radio built-in amplifier focus on amateur band signals **only**.
 
-I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive.
+I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time to build one?
 
 # Features
 * Two selectable sharp amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
