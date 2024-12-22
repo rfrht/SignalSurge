@@ -30,7 +30,7 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 # Preliminary board layout
-![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/SS-thumb.png)
+![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
 
 For full board image, [click here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
 
