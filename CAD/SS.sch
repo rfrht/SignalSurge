@@ -1551,6 +1551,8 @@ chip</description>
 <part name="L11" library="aarf" deviceset="L-0805" device="" value="5.6nH"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="5V" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="5V"/>
+<part name="3V" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="3V"/>
 </parts>
 <sheets>
 <sheet>
@@ -1974,6 +1976,12 @@ ISOLATION</text>
 </instance>
 <instance part="GND16" gate="1" x="281.94" y="58.42" smashed="yes"/>
 <instance part="GND18" gate="1" x="210.82" y="58.42" smashed="yes"/>
+<instance part="5V" gate="1" x="149.86" y="114.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="149.987" y="116.9162" size="1.778" layer="95" align="center"/>
+</instance>
+<instance part="3V" gate="1" x="149.86" y="142.24" smashed="yes" rot="R270">
+<attribute name="NAME" x="149.987" y="145.3642" size="1.778" layer="95" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -2309,11 +2317,14 @@ ISOLATION</text>
 <wire x1="142.24" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C22" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="111.76" x2="144.78" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="111.76" x2="236.22" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="111.76" x2="149.86" y2="111.76" width="0.1524" layer="91"/>
 <junction x="144.78" y="111.76"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <label x="162.56" y="111.76" size="1.778" layer="255" rot="R180" xref="yes"/>
 <pinref part="Q6" gate="G$1" pin="VOUT"/>
+<pinref part="5V" gate="1" pin="P"/>
+<wire x1="149.86" y1="111.76" x2="236.22" y2="111.76" width="0.1524" layer="91"/>
+<junction x="149.86" y="111.76"/>
 </segment>
 </net>
 <net name="13.8V" class="0">
@@ -2362,11 +2373,12 @@ ISOLATION</text>
 <wire x1="312.42" y1="83.82" x2="309.88" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="160.02" x2="119.38" y2="160.02" width="0.1524" layer="91"/>
 <junction x="170.18" y="160.02"/>
-<wire x1="144.78" y1="139.7" x2="170.18" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="139.7" x2="149.86" y2="139.7" width="0.1524" layer="91"/>
 <junction x="144.78" y="139.7"/>
 <junction x="170.18" y="139.7"/>
 <label x="162.56" y="139.7" size="1.778" layer="255" rot="R180" xref="yes"/>
 <pinref part="SW_ISOL-ANT" gate="G$1" pin="VDD"/>
+<wire x1="149.86" y1="139.7" x2="170.18" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="193.04" x2="119.38" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="193.04" x2="119.38" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="Q4" gate="A" pin="VCC"/>
@@ -2399,6 +2411,8 @@ ISOLATION</text>
 <wire x1="182.88" y1="73.66" x2="180.34" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="73.66" x2="180.34" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="83.82" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="3V" gate="1" pin="P"/>
+<junction x="149.86" y="139.7"/>
 </segment>
 </net>
 <net name="TO_BPF" class="0">
