@@ -1,5 +1,5 @@
 # SignalSurge
-This is an open source (check licensing [here](https://github.com/rfrht/SignalSurge/blob/main/LICENSE)) Bandpass filter for VHF and UHF bands, with a selectable LNA and a sequencer. Projected using Eagle CAD 9.
+This is an open source (check licensing [here](https://github.com/rfrht/SignalSurge/blob/main/LICENSE)) Bandpass filter for VHF and UHF amateur radio bands, with a selectable LNA and a sequencer. Projected using Eagle CAD 9.
 
 # Why?
 I live in a metropolitan area and **very** RF-polluted. One of these days, only FFS I have added a FM bandstop filter and I found that, contrary to my belief, my reception was **way better**! That means:
