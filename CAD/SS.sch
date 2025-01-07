@@ -169,6 +169,13 @@ Contains RF-Friendly rounded footprints.</description>
 <wire x1="1.05" y1="-0.6" x2="1" y2="-0.6" width="0.127" layer="21"/>
 <circle x="-1.524" y="-0.508" radius="0.127" width="0.127" layer="21"/>
 </package>
+<package name="1207">
+<description>Tayo 1207/3218 solder footprint</description>
+<smd name="P$1" x="-1.251" y="-0.016" dx="0.85" dy="2" layer="1"/>
+<smd name="P$2" x="1.249" y="-0.016" dx="0.85" dy="2" layer="1"/>
+<text x="0" y="2" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="0" y="-2" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;VALUE</text>
+</package>
 <package name="0805" urn="urn:adsk.eagle:footprint:22978/1" locally_modified="yes">
 <description>Footprint 0805</description>
 <wire x1="-1.473" y1="0.683" x2="1.473" y2="0.683" width="0.0508" layer="39"/>
@@ -788,6 +795,23 @@ Features
 <connect gate="G$1" pin="NO" pad="1"/>
 <connect gate="G$1" pin="RFC" pad="5"/>
 <connect gate="G$1" pin="VDD" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="L-1207" prefix="L" uservalue="yes">
+<description>Tayo 1207/3218 Inductor</description>
+<gates>
+<gate name="G$1" symbol="L-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1207">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2520,14 +2544,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="FB2" library="aarf" deviceset="FB-0805" device="" value="BLM21"/>
 <part name="R5" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
-<part name="C13" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
-<part name="C14" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
+<part name="C13" library="aarf" deviceset="C-0805" device="" value="1000pF"/>
+<part name="C14" library="aarf" deviceset="C-0805" device="" value="1000pF"/>
 <part name="X_8" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="R6" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="FB3" library="aarf" deviceset="FB-0805" device="" value="BLM21"/>
-<part name="C15" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
+<part name="C15" library="aarf" deviceset="C-0805" device="" value="1000pF"/>
 <part name="Q1" library="aarf" deviceset="SN74AHC-NOR" device="" package3d_urn="urn:adsk.eagle:package:2405/1"/>
-<part name="C16" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
+<part name="C16" library="aarf" deviceset="C-0805" device="" value="1000pF"/>
 <part name="BYPASS" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="BYPASS"/>
 <part name="R7" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="FB4" library="aarf" deviceset="FB-0805" device="" value="BLM21"/>
@@ -2538,11 +2562,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="D3" library="aarf" deviceset="D-SOD323" device="" value="1N4148"/>
 <part name="C18" library="aarf" deviceset="C-0805" device="" value="0.1µ"/>
 <part name="R10" library="aarf" deviceset="R-1206" device="" value="100Ω"/>
-<part name="C19" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
+<part name="C19" library="aarf" deviceset="C-0805" device="" value="1000pF"/>
 <part name="VHF" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="VHF"/>
 <part name="R11" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="FB5" library="aarf" deviceset="FB-0805" device="" value="BLM21"/>
-<part name="C20" library="aarf" deviceset="C-0805" device="" value="0.001µ"/>
+<part name="C20" library="aarf" deviceset="C-0805" device="" value="1000pF"/>
 <part name="AMP_ON" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="AMP_ON"/>
 <part name="R12" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="FB6" library="aarf" deviceset="FB-0805" device="" value="BLM21"/>
@@ -2561,7 +2585,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="RL2" library="aarf" deviceset="RELAY-TE-HF3" device="" value="RADIO_RLY"/>
 <part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-PNP_DRIVER-" device="SC59-BEC" package3d_urn="urn:adsk.eagle:package:28754/2" technology="MUN2111T1" value="MMBTRA104SS"/>
 <part name="R8" library="aarf" deviceset="R-1206" device="" value="1kΩ"/>
-<part name="L7" library="aarf" deviceset="L-0805" device="" value="1000µH"/>
+<part name="L7" library="aarf" deviceset="L-1207" device="" value="1000µH"/>
 <part name="R13" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="R14" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="ANTENNA" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1" value="ANTENNA"/>
@@ -2817,11 +2841,11 @@ ISOLATION</text>
 </instance>
 <instance part="C13" gate="G$1" x="12.7" y="162.56" smashed="yes" rot="R90">
 <attribute name="NAME" x="12.446" y="164.719" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="22.606" y="164.719" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="20.066" y="164.719" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
 <instance part="C14" gate="G$1" x="12.7" y="142.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.176" y="144.399" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="22.86" y="144.399" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="20.32" y="144.399" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
 <instance part="X_8" gate="G$1" x="7.62" y="160.02" smashed="yes"/>
 <instance part="R6" gate="G$1" x="27.94" y="111.76" smashed="yes" rot="R180">
@@ -2834,7 +2858,7 @@ ISOLATION</text>
 </instance>
 <instance part="C15" gate="G$1" x="12.7" y="121.92" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.176" y="124.079" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="22.86" y="124.079" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="20.32" y="124.079" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
 <instance part="Q1" gate="G$1" x="81.28" y="172.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="90.805" y="180.34" size="1.778" layer="95" rot="R90"/>
@@ -2842,7 +2866,7 @@ ISOLATION</text>
 </instance>
 <instance part="C16" gate="G$1" x="12.7" y="101.6" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.176" y="103.759" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="22.86" y="103.759" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="20.32" y="103.759" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
 <instance part="BYPASS" gate="1" x="12.7" y="91.44" smashed="yes">
 <attribute name="NAME" x="9.017" y="88.2142" size="1.778" layer="95"/>
@@ -2885,7 +2909,7 @@ ISOLATION</text>
 </instance>
 <instance part="C19" gate="G$1" x="12.7" y="81.28" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.176" y="83.439" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="22.86" y="83.439" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="20.32" y="83.439" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
 <instance part="VHF" gate="1" x="12.7" y="71.12" smashed="yes">
 <attribute name="NAME" x="11.557" y="67.8942" size="1.778" layer="95"/>
@@ -2900,7 +2924,7 @@ ISOLATION</text>
 </instance>
 <instance part="C20" gate="G$1" x="12.7" y="60.96" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.176" y="63.119" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="22.86" y="63.119" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="20.32" y="63.119" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
 <instance part="AMP_ON" gate="1" x="12.7" y="50.8" smashed="yes">
 <attribute name="NAME" x="9.017" y="47.5742" size="1.778" layer="95"/>

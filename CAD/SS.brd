@@ -3,7 +3,7 @@
 <eagle version="9.3.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
@@ -7592,6 +7592,13 @@ Contains RF-Friendly rounded footprints.</description>
 <text x="0.043" y="-1.284" size="0.8" layer="21" font="vector" ratio="15" align="center">&gt;VALUE</text>
 <rectangle x1="-0.319" y1="-0.7" x2="-0.119" y2="0.7" layer="21"/>
 </package>
+<package name="1207">
+<description>Tayo 1207/3218 solder footprint</description>
+<smd name="P$1" x="-1.251" y="-0.016" dx="0.85" dy="2" layer="1"/>
+<smd name="P$2" x="1.249" y="-0.016" dx="0.85" dy="2" layer="1"/>
+<text x="0" y="2" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="0" y="-2" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;VALUE</text>
+</package>
 <package name="0805" urn="urn:adsk.eagle:footprint:22978/1" locally_modified="yes">
 <description>Footprint 0805</description>
 <wire x1="-1.473" y1="0.683" x2="1.473" y2="0.683" width="0.0508" layer="39"/>
@@ -8161,16 +8168,16 @@ design rules under a new name.</description>
 <element name="C12" library="aarf" package="GRM18" value="390pF" x="41.91" y="63.777" smashed="yes" rot="R90">
 <attribute name="VALUE" x="44.3" y="64.246" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="C13" library="aarf" package="0805" value="0.001µ" x="44.676" y="7.75" smashed="yes">
+<element name="C13" library="aarf" package="0805" value="1000pF" x="44.676" y="7.75" smashed="yes">
 <attribute name="VALUE" x="44.708" y="9.464" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
-<element name="C14" library="aarf" package="0805" value="0.001µ" x="69.847" y="19.041" smashed="yes" rot="R90">
+<element name="C14" library="aarf" package="0805" value="1000pF" x="69.847" y="19.041" smashed="yes" rot="R90">
 <attribute name="VALUE" x="71.054" y="19.057" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
-<element name="C15" library="aarf" package="0805" value="0.001µ" x="24.642" y="7.72" smashed="yes" rot="R270">
+<element name="C15" library="aarf" package="0805" value="1000pF" x="24.642" y="7.72" smashed="yes" rot="R270">
 <attribute name="VALUE" x="23.181" y="7.704" size="0.6096" layer="21" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
-<element name="C16" library="aarf" package="0805" value="0.001µ" x="36.84" y="7.558" smashed="yes">
+<element name="C16" library="aarf" package="0805" value="1000pF" x="36.84" y="7.558" smashed="yes">
 <attribute name="VALUE" x="39.242" y="7.535" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
 <element name="C17" library="aarf" package="0805" value="0.1µ" x="51.773" y="82.686" smashed="yes" rot="R180">
@@ -8179,13 +8186,13 @@ design rules under a new name.</description>
 <element name="C18" library="aarf" package="0805" value="0.1µ" x="28.471" y="93.402" smashed="yes">
 <attribute name="VALUE" x="28.471" y="92.132" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
-<element name="C19" library="aarf" package="0805" value="0.001µ" x="69.85" y="25.423" smashed="yes" rot="R90">
+<element name="C19" library="aarf" package="0805" value="1000pF" x="69.85" y="25.423" smashed="yes" rot="R90">
 <attribute name="VALUE" x="68.199" y="25.423" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
 <element name="C2" library="aarf" package="GRM18" value="22pF" x="60.241040625" y="65.9638" smashed="yes" rot="R180">
 <attribute name="VALUE" x="63.8427625" y="65.9638" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="C20" library="aarf" package="0805" value="0.001µ" x="18.203" y="7.592" smashed="yes">
+<element name="C20" library="aarf" package="0805" value="1000pF" x="18.203" y="7.592" smashed="yes">
 <attribute name="VALUE" x="18.219" y="9.306" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
 <element name="C21" library="aarf" package="0805" value="0.33µ" x="67.337" y="7.565" smashed="yes" rot="R180">
@@ -8373,8 +8380,8 @@ design rules under a new name.</description>
 <element name="R8" library="aarf" package="1206" value="1kΩ" x="38.569" y="98.783" smashed="yes" rot="R270">
 <attribute name="VALUE" x="40.22" y="98.783" size="0.6096" layer="21" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
-<element name="L7" library="aarf" package="0805" value="1000µH" x="38.519" y="103.655" smashed="yes" rot="R90">
-<attribute name="VALUE" x="40.132" y="103.636" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
+<element name="L7" library="aarf" package="1207" value="1000µH" x="38.4682" y="104.1884" smashed="yes" rot="R90">
+<attribute name="VALUE" x="40.0812" y="104.1694" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
 <element name="R13" library="aarf" package="1206" value="10kΩ" x="27.9" y="19.28" smashed="yes" rot="R180">
 <attribute name="VALUE" x="27.9" y="17.629" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
@@ -8865,7 +8872,7 @@ design rules under a new name.</description>
 <via x="38.922959375" y="65.68948125" extent="1-16" drill="0.2"/>
 <via x="45.24248125" y="63.190121875" extent="1-16" drill="0.2"/>
 <via x="43.92168125" y="76.62671875" extent="1-16" drill="0.2"/>
-<via x="38.506403125" y="104.71911875" extent="1-16" drill="0.2"/>
+<via x="38.455603125" y="105.43031875" extent="1-16" drill="0.2"/>
 <via x="38.506403125" y="93.096078125" extent="1-16" drill="0.2"/>
 <via x="27.518359375" y="84.6937625" extent="1-16" drill="0.2"/>
 <via x="27.305" y="82.0521625" extent="1-16" drill="0.2"/>
@@ -9401,8 +9408,8 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="R8" pad="1"/>
 <contactref element="L7" pad="P$1"/>
-<wire x1="38.569" y1="100.183" x2="38.519" y2="100.233" width="0.6096" layer="1"/>
-<wire x1="38.519" y1="100.233" x2="38.519" y2="102.755" width="0.8128" layer="1"/>
+<wire x1="38.569" y1="100.183" x2="38.46466875" y2="100.28733125" width="0.6096" layer="1"/>
+<wire x1="38.46466875" y1="100.28733125" x2="38.4842" y2="102.9374" width="0.8128" layer="1"/>
 </signal>
 <signal name="N$8">
 <contactref element="L9" pad="P$2"/>
@@ -9579,7 +9586,6 @@ design rules under a new name.</description>
 <approved hash="19,1,212826985b9e5c2e"/>
 <approved hash="19,1,32dd3f2646844b7f"/>
 <approved hash="19,1,f33ef235ca97cb9c"/>
-<approved hash="19,1,72d0b4306ac0b43e"/>
 <approved hash="19,1,cd4dce5b13951083"/>
 <approved hash="19,1,213021fd9b839b4e"/>
 <approved hash="19,1,174b140190a393e9"/>
@@ -9664,6 +9670,7 @@ design rules under a new name.</description>
 <approved hash="6,1,2211c003514a2b44"/>
 <approved hash="6,1,5c03eec02788a435"/>
 <approved hash="6,1,ba719091d44e33f4"/>
+<approved hash="19,1,fd5df8549656935f"/>
 </errors>
 </board>
 </drawing>

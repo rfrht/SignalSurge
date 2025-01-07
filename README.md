@@ -26,7 +26,6 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
 
 # Schematic: 
-
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 # Preliminary board layout
@@ -98,10 +97,11 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 * Still untested, unbuilt - and yes, it is still green - but slowly making its way through.
 
 ## Library
-Custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
+Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
+
+Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
 
 ## To Do
-* Create a BOM file
 * Assemble and build the board
 * Improve the SO-239 connector
 * Assure the filter operation
