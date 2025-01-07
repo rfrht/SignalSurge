@@ -1,5 +1,4 @@
 # SignalSurge
-
 This is an open source (check licensing [here](https://github.com/rfrht/SignalSurge/blob/main/LICENSE)) Bandpass filter for VHF and UHF bands, with a selectable LNA and a sequencer. Projected using Eagle CAD 9.
 
 # Why?
@@ -25,6 +24,11 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * Small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) on antenna and radio sides
 * [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
 
+## Library
+Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
+
+Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
+
 # Schematic: 
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
@@ -46,8 +50,17 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
-# Relay Logic
+## Maturity level
+* Reached the "minimally lovable project" stage.
+* I think that with regards to the base components and schematic, this is pretty much it.
+* Still untested, unbuilt - and yes, it is still green - but slowly making its way through.
 
+## To Do
+* Assemble and build the board
+* Improve the SO-239 connector
+* Assure the filter operation
+
+# Relay Logic
 ## BPF and Relay control
 ### Truth table (NOR)
 | RADIO_TX | FORCE_BYPASS | Signal Level | Behavior |
@@ -90,21 +103,6 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 :---------|---------------|--------:
 | V.REG.  | EN | - |
 | LNA SW  | NC | - |
-
-## Maturity level
-* Reached the "minimally lovable project" stage.
-* I think that with regards to the base components and schematic, this is pretty much it.
-* Still untested, unbuilt - and yes, it is still green - but slowly making its way through.
-
-## Library
-Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
-
-Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
-
-## To Do
-* Assemble and build the board
-* Improve the SO-239 connector
-* Assure the filter operation
 
 ## CHANGELOG
 * Rev. A: Initial release (in the making)
