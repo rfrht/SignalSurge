@@ -51,7 +51,8 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
 ## Maturity level / Status
-* Feb 07: Bought the needed parts!
+* Feb 19 - All parts inventoried and accounted for. Placed the board order
+* Feb 07 - Bought the needed parts!
 Previously:
 * Reached the "minimally lovable project" stage.
 * I think that with regards to the base components and schematic, this is pretty much it.
