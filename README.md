@@ -14,7 +14,7 @@ That said, the objective of this project is to remove everything outside 2m and 
 I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time to build one?
 
 # Features
-* Two selectable sharp amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
+* Two selectable amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
 * High performance and selectable [low noise 15 dB amplifier](#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
 * The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line)
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB)
@@ -32,36 +32,43 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 # Schematic: 
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
-# Preliminary board layout
-![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
+# Board layout
+![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
 For full board image, [click here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
 
-# BPF theoretical performance
+# BPF performance
+This is how the filter performed out-of-box, with theoretically calculated components.
+
+* 2m band:
+![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/vna-sweep-vhf.jpg)
+
+* 70cm band:
+![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/vna-sweep-uhf.jpg)
+
+## BPF theoretical performance
 Here's the calculated theoretical filter performance, for VHF and UHF bands:
 
 ![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/bpf-vhf.png)
 ![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/bpf-uhf.png)
 
-We shall see how that work out in the real world.
+## Performance notes
+Notice that the theoretical performance involved ideal components, no parasitics, infinite Q, etc components. The filter will be refactored with [lower value components](https://github.com/rfrht/SignalSurge/blob/main/others/cap-kit.jpg) to bring the top of the curve to the target area.
 
 # Amplifier performance
 Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
 
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
-## Maturity level / Status
+# Maturity level / Status
+* Mar 11 - The boards arrived and assembled the Rev. A board - the BPF works! A bit out of frequency, but it works. More testing and component tweaking in the make.
 * Feb 19 - All parts inventoried and accounted for. Placed the board order
 * Feb 07 - Bought the needed parts!
-Previously:
-* Reached the "minimally lovable project" stage.
-* I think that with regards to the base components and schematic, this is pretty much it.
-* Still untested, unbuilt - and yes, it is still green - but slowly making its way through.
+* Jan/2025 - Reached the "minimally lovable project" stage.
 
-## To Do
-* Assemble and build the board
-* Improve the SO-239 connector
-* Assure the filter operation
+# To Do
+* Bring the filter fC to the center of amateur radio bands
+* Add a u.fl port on BPF in and out lines
 
 # Relay Logic
 ## BPF and Relay control
@@ -108,7 +115,7 @@ Previously:
 | LNA SW  | NC | - |
 
 ## CHANGELOG
-* Rev. A: Initial release (in the making)
+* Rev. A: Initial release (Testing it)
 
 ## ACKNOWLEDGEMENTS
 I'd like to thank the following contributors:
