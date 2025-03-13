@@ -114,10 +114,13 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | V.REG.  | EN | - |
 | LNA SW  | NC | - |
 
-## CHANGELOG
+# KNOWN ISSUES
+Check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
+
+# CHANGELOG
 * Rev. A: Initial release (Testing it)
 
-## ACKNOWLEDGEMENTS
+# ACKNOWLEDGEMENTS
 I'd like to thank the following contributors:
 * The fine [r/rfelectronics](https://www.reddit.com/r/rfelectronics/) community for helping me [square out a RX mute/isolation](https://www.reddit.com/r/rfelectronics/comments/1h0pffq/help_me_reuse_this_circuit/) (tip: it was right under my nose) issue and [how to select the large signal switch](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/help_select_high_power_50w_uhf_switch/) and [a critical review of the bandpass filters](https://www.reddit.com/r/rfelectronics/comments/1hk1mgi/sanity_check_in_vhf_uhf_bpf_filters/)
 * The [r/AskElectronics](https://www.reddit.com/r/AskElectronics/) community for [the sanity checking on using a PNP transistor to switch a ground signal](https://www.reddit.com/r/AskElectronics/comments/1hanp3u/will_this_switch_when_tx_gnd_is_grounded/).
