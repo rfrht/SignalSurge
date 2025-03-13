@@ -9,9 +9,9 @@ I live in a metropolitan area and **very** RF-polluted. One of these days, only 
 3. By filtering out unwanted signals, you give more **dynamic range** to your radio, improving your reception.
 4. [See for yourself here](https://www.reddit.com/r/amateurradio/comments/1gxahma/noticeable_improvement_in_ft991a_2m_rx_when_using/).
 
-That said, the objective of this project is to remove everything outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else between), ensuring that the precious front-end gain on the radio built-in amplifier focus on amateur band signals **only**.
+That said, the objective of this project is to remove as much as possible signals outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else inbetween), ensuring that the precious front-end gain on the radio built-in amplifier focus on amateur band signals **only**.
 
-I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time to build one?
+I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time and parts to build one?
 
 # Features
 * Two selectable amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
@@ -20,8 +20,7 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB)
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
 * [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn't positioned
-* Static bleeding on antenna side when switched to BPF/AMP
-* Small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) on antenna and radio sides
+* Static bleeding and small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
 * [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
 
 ## Library
@@ -32,12 +31,10 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 # Schematic: 
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
-# Board layout
+# Board layout (Rev. A)
 ![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
-For full board image, [click here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
-
-# BPF performance
+# BPF performance (tested, works, needs frequency adjust)
 This is how the filter performed out-of-box, with theoretically calculated components.
 
 * 2m band:
@@ -55,7 +52,7 @@ Here's the calculated theoretical filter performance, for VHF and UHF bands:
 ## Performance notes
 Notice that the theoretical performance involved ideal components, no parasitics, infinite Q, etc components. The filter will be refactored with [lower value components](https://github.com/rfrht/SignalSurge/blob/main/others/cap-kit.jpg) to bring the top of the curve to the target area.
 
-# Amplifier performance
+# Amplifier performance (untested, theoretical)
 Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
 
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
@@ -68,9 +65,9 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 
 # To Do
 * Bring the filter fC to the center of amateur radio bands
-* Add a u.fl port on BPF in and out lines
+* Add a u.FL port on BPF in and out lines for easier debugging
 
-# Relay Logic
+# Relay Logic (untested)
 ## BPF and Relay control
 ### Truth table (NOR)
 | RADIO_TX | FORCE_BYPASS | Signal Level | Behavior |
