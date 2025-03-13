@@ -34,6 +34,9 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 # Board layout (Rev. A)
 ![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
+### Why the large exposed pads around the BPF/LNA?
+The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
+
 # BPF performance (tested, works, needs frequency adjust)
 This is how the filter performed out-of-box, with theoretically calculated components.
 
