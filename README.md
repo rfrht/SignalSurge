@@ -60,17 +60,10 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
-# Maturity level / Status
-* Mar 11 - The boards arrived and assembled the Rev. A board - the BPF works! A bit out of frequency, but it works. More testing and component tweaking in the make.
-* Feb 19 - All parts inventoried and accounted for. Placed the board order
-* Feb 07 - Bought the needed parts!
-* Jan/2025 - Reached the "minimally lovable project" stage.
+# KNOWN ISSUES
+Check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
-# To Do
-* Bring the filter fC to the center of amateur radio bands
-* Add a u.FL port on BPF in and out lines for easier debugging
-
-# Relay Logic (untested)
+# RELAY LOGIC (untested)
 ## BPF and Relay control
 ### Truth table (NOR)
 | RADIO_TX | FORCE_BYPASS | Signal Level | Behavior |
@@ -114,8 +107,11 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | V.REG.  | EN | - |
 | LNA SW  | NC | - |
 
-# KNOWN ISSUES
-Check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
+# JOURNEY
+* Mar 11 - The boards arrived and assembled the Rev. A board - the BPF works! A bit out of frequency, but it works. More testing and component tweaking in the make.
+* Feb 19 - All parts inventoried and accounted for. Placed the board order
+* Feb 07 - Bought the needed parts!
+* Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
 * Rev. A: Initial release (Testing it)
