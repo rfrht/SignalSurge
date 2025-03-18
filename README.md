@@ -37,14 +37,8 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 ### Why the large exposed pads around the BPF/LNA?
 The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
 
-# BPF performance (tested, works, needs frequency adjust)
-This is how the filter performed out-of-box, with theoretically calculated components.
-
-* 2m band:
-![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/vna-sweep-vhf.jpg)
-
-* 70cm band:
-![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/vna-sweep-uhf.jpg)
+# BPF performance
+Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
 
 ## BPF theoretical performance
 Here's the calculated theoretical filter performance, for VHF and UHF bands:
@@ -61,9 +55,9 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 ![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
 
 # KNOWN ISSUES
-Check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
+**Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
-# RELAY LOGIC (untested)
+# RELAY LOGIC
 ## BPF and Relay control
 ### Truth table (NOR)
 | RADIO_TX | FORCE_BYPASS | Signal Level | Behavior |
@@ -108,6 +102,8 @@ Check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 | LNA SW  | NC | - |
 
 # JOURNEY
+* Mar 17 - Tested relay logic (it is sound!), voltage regulators. And also fried the first board by shorting the 13.8V line on the 3V line **before** the fuse.
+* Mar 16 - Tweaked the filter to bring the peak 2m BPF performance to the center of the band (146 MHz). Done in trial and error.
 * Mar 11 - The boards arrived and assembled the Rev. A board - the BPF works! A bit out of frequency, but it works. More testing and component tweaking in the make.
 * Feb 19 - All parts inventoried and accounted for. Placed the board order
 * Feb 07 - Bought the needed parts!
