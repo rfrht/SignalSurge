@@ -31,8 +31,11 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 # Schematic: 
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
-# Board layout (Rev. A)
-![Rev A Signal Surge](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
+# Board layout
+[Rev. B board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
+
+Rev. A finished board:
+![Rev A Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
 ### Why the large exposed pads around the BPF/LNA?
 The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
@@ -102,6 +105,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | LNA SW  | NC | - |
 
 # JOURNEY
+* May 18 - Fixed the Rev. A defects, check the [changelog here](https://github.com/rfrht/SignalSurge/commit/eed25a111f6a104a3589aa6e2ec3a4192e9d5c3d)
 * Mar 17 - Tested relay logic (it is sound!), voltage regulators. And also fried the first board by shorting the 13.8V line on the 3V line **before** the fuse.
 * Mar 16 - Tweaked the filter to bring the peak 2m BPF performance to the center of the band (146 MHz). Done in trial and error.
 * Mar 11 - The boards arrived and assembled the Rev. A board - the BPF works! A bit out of frequency, but it works. More testing and component tweaking in the make.
@@ -110,7 +114,8 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
-* Rev. A: Initial release (Testing it)
+* Rev. B: Check for progress in [Issues](https://github.com/rfrht/SignalSurge/issues/)
+* Rev. A: Initial release
 
 # ACKNOWLEDGEMENTS
 I'd like to thank the following contributors:
