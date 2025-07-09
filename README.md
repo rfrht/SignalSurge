@@ -22,17 +22,18 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn't positioned
 * Static bleeding and small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
 * [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
+* A detachable miniature VHF BPF filter that fits perfectly in [RTL-SDR FM bandstop cases](https://www.rtl-sdr.com/rtl-sdr-com-broadcast-fm-band-stop-filter-88-108-mhz-reject-now-for-sale/)
 
 ## Library
 Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
 
-Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
+Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/Rev-B/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
 
 # Schematic: 
-![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
+![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/Rev-B/others/schematic.png)
 
 # Board layout
-[Rev. B board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
+[Rev. B board layout](https://github.com/rfrht/SignalSurge/blob/Rev-B/others/SS.png)
 
 Rev. A finished board:
 ![Rev A Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
@@ -105,6 +106,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | LNA SW  | NC | - |
 
 # JOURNEY
+* Jul 09 - Added a detachable board (taking advantage of the spare board real estate) that fits a RTL-SDR Bandpass filter. Minor signal and label revisions, routing, better labeling for signal I/O by adding expected voltages, improved semiotics. Tentatively final.
 * May 18 - Fixed the Rev. A defects, check the [changelog here](https://github.com/rfrht/SignalSurge/commit/eed25a111f6a104a3589aa6e2ec3a4192e9d5c3d)
 * Mar 17 - Tested relay logic (it is sound!), voltage regulators. And also fried the first board by shorting the 13.8V line on the 3V line **before** the fuse.
 * Mar 16 - Tweaked the filter to bring the peak 2m BPF performance to the center of the band (146 MHz). Done in trial and error.
