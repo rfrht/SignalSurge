@@ -25,7 +25,7 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * A detachable miniature VHF BPF filter that fits perfectly in [RTL-SDR FM bandstop cases](https://www.rtl-sdr.com/rtl-sdr-com-broadcast-fm-band-stop-filter-88-108-mhz-reject-now-for-sale/)
 
 ## Library
-Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr)
+Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr). Ensure to **also** fetch the latest library version (and update in your Eagle) when checking out new code.
 
 Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/Rev-B/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
 
