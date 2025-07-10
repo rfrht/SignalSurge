@@ -169,7 +169,7 @@ REGUL.</text>
 <wire x1="50.6" y1="22.43" x2="50.6" y2="13.54" width="0.127" layer="21" style="shortdash"/>
 <wire x1="50.6" y1="13.54" x2="49.33" y2="11" width="0.127" layer="21" style="shortdash"/>
 <wire x1="35.36" y1="22.43" x2="50.6" y2="22.43" width="0.127" layer="21" style="shortdash"/>
-<text x="39.543" y="18.177" size="1.27" layer="21" font="vector">RELAY
+<text x="40.559" y="16.907" size="1.27" layer="21" font="vector">RELAY
 CTRL</text>
 <wire x1="40.34" y1="63.68" x2="37.673" y2="63.68" width="0.1524" layer="21" style="shortdash"/>
 <wire x1="50.5" y1="62.41" x2="51.77" y2="63.68" width="0.1524" layer="21" style="shortdash"/>
@@ -204,21 +204,21 @@ CTRL</text>
 <wire x1="50.5" y1="68.887" x2="49.23" y2="70.157" width="0.1524" layer="21" style="shortdash"/>
 <wire x1="49.23" y1="70.157" x2="49.23" y2="77.65" width="0.1524" layer="21" style="shortdash"/>
 <wire x1="49.23" y1="77.65" x2="37.8" y2="77.65" width="0.1524" layer="21" style="shortdash"/>
-<wire x1="20.304" y1="1.324" x2="20.304" y2="2.721" width="0.254" layer="29"/>
-<wire x1="20.304" y1="2.721" x2="19.923" y2="2.34" width="0.254" layer="29"/>
-<wire x1="20.304" y1="2.721" x2="20.685" y2="2.34" width="0.254" layer="29"/>
-<wire x1="38.127" y1="1.424" x2="38.127" y2="2.821" width="0.254" layer="29"/>
-<wire x1="38.127" y1="2.821" x2="37.746" y2="2.44" width="0.254" layer="29"/>
-<wire x1="38.127" y1="2.821" x2="38.508" y2="2.44" width="0.254" layer="29"/>
-<wire x1="75.746" y1="18.747" x2="74.349" y2="18.747" width="0.254" layer="29"/>
-<wire x1="75.365" y1="18.366" x2="75.746" y2="18.747" width="0.254" layer="29"/>
-<wire x1="75.746" y1="18.747" x2="75.365" y2="19.128" width="0.254" layer="29"/>
-<wire x1="46.963" y1="1.37" x2="46.963" y2="2.767" width="0.254" layer="29"/>
-<wire x1="46.963" y1="2.767" x2="46.582" y2="2.386" width="0.254" layer="29"/>
-<wire x1="46.963" y1="2.767" x2="47.344" y2="2.386" width="0.254" layer="29"/>
-<wire x1="55.907" y1="2.694" x2="55.907" y2="1.297" width="0.254" layer="29"/>
-<wire x1="55.907" y1="1.297" x2="56.288" y2="1.678" width="0.254" layer="29"/>
-<wire x1="55.907" y1="1.297" x2="55.526" y2="1.678" width="0.254" layer="29"/>
+<wire x1="21.32" y1="1.578" x2="21.32" y2="2.975" width="0.254" layer="29"/>
+<wire x1="21.32" y1="2.975" x2="20.939" y2="2.594" width="0.254" layer="29"/>
+<wire x1="21.32" y1="2.975" x2="21.701" y2="2.594" width="0.254" layer="29"/>
+<wire x1="39.143" y1="1.424" x2="39.143" y2="2.821" width="0.254" layer="29"/>
+<wire x1="39.143" y1="2.821" x2="38.762" y2="2.44" width="0.254" layer="29"/>
+<wire x1="39.143" y1="2.821" x2="39.524" y2="2.44" width="0.254" layer="29"/>
+<wire x1="75.492" y1="19.509" x2="74.095" y2="19.509" width="0.254" layer="29"/>
+<wire x1="75.111" y1="19.128" x2="75.492" y2="19.509" width="0.254" layer="29"/>
+<wire x1="75.492" y1="19.509" x2="75.111" y2="19.89" width="0.254" layer="29"/>
+<wire x1="47.979" y1="1.37" x2="47.979" y2="2.767" width="0.254" layer="29"/>
+<wire x1="47.979" y1="2.767" x2="47.598" y2="2.386" width="0.254" layer="29"/>
+<wire x1="47.979" y1="2.767" x2="48.36" y2="2.386" width="0.254" layer="29"/>
+<wire x1="56.923" y1="2.948" x2="56.923" y2="1.551" width="0.254" layer="29"/>
+<wire x1="56.923" y1="1.551" x2="57.304" y2="1.932" width="0.254" layer="29"/>
+<wire x1="56.923" y1="1.551" x2="56.542" y2="1.932" width="0.254" layer="29"/>
 <rectangle x1="31.3717" y1="46.6343" x2="36.5279" y2="46.6597" layer="22" rot="R270"/>
 <rectangle x1="31.3463" y1="46.6343" x2="36.5025" y2="46.6597" layer="22" rot="R270"/>
 <rectangle x1="31.3209" y1="46.6343" x2="36.4771" y2="46.6597" layer="22" rot="R270"/>
@@ -7505,15 +7505,15 @@ r/AskElectronics </text>
 <text x="1.842159375" y="13.40791875" size="0.8128" layer="21" font="vector">github.com/rfrht/SignalSurge</text>
 <rectangle x1="60.4568" y1="40.0834" x2="61.2696" y2="64.3810375" layer="41"/>
 <rectangle x1="55.18" y1="44.364559375" x2="55.95215625" y2="62.210596875" layer="41"/>
-<wire x1="29.237" y1="1.424" x2="29.237" y2="2.821" width="0.254" layer="29"/>
-<wire x1="29.237" y1="2.821" x2="28.856" y2="2.44" width="0.254" layer="29"/>
-<wire x1="29.237" y1="2.821" x2="29.618" y2="2.44" width="0.254" layer="29"/>
-<wire x1="64.743" y1="2.64" x2="64.743" y2="1.243" width="0.254" layer="29"/>
-<wire x1="64.743" y1="1.243" x2="65.124" y2="1.624" width="0.254" layer="29"/>
-<wire x1="64.743" y1="1.243" x2="64.362" y2="1.624" width="0.254" layer="29"/>
-<wire x1="74.222" y1="26.621" x2="75.619" y2="26.621" width="0.254" layer="29"/>
-<wire x1="74.603" y1="27.002" x2="74.222" y2="26.621" width="0.254" layer="29"/>
-<wire x1="74.222" y1="26.621" x2="74.603" y2="26.24" width="0.254" layer="29"/>
+<wire x1="30.253" y1="1.424" x2="30.253" y2="2.821" width="0.254" layer="29"/>
+<wire x1="30.253" y1="2.821" x2="29.872" y2="2.44" width="0.254" layer="29"/>
+<wire x1="30.253" y1="2.821" x2="30.634" y2="2.44" width="0.254" layer="29"/>
+<wire x1="65.759" y1="2.894" x2="65.759" y2="1.497" width="0.254" layer="29"/>
+<wire x1="65.759" y1="1.497" x2="66.14" y2="1.878" width="0.254" layer="29"/>
+<wire x1="65.759" y1="1.497" x2="65.378" y2="1.878" width="0.254" layer="29"/>
+<wire x1="73.968" y1="27.637" x2="75.365" y2="27.637" width="0.254" layer="29"/>
+<wire x1="74.349" y1="28.018" x2="73.968" y2="27.637" width="0.254" layer="29"/>
+<wire x1="73.968" y1="27.637" x2="74.349" y2="27.256" width="0.254" layer="29"/>
 <rectangle x1="42.88" y1="56.568" x2="44.912" y2="57.584" layer="41"/>
 <rectangle x1="36.967" y1="54.765" x2="38.491" y2="56.543" layer="41" rot="R90"/>
 <rectangle x1="35.641" y1="50.091" x2="37.165" y2="51.869" layer="41" rot="R90"/>
@@ -8627,11 +8627,11 @@ PY2RAF</text>
 <rectangle x1="7.112" y1="47.244" x2="18.288" y2="60.198" layer="41"/>
 <rectangle x1="31.75" y1="27.432" x2="32.512" y2="27.686" layer="41"/>
 <rectangle x1="33.02" y1="29.718" x2="33.274" y2="31.242" layer="41"/>
-<text x="73.914" y="28.702" size="0.6096" layer="21" font="vector" rot="R90" align="center">3V</text>
-<text x="73.914" y="21.844" size="0.6096" layer="21" font="vector" rot="R90" align="center">12V</text>
-<text x="41.656" y="3.048" size="0.6096" layer="21" font="vector" rot="R180" align="center">3V</text>
-<text x="23.876" y="2.794" size="0.6096" layer="21" font="vector" rot="R180" align="center">3V</text>
-<text x="32.766" y="3.048" size="0.6096" layer="21" font="vector" rot="R180" align="center">GND</text>
+<text x="73.914" y="28.956" size="0.6096" layer="21" font="vector" rot="R90" align="center">3V</text>
+<text x="74.168" y="21.082" size="0.6096" layer="21" font="vector" rot="R90" align="center">12V</text>
+<text x="40.386" y="2.794" size="0.6096" layer="21" font="vector" rot="R180" align="center">3V</text>
+<text x="22.606" y="3.048" size="0.6096" layer="21" font="vector" rot="R180" align="center">3V</text>
+<text x="31.496" y="3.048" size="0.6096" layer="21" font="vector" rot="R180" align="center">GND</text>
 </plain>
 <libraries>
 <library name="aarf">
@@ -8972,6 +8972,39 @@ DigiKey: 2072-RFPC-SMA28-F-ND</description>
 <pad name="P$7" x="2.921" y="0.254" drill="0.6"/>
 <rectangle x1="-3.683" y1="-1.778" x2="3.683" y2="2.413" layer="41"/>
 </package>
+<package name="JUMPER1" urn="urn:adsk.eagle:footprint:15398/1" locally_modified="yes">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<wire x1="-1.016" y1="1.27" x2="-1.27" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="1.27" x2="1.27" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.016" x2="1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-1.27" x2="1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="1.27" x2="-1.016" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.016" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-1.27" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-1.27" x2="1.016" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="0.9144" shape="long"/>
+<text x="-2.921" y="-2.54" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="4.191" y="-2.54" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.3048" y1="-0.3048" x2="0.3048" y2="0.3048" layer="51"/>
+</package>
+<package name="FUSE-1206">
+<description>Footprint 1206</description>
+<wire x1="-0.913" y1="0.8" x2="0.888" y2="0.8" width="0.1524" layer="21"/>
+<wire x1="-0.913" y1="-0.8" x2="0.888" y2="-0.8" width="0.1524" layer="21"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="1.8" layer="1" roundness="50"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="1.8" layer="1" roundness="50"/>
+<text x="0" y="1.651" size="0.8" layer="21" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="0" y="-1.651" size="0.8" layer="21" font="vector" ratio="15" align="center">&gt;VALUE</text>
+<rectangle x1="-1.651" y1="-0.8763" x2="-0.9009" y2="0.8738" layer="21"/>
+<rectangle x1="0.889" y1="-0.8763" x2="1.6391" y2="0.8738" layer="21"/>
+<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+<wire x1="0" y1="0" x2="-0.635" y2="0" width="0.127" layer="21" curve="-180"/>
+<wire x1="0" y1="0" x2="0.635" y2="0" width="0.127" layer="21" curve="-180"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="SC70-5" urn="urn:adsk.eagle:package:2405/1" locally_modified="yes" type="box">
@@ -8986,23 +9019,6 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </library>
 <library name="adafruit">
 <packages>
-<package name="R1206">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
-chip</description>
-<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
-<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
-<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<text x="-1.397" y="1.143" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.397" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
-<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
-<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
-</package>
 <package name="U.FL">
 <wire x1="1.3" y1="0.7" x2="1.3" y2="2.1" width="0.2032" layer="21"/>
 <wire x1="1.3" y1="2.1" x2="-1.3" y2="2.1" width="0.2032" layer="21"/>
@@ -9026,26 +9042,6 @@ chip</description>
 <text x="-1.27" y="-3.175" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 </packages>
-</library>
-<library name="wirepad" urn="urn:adsk.eagle:library:412">
-<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SMD1,27-2,54" urn="urn:adsk.eagle:footprint:30822/1" library_version="1">
-<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
-<smd name="1" x="0" y="0" dx="1.27" dy="2.54" layer="1"/>
-<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="-0.8" y="-2.4" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-</package>
-</packages>
-<packages3d>
-<package3d name="SMD1,27-2,54" urn="urn:adsk.eagle:package:30839/1" type="box" library_version="1">
-<description>SMD PAD</description>
-<packageinstances>
-<packageinstance name="SMD1,27-2,54"/>
-</packageinstances>
-</package3d>
-</packages3d>
 </library>
 <library name="transistor" urn="urn:adsk.eagle:library:402">
 <description>&lt;b&gt;Transistors&lt;/b&gt;&lt;p&gt;
@@ -9311,7 +9307,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="44.508" y="7.764" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
 <element name="C14" library="aarf" package="0805" value="1000pF" x="70.447" y="17.741" smashed="yes" rot="R90">
-<attribute name="VALUE" x="71.654" y="17.757" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
+<attribute name="VALUE" x="71.908" y="17.757" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
 <element name="C15" library="aarf" package="0805" value="1000pF" x="24.442" y="6.02" smashed="yes" rot="R270">
 <attribute name="VALUE" x="22.981" y="6.004" size="0.6096" layer="21" font="vector" ratio="15" rot="R270" align="center"/>
@@ -9319,10 +9315,10 @@ design rules under a new name.</description>
 <element name="C16" library="aarf" package="0805" value="1000pF" x="36.64" y="5.858" smashed="yes">
 <attribute name="VALUE" x="39.631" y="6.022" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="C17" library="aarf" package="0805" value="0.1µ" x="51.473" y="77.786" smashed="yes" rot="R180">
+<element name="C17" library="aarf" package="0805" value="0.1µF" x="51.473" y="77.786" smashed="yes" rot="R180">
 <attribute name="VALUE" x="54.568" y="77.818" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="C18" library="aarf" package="0805" value="0.1µ" x="28.171" y="88.502" smashed="yes">
+<element name="C18" library="aarf" package="0805" value="0.1µF" x="28.171" y="88.502" smashed="yes">
 <attribute name="VALUE" x="28.171" y="87.232" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
 <element name="C19" library="aarf" package="0805" value="1000pF" x="68.784" y="25.0716" smashed="yes">
@@ -9334,16 +9330,16 @@ design rules under a new name.</description>
 <element name="C20" library="aarf" package="0805" value="1000pF" x="18.003" y="5.892" smashed="yes">
 <attribute name="VALUE" x="18.019" y="7.606" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
-<element name="C21" library="aarf" package="0805" value="0.47µ" x="66.737" y="6.065" smashed="yes" rot="R180">
+<element name="C21" library="aarf" package="0805" value="0.47µF" x="66.737" y="6.065" smashed="yes" rot="R180">
 <attribute name="VALUE" x="66.721" y="4.414" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="C22" library="aarf" package="0805" value="0.47µ" x="64.841" y="14.707" smashed="yes">
-<attribute name="VALUE" x="67.474" y="14.659" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
+<element name="C22" library="aarf" package="0805" value="0.47µF" x="64.841" y="14.707" smashed="yes">
+<attribute name="VALUE" x="66.875" y="14.388" size="0.6096" layer="21" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
-<element name="C23" library="aarf" package="0805" value="1µ" x="58.434" y="8.836" smashed="yes" rot="R180">
+<element name="C23" library="aarf" package="0805" value="1µF" x="58.434" y="8.836" smashed="yes" rot="R180">
 <attribute name="VALUE" x="58.371" y="10.138" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="C24" library="aarf" package="0805" value="0.33µ" x="56.24" y="16.1" smashed="yes">
+<element name="C24" library="aarf" package="0805" value="0.33µF" x="56.24" y="16.1" smashed="yes">
 <attribute name="VALUE" x="56.256" y="17.941" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
 <element name="C6" library="aarf" package="GRM18" value="27pF" x="54.695" y="55.806" smashed="yes">
@@ -9367,15 +9363,15 @@ design rules under a new name.</description>
 <element name="D3" library="aarf" package="SOD-323" value="1N4148" x="22.657" y="86.146" smashed="yes" rot="R90">
 <attribute name="VALUE" x="23.941" y="86.189" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
-<element name="F1" library="adafruit" package="R1206" value="1231" x="50.411" y="6.039" smashed="yes" rot="R180">
-<attribute name="NAME" x="50.481" y="8.407" size="0.6096" layer="21" font="vector" ratio="15" rot="R180"/>
+<element name="F1" library="aarf" package="FUSE-1206" value="50mA" x="50.411" y="6.039" smashed="yes" rot="R180">
 <attribute name="SPICEPREFIX" value="B" x="50.411" y="6.039" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="50.411" y="7.69" size="0.8" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
 <element name="FB1" library="aarf" package="0805" value="BLM21" x="56.617" y="5.959" smashed="yes">
 <attribute name="VALUE" x="56.598" y="4.727" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
 <element name="FB2" library="aarf" package="0805" value="BLM21" x="60.17" y="18.969" smashed="yes" rot="R90">
-<attribute name="VALUE" x="61.402" y="18.95" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
+<attribute name="VALUE" x="61.656" y="18.95" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
 <element name="FB3" library="aarf" package="0805" value="BLM21" x="28.721" y="8.306" smashed="yes" rot="R180">
 <attribute name="VALUE" x="28.867" y="6.998" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
@@ -9407,31 +9403,31 @@ design rules under a new name.</description>
 <element name="L8" library="aarf" package="0805" value="150nH" x="55.561" y="52.327" smashed="yes" rot="R270">
 <attribute name="VALUE" x="53.525" y="52.312" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="13.8V" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="13.8V" x="45.62" y="2.44" smashed="yes" rot="R180">
-<attribute name="NAME" x="50.109" y="1.983" size="1.27" layer="21" font="vector" align="center"/>
+<element name="13.8V" library="aarf" package="JUMPER1" value="13.8V" x="45.62" y="2.44" smashed="yes" rot="R180">
+<attribute name="NAME" x="50.617" y="1.983" size="1.016" layer="21" font="vector" align="center"/>
 <attribute name="SPICEPREFIX" value="X" x="45.62" y="2.44" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="TX_INH" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="TX INH" x="74.484" y="17.295" smashed="yes" rot="R270">
-<attribute name="NAME" x="74.981" y="21.776" size="1.016" layer="21" font="vector" rot="R270" align="center"/>
+<element name="TX_INH" library="aarf" package="JUMPER1" value="TX INH" x="74.484" y="17.295" smashed="yes" rot="R270">
+<attribute name="NAME" x="75.235" y="21.776" size="0.6096" layer="21" font="vector" rot="R270" align="center"/>
 <attribute name="SPICEPREFIX" value="X" x="74.484" y="17.295" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="TX_GND" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="TX_GND" x="27.84" y="2.44" smashed="yes">
-<attribute name="NAME" x="32.642" y="1.856" size="1.016" layer="21" font="vector" rot="R180" align="center"/>
+<element name="TX_GND" library="aarf" package="JUMPER1" value="TX_GND" x="27.84" y="2.44" smashed="yes">
+<attribute name="NAME" x="32.896" y="1.856" size="0.8128" layer="21" font="vector" rot="R180" align="center"/>
 </element>
-<element name="GND" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="GND" x="4.65" y="31.52" smashed="yes" rot="R90">
+<element name="GND" library="aarf" package="JUMPER1" value="GND" x="4.65" y="31.52" smashed="yes" rot="R90">
 <attribute name="NAME" x="6.05" y="29.72" size="0.6096" layer="21" font="vector" ratio="15" rot="R180"/>
 </element>
-<element name="BYPASS" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="BYPASS" x="36.73" y="2.44" smashed="yes">
-<attribute name="NAME" x="41.539" y="1.842" size="1.016" layer="21" font="vector" align="center"/>
+<element name="BYPASS" library="aarf" package="JUMPER1" value="BYPASS" x="36.73" y="2.44" smashed="yes">
+<attribute name="NAME" x="41.793" y="1.842" size="0.8128" layer="21" font="vector" align="center"/>
 </element>
-<element name="VHF" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="VHF" x="74.476" y="25.074" smashed="yes" rot="R270">
-<attribute name="VALUE" x="75.098" y="28.608" size="1.016" layer="21" font="vector" rot="R90" align="center"/>
+<element name="VHF" library="aarf" package="JUMPER1" value="VHF" x="74.476" y="25.074" smashed="yes" rot="R270">
+<attribute name="VALUE" x="75.098" y="29.624" size="1.016" layer="21" font="vector" rot="R90" align="center"/>
 </element>
-<element name="AMP_ON" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="AMP_ON" x="18.95" y="2.44" smashed="yes">
-<attribute name="NAME" x="23.643" y="1.725" size="1.016" layer="21" font="vector" rot="R180" align="center"/>
+<element name="AMP_ON" library="aarf" package="JUMPER1" value="AMP_ON" x="18.95" y="2.44" smashed="yes">
+<attribute name="NAME" x="23.897" y="1.979" size="0.8128" layer="21" font="vector" rot="R180" align="center"/>
 </element>
 <element name="Q1" library="aarf" package="SC70-5" package3d_urn="urn:adsk.eagle:package:2405/1" value="SN74AHC-NOR" x="36.76" y="18.19" smashed="yes">
-<attribute name="VALUE" x="36.792" y="16.285" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
+<attribute name="VALUE" x="36.792" y="16.031" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
 </element>
 <element name="Q2" library="aarf" package="SOT363" value="UMD5N" x="48.02" y="19.07" smashed="yes" rot="R90">
 <attribute name="VALUE" x="48.043" y="16.899" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
@@ -9467,7 +9463,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="32.339" y="51.338" size="0.6096" layer="21" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
 <element name="R5" library="aarf" package="1206" value="10kΩ" x="65.789" y="18.608" smashed="yes">
-<attribute name="VALUE" x="65.764" y="20.156" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
+<attribute name="VALUE" x="65.764" y="20.41" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
 <element name="R6" library="aarf" package="1206" value="10kΩ" x="28.678" y="5.118" smashed="yes" rot="R180">
 <attribute name="VALUE" x="31.844" y="5.08" size="0.6096" layer="21" font="vector" ratio="15" rot="R270" align="center"/>
@@ -9543,12 +9539,12 @@ design rules under a new name.</description>
 <element name="L11" library="aarf" package="0805" value="5.6nH" x="54.672" y="49.683" smashed="yes" rot="R180">
 <attribute name="VALUE" x="51.77" y="49.645" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
-<element name="5V" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="5V" x="63.4" y="2.44" smashed="yes">
-<attribute name="NAME" x="66.649" y="1.98" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
+<element name="5V" library="aarf" package="JUMPER1" value="5V" x="63.4" y="2.44" smashed="yes">
+<attribute name="NAME" x="68.173" y="1.98" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
 <attribute name="VALUE" x="119.28" y="2.44" size="0.0254" layer="27"/>
 </element>
-<element name="3V" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="3V" x="54.51" y="2.44" smashed="yes">
-<attribute name="NAME" x="57.813" y="2.007" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
+<element name="3V" library="aarf" package="JUMPER1" value="3V" x="54.51" y="2.44" smashed="yes">
+<attribute name="NAME" x="59.337" y="2.007" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
 <attribute name="VALUE" x="123.09" y="2.44" size="0.0254" layer="27"/>
 </element>
 <element name="C3" library="aarf" package="GRM18" value="22pF" x="60.84288125" y="58.518721875" smashed="yes" rot="R90">
@@ -9567,7 +9563,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="56.992234375" y="42.297525" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
 <element name="TP3V" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="59.2868" y="13.2098" smashed="yes">
-<attribute name="NAME" x="59.2868" y="12.0668" size="0.6096" layer="21" font="vector" ratio="15" align="center"/>
+<attribute name="NAME" x="60.8312" y="13.3128" size="0.6096" layer="21" font="vector" ratio="15" rot="R90" align="center"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="58.6518" y="11.3048" size="1" layer="37"/>
 </element>
 <element name="TP-LNA-ON" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="35.487" y="32.209" smashed="yes">
@@ -9579,7 +9575,7 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="71.555" y="11.254" size="0.6096" layer="27" font="vector" display="off"/>
 </element>
 <element name="TP-BPF-ON" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="37.4428" y="21.1238" smashed="yes">
-<attribute name="NAME" x="38.4578" y="21.5098" size="0.6096" layer="21" font="vector" ratio="10"/>
+<attribute name="NAME" x="38.9658" y="21.0018" size="0.6096" layer="21" font="vector" ratio="10"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37.4428" y="21.1238" size="0.6096" layer="27" font="vector" display="off"/>
 </element>
 <element name="TP-RLY-ON" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="53.8004" y="22.5824" smashed="yes">
@@ -9587,7 +9583,7 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="53.8004" y="22.5824" size="0.6096" layer="27" font="vector" display="off"/>
 </element>
 <element name="TP-RADIO-TX" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="31.5246" y="19.2804" smashed="yes">
-<attribute name="NAME" x="26.7494" y="20.4488" size="0.6096" layer="21" font="vector" ratio="10"/>
+<attribute name="NAME" x="27.5114" y="20.1948" size="0.6096" layer="21" font="vector" ratio="10"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="31.5246" y="19.2804" size="1.778" layer="27" display="off"/>
 </element>
 <element name="TP-BYPASS" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="32.7184" y="15.1402" smashed="yes">
@@ -9608,7 +9604,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="46.66" y="39.755" size="0.8128" layer="21" font="vector" ratio="10" rot="R180"/>
 </element>
 <element name="TP-VHF-ON" library="testpad" library_urn="urn:adsk.eagle:library:385" package="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1" value="TPB1,27" x="59.7" y="31.52" smashed="yes">
-<attribute name="NAME" x="57.185" y="30.156" size="0.6096" layer="21" font="vector" ratio="10"/>
+<attribute name="NAME" x="57.185" y="29.648" size="0.6096" layer="21" font="vector" ratio="10"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="59.7" y="31.52" size="1.778" layer="27" font="vector" display="off"/>
 <attribute name="VALUE" x="59.065" y="30.758" size="0.0254" layer="27"/>
 </element>
@@ -10202,12 +10198,12 @@ design rules under a new name.</description>
 <wire x1="45.62" y1="2.44" x2="45.62" y2="5.806" width="0.508" layer="1"/>
 <wire x1="45.62" y1="5.806" x2="45.376" y2="6.05" width="0.508" layer="1"/>
 <wire x1="45.376" y1="6.05" x2="48.978" y2="6.05" width="0.508" layer="1"/>
-<wire x1="48.978" y1="6.05" x2="48.989" y2="6.039" width="0.508" layer="1"/>
+<wire x1="48.978" y1="6.05" x2="49.011" y2="6.039" width="0.508" layer="1"/>
 </signal>
 <signal name="N$13">
 <contactref element="F1" pad="1"/>
 <contactref element="FB1" pad="P$1"/>
-<wire x1="51.833" y1="6.039" x2="55.717" y2="6.039" width="0.4064" layer="1"/>
+<wire x1="51.811" y1="6.039" x2="55.717" y2="6.039" width="0.4064" layer="1"/>
 <wire x1="55.717" y1="6.039" x2="55.717" y2="5.959" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$26">
