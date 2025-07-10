@@ -3,7 +3,7 @@
 <eagle version="9.3.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.01" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="mil"/>
@@ -213,9 +213,9 @@ CTRL</text>
 <wire x1="75.746" y1="18.747" x2="74.349" y2="18.747" width="0.254" layer="29"/>
 <wire x1="75.365" y1="18.366" x2="75.746" y2="18.747" width="0.254" layer="29"/>
 <wire x1="75.746" y1="18.747" x2="75.365" y2="19.128" width="0.254" layer="29"/>
-<wire x1="47.017" y1="2.694" x2="47.017" y2="1.297" width="0.254" layer="29"/>
-<wire x1="47.017" y1="1.297" x2="47.398" y2="1.678" width="0.254" layer="29"/>
-<wire x1="47.017" y1="1.297" x2="46.636" y2="1.678" width="0.254" layer="29"/>
+<wire x1="46.963" y1="1.37" x2="46.963" y2="2.767" width="0.254" layer="29"/>
+<wire x1="46.963" y1="2.767" x2="46.582" y2="2.386" width="0.254" layer="29"/>
+<wire x1="46.963" y1="2.767" x2="47.344" y2="2.386" width="0.254" layer="29"/>
 <wire x1="55.907" y1="2.694" x2="55.907" y2="1.297" width="0.254" layer="29"/>
 <wire x1="55.907" y1="1.297" x2="56.288" y2="1.678" width="0.254" layer="29"/>
 <wire x1="55.907" y1="1.297" x2="55.526" y2="1.678" width="0.254" layer="29"/>
@@ -8628,10 +8628,10 @@ PY2RAF</text>
 <rectangle x1="31.75" y1="27.432" x2="32.512" y2="27.686" layer="41"/>
 <rectangle x1="33.02" y1="29.718" x2="33.274" y2="31.242" layer="41"/>
 <text x="73.914" y="28.702" size="0.6096" layer="21" font="vector" rot="R90" align="center">3V</text>
-<text x="74.168" y="21.844" size="0.6096" layer="21" font="vector" rot="R90" align="center">12V</text>
+<text x="73.914" y="21.844" size="0.6096" layer="21" font="vector" rot="R90" align="center">12V</text>
 <text x="41.656" y="3.048" size="0.6096" layer="21" font="vector" rot="R180" align="center">3V</text>
 <text x="23.876" y="2.794" size="0.6096" layer="21" font="vector" rot="R180" align="center">3V</text>
-<text x="32.766" y="2.794" size="0.6096" layer="21" font="vector" rot="R180" align="center">GND</text>
+<text x="32.766" y="3.048" size="0.6096" layer="21" font="vector" rot="R180" align="center">GND</text>
 </plain>
 <libraries>
 <library name="aarf">
@@ -9412,7 +9412,7 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="X" x="45.62" y="2.44" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="TX_INH" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="TX INH" x="74.484" y="17.295" smashed="yes" rot="R270">
-<attribute name="NAME" x="75.235" y="21.776" size="1.016" layer="21" font="vector" rot="R270" align="center"/>
+<attribute name="NAME" x="74.981" y="21.776" size="1.016" layer="21" font="vector" rot="R270" align="center"/>
 <attribute name="SPICEPREFIX" value="X" x="74.484" y="17.295" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="TX_GND" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="TX_GND" x="27.84" y="2.44" smashed="yes">
@@ -9544,11 +9544,11 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="51.77" y="49.645" size="0.6096" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
 <element name="5V" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="5V" x="63.4" y="2.44" smashed="yes">
-<attribute name="NAME" x="66.395" y="1.726" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
+<attribute name="NAME" x="66.649" y="1.98" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
 <attribute name="VALUE" x="119.28" y="2.44" size="0.0254" layer="27"/>
 </element>
 <element name="3V" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD1,27-2,54" package3d_urn="urn:adsk.eagle:package:30839/1" value="3V" x="54.51" y="2.44" smashed="yes">
-<attribute name="NAME" x="57.559" y="1.753" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
+<attribute name="NAME" x="57.813" y="2.007" size="1.27" layer="21" font="vector" rot="R180" align="center"/>
 <attribute name="VALUE" x="123.09" y="2.44" size="0.0254" layer="27"/>
 </element>
 <element name="C3" library="aarf" package="GRM18" value="22pF" x="60.84288125" y="58.518721875" smashed="yes" rot="R90">
@@ -9795,8 +9795,7 @@ design rules under a new name.</description>
 <contactref element="L11" pad="P$2"/>
 <via x="54.472" y="57.016" extent="1-16" drill="0.2"/>
 <via x="53.772" y="58.222" extent="1-16" drill="0.2"/>
-<via x="50.119" y="40.947" extent="1-16" drill="0.2"/>
-<via x="49.23" y="40.947" extent="1-16" drill="0.2"/>
+<via x="49.068" y="40.587" extent="1-16" drill="0.2"/>
 <via x="46.436" y="40.947" extent="1-16" drill="0.2"/>
 <via x="45.547" y="40.947" extent="1-16" drill="0.2"/>
 <via x="44.531" y="40.947" extent="1-16" drill="0.2"/>
@@ -9804,13 +9803,10 @@ design rules under a new name.</description>
 <via x="43.6674" y="41.0486" extent="1-16" drill="0.2"/>
 <via x="46.359" y="46.676" extent="1-16" drill="0.2"/>
 <via x="47.904" y="46.189" extent="1-16" drill="0.2"/>
-<via x="48.341" y="40.947" extent="1-16" drill="0.2"/>
 <via x="44.285" y="42.725" extent="1-16" drill="0.2"/>
 <via x="45.354" y="42.725" extent="1-16" drill="0.2"/>
 <via x="46.563" y="42.725" extent="1-16" drill="0.2"/>
-<via x="48.341" y="42.725" extent="1-16" drill="0.2"/>
-<via x="50.119" y="42.725" extent="1-16" drill="0.2"/>
-<via x="49.23" y="42.725" extent="1-16" drill="0.2"/>
+<via x="49.103" y="43.233" extent="1-16" drill="0.2"/>
 <via x="54.056" y="64.569" extent="1-16" drill="0.2"/>
 <via x="53.167" y="64.569" extent="1-16" drill="0.2"/>
 <via x="50.5" y="64.569" extent="1-16" drill="0.2"/>
@@ -9896,7 +9892,6 @@ design rules under a new name.</description>
 <via x="45.928" y="60.759" extent="1-16" drill="0.2"/>
 <via x="45.166" y="61.267" extent="1-16" drill="0.2"/>
 <via x="44.277" y="61.521" extent="1-16" drill="0.2"/>
-<via x="43.388" y="61.648" extent="1-16" drill="0.2"/>
 <via x="46.055" y="62.664" extent="1-16" drill="0.2"/>
 <via x="46.817" y="62.156" extent="1-16" drill="0.2"/>
 <via x="47.452" y="61.521" extent="1-16" drill="0.2"/>
@@ -9929,7 +9924,7 @@ design rules under a new name.</description>
 <via x="45.293" y="51.869" extent="1-16" drill="0.2"/>
 <via x="45.293" y="53.647" extent="1-16" drill="0.2"/>
 <via x="45.293" y="54.536" extent="1-16" drill="0.2"/>
-<via x="45.293" y="55.425" extent="1-16" drill="0.2"/>
+<via x="45.547" y="55.425" extent="1-16" drill="0.2"/>
 <via x="43.007" y="50.599" extent="1-16" drill="0.2"/>
 <via x="43.769" y="52.504" extent="1-16" drill="0.2"/>
 <via x="43.642" y="51.361" extent="1-16" drill="0.2"/>
@@ -9955,7 +9950,7 @@ design rules under a new name.</description>
 <via x="37.646" y="59.406" extent="1-16" drill="0.2"/>
 <via x="45.166" y="63.045" extent="1-16" drill="0.2"/>
 <via x="43.134" y="63.299" extent="1-16" drill="0.2"/>
-<via x="42.499" y="61.648" extent="1-16" drill="0.2"/>
+<via x="43.007" y="61.648" extent="1-16" drill="0.2"/>
 <via x="33.482" y="74.602" extent="1-16" drill="0.2"/>
 <via x="33.355" y="82.222" extent="1-16" drill="0.2"/>
 <via x="28.529" y="78.539" extent="1-16" drill="0.2"/>
@@ -9964,7 +9959,7 @@ design rules under a new name.</description>
 <contactref element="C11" pad="P$2"/>
 <via x="45.747" y="44.093" extent="1-16" drill="0.2"/>
 <via x="37.927" y="48.313" extent="1-16" drill="0.2"/>
-<via x="41.229" y="45.9" extent="1-16" drill="0.2"/>
+<via x="40.975" y="45.9" extent="1-16" drill="0.2"/>
 <via x="38.435" y="47.551" extent="1-16" drill="0.2"/>
 <via x="41.102" y="44.249" extent="1-16" drill="0.2"/>
 <contactref element="SW-IS-ANT" pad="3"/>
@@ -9976,7 +9971,7 @@ design rules under a new name.</description>
 <via x="40.491" y="58.978" extent="1-16" drill="0.2"/>
 <via x="39.197" y="47.043" extent="1-16" drill="0.2"/>
 <via x="43.515" y="48.059" extent="1-16" drill="0.2"/>
-<via x="44.116" y="47.083" extent="1-16" drill="0.2"/>
+<via x="44.116" y="46.575" extent="1-16" drill="0.2"/>
 <via x="73.26" y="3.71" extent="1-16" drill="3.556"/>
 <via x="3.71" y="3.61" extent="1-16" drill="3.556"/>
 <via x="3.81" y="96.098" extent="1-16" drill="3.556"/>
@@ -10138,7 +10133,6 @@ design rules under a new name.</description>
 <contactref element="X3" pad="2"/>
 <via x="44.912" y="80.834" extent="1-16" drill="0.2"/>
 <via x="46.442" y="80.834" extent="1-16" drill="0.2"/>
-<via x="44.146" y="46.133" extent="1-16" drill="0.2"/>
 <contactref element="C31" pad="P$2"/>
 <contactref element="C29" pad="P$2"/>
 <contactref element="L5" pad="P$1"/>
