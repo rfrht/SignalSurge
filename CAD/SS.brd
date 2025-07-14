@@ -3,7 +3,7 @@
 <eagle version="9.3.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.01" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="mil"/>
@@ -7514,7 +7514,7 @@ r/AskElectronics </text>
 <wire x1="73.968" y1="27.637" x2="75.365" y2="27.637" width="0.254" layer="29"/>
 <wire x1="74.349" y1="28.018" x2="73.968" y2="27.637" width="0.254" layer="29"/>
 <wire x1="73.968" y1="27.637" x2="74.349" y2="27.256" width="0.254" layer="29"/>
-<rectangle x1="42.88" y1="56.568" x2="44.912" y2="57.584" layer="41"/>
+<rectangle x1="43.053" y1="55.626" x2="44.912" y2="57.584" layer="41"/>
 <rectangle x1="36.967" y1="54.765" x2="38.491" y2="56.543" layer="41" rot="R90"/>
 <rectangle x1="35.641" y1="50.091" x2="37.165" y2="51.869" layer="41" rot="R90"/>
 <rectangle x1="38.181" y1="50.091" x2="39.705" y2="51.869" layer="41" rot="R90"/>
@@ -9415,7 +9415,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="32.896" y="1.856" size="0.8128" layer="21" font="vector" rot="R180" align="center"/>
 </element>
 <element name="GND" library="aarf" package="JUMPER1" value="GND" x="4.65" y="31.52" smashed="yes" rot="R90">
-<attribute name="NAME" x="6.05" y="29.72" size="0.6096" layer="21" font="vector" ratio="15" rot="R180"/>
+<attribute name="NAME" x="4.78" y="28.704" size="1.27" layer="21" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
 <element name="BYPASS" library="aarf" package="JUMPER1" value="BYPASS" x="36.73" y="2.44" smashed="yes">
 <attribute name="NAME" x="41.793" y="1.842" size="0.8128" layer="21" font="vector" align="center"/>
@@ -9926,7 +9926,7 @@ design rules under a new name.</description>
 <via x="43.642" y="51.361" extent="1-16" drill="0.2"/>
 <via x="43.769" y="53.52" extent="1-16" drill="0.2"/>
 <via x="43.769" y="54.536" extent="1-16" drill="0.2"/>
-<via x="43.769" y="55.425" extent="1-16" drill="0.2"/>
+<via x="43.515" y="55.425" extent="1-16" drill="0.2"/>
 <via x="44.785" y="50.218" extent="1-16" drill="0.2"/>
 <via x="44.277" y="49.583" extent="1-16" drill="0.2"/>
 <via x="43.388" y="49.075" extent="1-16" drill="0.2"/>
