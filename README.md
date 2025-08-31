@@ -106,7 +106,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | LNA SW  | NC | - |
 
 # JOURNEY
-* Aug 31 - Added pulldown lines in comparators, routing change on the back of the board, unified logic ICs into SC70-5 footprint, updated BOM to add new pulldown resistors, better footprint for BFP460 and NCP553.
+* Aug 31 - Added pulldown lines in comparators, routing change on the back of the board, unified logic ICs into SC70-5 footprint, updated BOM to add new pulldown resistors, better footprint for BFP460 and NCP553, fixed wrong 0.22µf part (it was 0.022µf) in BOM
 * Jul 09 - Added a detachable board (taking advantage of the spare board real estate) that fits a RTL-SDR Bandpass filter. Minor signal and label revisions, routing, better labeling for signal I/O by adding expected voltages, improved semiotics. Tentatively final.
 * May 18 - Fixed the Rev. A defects, check the [changelog here](https://github.com/rfrht/SignalSurge/commit/eed25a111f6a104a3589aa6e2ec3a4192e9d5c3d)
 * Mar 17 - Tested relay logic (it is sound!), voltage regulators. And also fried the first board by shorting the 13.8V line on the 3V line **before** the fuse.
