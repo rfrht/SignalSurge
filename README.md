@@ -106,7 +106,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 * Dec 28 - Reviewed the board layout, added descriptions to signal lines, refactored the detachable VHF BPF, fixed a pernicious board cut failure to render (it was my fault)
 * Dec 25 - Used Gemini to design a VHF BPF - which yielded pretty good results, *tips hat to AI*
 * Dec 25 - Starting Rev. C. 
-* Aug 31 - Tested the VHF BPF and it was way out of line.
+* Aug 31 - Tested the VHF BPF and it was way out of line. Shelved the project for a while.
 * Aug 31 - Added pulldown lines in comparators, routing change on the back of the board, unified logic ICs into SC70-5 footprint, updated BOM to add new pulldown resistors, better footprint for BFP460 and NCP553, fixed wrong 0.22µf part (it was 0.022µf) in BOM
 * Jul 09 - Added a detachable board (taking advantage of the spare board real estate) that fits a RTL-SDR Bandpass filter. Minor signal and label revisions, routing, better labeling for signal I/O by adding expected voltages, improved semiotics. Tentatively final.
 * May 18 - Fixed the Rev. A defects, check the [changelog here](https://github.com/rfrht/SignalSurge/commit/eed25a111f6a104a3589aa6e2ec3a4192e9d5c3d)
