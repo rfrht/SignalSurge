@@ -1,4 +1,3 @@
-For the bleeding edge Rev. C version, [check here](https://github.com/rfrht/SignalSurge/tree/Rev-C)
 # SignalSurge
 This is an open source (check licensing [here](https://github.com/rfrht/SignalSurge/blob/main/LICENSE)) Bandpass filter for VHF and UHF amateur radio bands, with a selectable LNA and a sequencer. Projected using Eagle CAD 9.
 
@@ -28,13 +27,13 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 ## Library
 Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr). Ensure to **also** fetch the latest library version (and update in your Eagle) when checking out new code.
 
-Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/Rev-C/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
+Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
 
 # Schematic: 
-![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/Rev-C/others/schematic.png)
+![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 # Board layout
-[Rev. C board layout](https://github.com/rfrht/SignalSurge/blob/Rev-C/others/SS.png)
+[Rev. C board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
 
 Rev. A finished board:
 ![Rev A Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
@@ -43,7 +42,7 @@ Rev. A finished board:
 The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
 
 # BPF performance
-Check the [test results](https://github.com/rfrht/SignalSurge/blob/Rev-C/rf-performance.md) page.
+Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
 
 ## BPF theoretical performance
 Here's the calculated theoretical filter performance, for VHF and UHF bands:
