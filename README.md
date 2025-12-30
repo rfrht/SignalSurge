@@ -47,12 +47,12 @@ Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-perfo
 ## BPF theoretical performance
 Here's the calculated theoretical filter performance, for VHF and UHF bands:
 
-![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/bpf-vhf.png)
-![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/bpf-uhf.png)
+![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
+![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf.png)
 
 # Amplifier performance (untested, theoretical)
 Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
-![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/bfp460-gain-fig.png)
+![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bfp460-gain-fig.png)
 
 # KNOWN ISSUES
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
