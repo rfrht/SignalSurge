@@ -102,6 +102,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 | LNA SW  | NC | - |
 
 # JOURNEY
+* Dec 30 - Refactored the coplanar waveguides (CPW)
 * Dec 29 - Changed layout of BPF section, separating inductors at 90° - Gemini said it's a good practice
 * Dec 28 - Reviewed the board layout, added descriptions to signal lines, refactored the detachable VHF BPF, fixed a pernicious board cut failure to render (it was my fault)
 * Dec 25 - Used Gemini to design a VHF BPF - which yielded pretty good results, *tips hat to AI*
