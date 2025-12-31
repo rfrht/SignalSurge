@@ -106,7 +106,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 * Dec 30 - Refactored the coplanar waveguides (CPW)
 * Dec 29 - Changed layout of BPF section, separating inductors at 90° - Gemini said it's a good practice
 * Dec 28 - Reviewed the board layout, added descriptions to signal lines, refactored the detachable VHF BPF, fixed a pernicious board cut failure to render (it was my fault)
-* Dec 25 - Used Gemini to design a VHF BPF - which yielded pretty good results, *tips hat to AI*
+* Dec 25 - [Used Gemini to design a VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/gemini-prompt.md) - which yielded pretty good results, *tips hat to AI*
 * Dec 25 - Starting Rev. C. 
 * Aug 31 - Tested the VHF BPF and it was way out of line. Shelved the project for a while.
 * Aug 31 - Added pulldown lines in comparators, routing change on the back of the board, unified logic ICs into SC70-5 footprint, updated BOM to add new pulldown resistors, better footprint for BFP460 and NCP553, fixed wrong 0.22µf part (it was 0.022µf) in BOM
