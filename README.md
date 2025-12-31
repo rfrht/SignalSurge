@@ -35,7 +35,8 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 # Board layout
 [Rev. C board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
 
-Rev. A finished board:
+Rev. B finished board:
+
 ![Rev A Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
 ### Why the large exposed pads around the BPF/LNA?
