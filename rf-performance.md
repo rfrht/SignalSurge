@@ -3,7 +3,7 @@ The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-ty
 
 ## Revision C
 ### VHF Filter
-Originally, this is the simulated filter performance, modulated by LTSpice:
+Originally, this is the simulated filter performance, modeled by LTSpice:
 ![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
 
 This is how the filter fared in the real world with a 10 MHz - 300 MHZ VNA sweep of the VHF BPF. It provides a very decent isolation for the lower bands, FM broadcast and other general out-of-band signals.
