@@ -4,15 +4,19 @@ The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-ty
 ## Revision C
 ### VHF Filter
 Originally, this is the simulated filter performance, modeled by LTSpice:
+
 ![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
 
 This is how the filter fared in the real world with a 10 MHz - 300 MHZ VNA sweep of the VHF BPF. It provides a very decent isolation for the lower bands, FM broadcast and other general out-of-band signals.
+
 ![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-25-10-300.png)
 
 This is a sweep of the 2m amateur band - I'm very satisfied with the result, with a low insertion loss (~1.7 dB'ish) and how the filter peaked around 145 MHz:
+
 ![2m VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-25-144-148.png)
 
 And this is a sweep in the broadcast band, which is my key pain- max -46 dB, min -29 dB of attenuation:
+
 ![FM Broadcast filter performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-25-76-108.png)
 
 ### UHF filter
