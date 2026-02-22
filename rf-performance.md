@@ -1,58 +1,50 @@
-# RF Performance
-The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-type bandpass filter, direct-coupled, Series Inductor. While Bessel filters are known for its slow-fall filter skirts, it preserves the signal phase and integrity.
+# Device under Test
+![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/dut.jpg)
 
-## Revision C
-### VHF Filter
+# Power Consumption
+The board consumes around 1.3 mA in TX mode, no loaded relays. Without the relays, in RX and activating the amplifier, the power consumption jumps to 10 mA. RX mode, no relays and no amp, the board consumes around 3 mA. The board has a PTC fuse set at 50 mA.
+
+# RF Performance
+The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-type bandpass filter, direct-coupled, Series Inductor.
+
+## VHF Filter
 Originally, this is the simulated filter performance, modeled by LTSpice:
 
 ![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
 
 This is how the filter fared in the real world with a 10 MHz - 300 MHZ VNA sweep of the VHF BPF. It provides a very decent isolation for the lower bands, FM broadcast and other general out-of-band signals.
 
-![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-25-10-300.png)
+![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-amp-noamp-2026-02-22-10-300.png)
 
 This is a sweep of the 2m amateur band - I'm very satisfied with the result, with a low insertion loss (~1.7 dB'ish) and how the filter peaked around 145 MHz:
 
-![2m VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-25-144-148.png)
+![2m VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-2m-2026-02-22-144-148.png)
 
-And this is a sweep in the broadcast band, which is my key pain- max -46 dB, min -29 dB of attenuation:
+And this is a sweep in the broadcast band, which is my key pain- max -46 dB, min -30 dB of attenuation:
 
-![FM Broadcast filter performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-25-76-108.png)
+![FM Broadcast filter performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-2m-2026-02-22-76-108.png)
 
-### UHF filter
-To be tested.
+## UHF filter
+Here is the Meraki projected filter performance:
+![Out of box UHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf.png)
 
-### Amplifier performance
-To be tested.
+And here is how the UHF filter delivered on a sweep from 300-600 MHz:
+![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-2026-02-22-300-600.png)
 
-## Revision A
-### VHF filter
-This is how the filter performed out-of-box:
-![OOB BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-oob-2025-03-13-120-150.png)
+## Isolation performance
+When the board is on TX or bypass mode, the amplifier is disabled, and there's a front-end RF switch right after the relay, adding extra signal isolation during transmission and high power voltages. This is the isolation figure during TX/Bypass mode. 10-500 MHz sweep.
 
-After further tweaking, the filter top gain was brought to the 2m band:
-![tuned-perf](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-tuned-2025-03-16-60-200.png)
+![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/isolation-2026-02-20-10-500.png)
 
-Zooming in on 2m band:
-![2m band](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-tuned-2025-03-16-144-148.png)
-
-This is how the filter fared on FM broadcast band:
-![fm bc performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-tuned-2025-03-16-80-120.png)
-
-And this is a sweep of RTL-SDR FM bandstop filter:
-![RTL-SDR FM VNA sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-rtlsdr-2025-03-16-80-120.png)
-
-Another sweep, putting the FM broadcast and 2m band in perspective:
-![VNA sweep with broadcast](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-amplified-2025-03-17-60-150.png)
-
-This is a wide sweep (1 MHz to 1 GHz). Notice another peak on 54 MHz. If I wanted to design a filter for both bands I'm positive I would't succeed :-P
-![filter performance, wide sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-tuned-2025-03-16-1-1000.png)
-
-Zooming in on 54 MHz peak (notice that this is not intended):
-![6m band performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-tuned-2025-03-16-40-60.png)
 
 ## Amplifier performance
-After following the Application Note, I wasn't able to get that linear sweep - instead it was **very** bumpy:
-![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/amp-broadband-performance-2025-03-17.png)
+Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
+![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bfp460-gain-fig.png)
 
-More to come.
+The filter delivered approx. 16 dB of gain, nicely, neatly and linearly. Check the results for VHF and UHF amplification:
+
+### VHF
+![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-amp-noamp-2026-02-22-10-300.png)
+
+### UHF
+![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-amp-noamp-2026-02-22-300-600.png)
