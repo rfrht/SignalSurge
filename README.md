@@ -15,8 +15,8 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 
 # Features
 * Two selectable amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
-* High performance and selectable [low noise 15 dB amplifier](#amplifier-performance-untested-theoretical) after the bandpass filter, adding some oomph to weak signals
-* The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage
+* High performance and selectable [low noise 15 dB amplifier](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
+* The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage. Also, contains a [RF switch completely isolating](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#isolation-performance) the low signal part of the board during the TX for added protection.
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB)
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
 * [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn't positioned
