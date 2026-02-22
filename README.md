@@ -16,7 +16,7 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 # Features
 * Two selectable amateur band (2m and 70 cm) [bandpass filter](#bpf-theoretical-performance) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
 * High performance and selectable [low noise 15 dB amplifier](#amplifier-performance-untested-theoretical) after the bandpass filter, adding some oomph to weak signals
-* The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line)
+* The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB)
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
 * [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn't positioned
@@ -33,11 +33,11 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/SS.pdf)
 
 # Board layout
-[Rev. C board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
+[Rev. D board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
 
 Rev. B finished board:
 
-![Rev A Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
+![Rev B Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
 ### Why the large exposed pads around the BPF/LNA?
 The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
@@ -45,64 +45,19 @@ The objective is to test an isolation layer, by covering the components with Kap
 # BPF performance
 Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
 
-## BPF theoretical performance
-Here's the calculated theoretical filter performance, for VHF and UHF bands:
+# Amplifier performance
+Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) page.
 
-![VHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
-![UHF BPF performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf.png)
-
-# Amplifier performance (untested, theoretical)
-Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
-![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bfp460-gain-fig.png)
+# Relay Logic
+Check the [relay logic](https://github.com/rfrht/SignalSurge/blob/main/others/relay-logic.md) page.
 
 # KNOWN ISSUES
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
-# RELAY LOGIC
-## BPF and Relay control
-### Truth table (NOR)
-| RADIO_TX | FORCE_BYPASS | Signal Level | Behavior |
-:---|---|---|---:
-| 0 | 0 | 1 | VIA BPF |
-| 0 | 1 | 0 | BYPASS |
-| 1 | 0 | 0 | BYPASS |
-| 1 | 1 | 0 | BYPASS |
-
-### RX/Via BPF states:
-| Circuit | Connected to  | Power |
-:---------|---------------|--------:
-| Relays  | NO | + |
-| Isolation | NO | + |
-
-### TX/Bypass states:
-| Circuit | Connected to  | Power |
-:---------|---------------|--------:
-| Relays  | NC | - |
-| Isolation | NC | - |
-
-## LNA 
-### Truth Table (AND)
-| BPF_ON | LNA_ON | Signal Level | Behavior |
-:---|---|---|---:
-| 0 | 0 | 0 | OFF |
-| 0 | 1 | 0 | OFF |
-| 1 | 0 | 0 | OFF |
-| 1 | 1 | 1 | ON |
-
-### LNA On
-| Circuit | Connected to  | Power |
-:---------|---------------|--------:
-| V.REG.  | EN | + |
-| LNA SW  | NO | + |
-
-
-### LNA Off
-| Circuit | Connected to  | Power |
-:---------|---------------|--------:
-| V.REG.  | EN | - |
-| LNA SW  | NC | - |
-
 # JOURNEY
+* Feb 22 - Pushing Rev. D
+* Feb 20 - Finished BPF and LNA tests
+* Feb/2026 - Got the Rev. C boards
 * Dec 30 - Refactored the coplanar waveguides (CPW)
 * Dec 29 - Changed layout of BPF section, separating inductors at 90° - Gemini said it's a good practice
 * Dec 28 - Reviewed the board layout, added descriptions to signal lines, refactored the detachable VHF BPF, fixed a pernicious board cut failure to render (it was my fault)
@@ -120,6 +75,7 @@ Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-tr
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
+* Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pins, small tweak in UHF filter (caps changed to 20 pF)
 * Rev. C: New VHF BPF topology, added a test UHF BPF on the back of the board, improved the LNA board layout, fixed capacitor pads (was too small)
 * Rev. B: Added test points, changed connectors to SMA (big signal) and U.FL (small signal and test)
 * Rev. A: Initial release
