@@ -30,7 +30,7 @@ Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/m
 Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/SignalSurge/blob/main/others/SS.csv). Notice that there's a full RF Inductor and Capacitor kit specified in the BOM - and that is **costly**. If you have the suitable RF L/C components, fine! Otherwise (like me), buy a proper one.
 
 # Schematic: 
-![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/SS.pdf)
+![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 # Board layout
 [Rev. D board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
