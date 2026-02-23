@@ -10,11 +10,11 @@ The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-ty
 ## VHF Filter
 Originally, this is the simulated filter performance, modeled by LTSpice:
 
-![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
+![Theoretical VHF filter](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
 
 This is how the filter fared in the real world with a 10 MHz - 300 MHZ VNA sweep of the VHF BPF. It provides a very decent isolation for the lower bands, FM broadcast and other general out-of-band signals. The bold superior line is the actual filter performance with the amplifier on. Lower line, no amp.
 
-![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-amp-noamp-2026-02-22-10-300.png)
+![Out of box VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-amp-noamp-2026-02-22-10-300.png)
 
 This is a sweep of the 2m amateur band - I'm very satisfied with the result, with a low insertion loss (~1.7 dB'ish) and how the filter peaked around 145 MHz:
 
@@ -31,12 +31,16 @@ Here is the Meraki projected filter performance:
 
 And here is what the UHF filter delivered on a sweep from 300-600 MHz:
 
-![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-2026-02-22-300-600.png)
+![Larger UHF sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-2026-02-22-300-600.png)
+
+Zooming on UHF range, you can see the highest gain range at the end of the band - which is my region of interest, the repeater output at 439 MHz.
+
+![70 cm band VNA sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-70cm-2026-02-22-430-440.png)
 
 ## Isolation performance
 When the board is on TX or bypass mode, the amplifier is disabled, and there's a front-end RF switch right after the relay, adding extra signal isolation during transmission and high power voltages. This is the isolation figure during TX/Bypass mode. 10-500 MHz sweep.
 
-![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/isolation-2026-02-20-10-500.png)
+![Isolation performance from RF switches](https://github.com/rfrht/SignalSurge/blob/main/others/test/isolation-2026-02-20-10-500.png)
 
 
 ## Amplifier performance
