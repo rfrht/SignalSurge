@@ -30,3 +30,58 @@
 If you have any further questions, get in touch or file an issue.
 
 Yea, it would be just easier if you bought that 300 EUR filter ;-)
+
+# Specifications
+## Power
+* 1.3 mA in TX mode, no loaded relays.
+* Without the relays, in RX and activating the amplifier, the power consumption jumps to 10 mA.
+* RX mode, no relays and no amp, the board consumes around 3 mA.
+* The board has a PTC fuse rated 50 mA.
+
+## Signal routing
+### RX
+* The signal enters the SMA Antenna connector
+* Enters the first Axicom HF3 relay, duly protected by 1N4148 flywheel
+* Finds a Eaton TVS PolySurg surge protector
+* Static draining via a 1 kohm and 1000 µH inductor
+* Encounters a 390 pF decoupling capacitor
+* First `IS` RF switch, pSemi 4259-63 (all of them are the same model). When in TX mode, any incoming signal is shunted to ground. In RX, move forward.
+* `INP` u.FL test port
+* Second RF switch, selects between VHF or UHF bandpass filter
+* Third RF switch, the exit section from the bandpass filter
+* `BPF-O` test port
+* Fourth RF switch, selects between the LNA section or bypass it, no amplification
+* Fifth RF switch, LNA/bypass exit
+* `AMP-O` test port
+* Sixth RF switch, another relay isolation. When in TX, shunted to ground. In RX, move forward
+* Second Axicom HF3 relay, duly protected by 1N4148 flywheel
+* Exit to radio port via SMA connector
+
+### TX
+* The signal enters the board via the SMA Radio connector
+* Enters the first Axicom HF3 relay, duly protected by 1N4148 flywheel
+* The signal is moved to the second Axicom HF3 relay, duly protected by 1N4148 flywheel
+* Exit to the antenna
+* The `IS` RF switches are shunted to ground.
+* The amplifier is de-energized by pulling off the `ENABLE` line from the 5V voltage regulator
+
+## Radio Frequency Performance
+### VHF
+All data, except when noted otherwise, are with amplifier off. Data measured after traversing the full signal chain.
+* Start of band gain: 144 MHz, -5.8 dB
+* Best gain: 146.5 MHz, -4.7 dB
+* End of band gain: 148 MHz, -5.1 dB
+
+#### FM Broadcast rejection
+* 76 MHz: -55 dB
+* 108 MHz: -33 dB
+
+#### Amplifier gain:
+* Add 16 dB to the numbers.
+
+### UHF
+* Start of band gain: 430 MHz, -12.2 dB
+* End of band gain: 440 MHz, -7.5 dB
+
+#### Amplifier gain:
+* Add 16 dB to the numbers.
