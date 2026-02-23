@@ -1,23 +1,23 @@
 # Test sequence
 ![Board picture - test sequence](https://github.com/rfrht/SignalSurge/blob/main/others/test-sequence.jpg)
 
-* Start soldering the highlighted u.FL connectors and the VHF/UHF BPF discretes ONLY.
+* Start soldering the highlighted u.FL connectors and the VHF/UHF BPF **discretes (caps & inductors) only**. Do not solder the RF switch yet.
 
-* Then, inject signal at u.FL connector `1` (marked `INP`) and measure S21 with port `2` (marked `BPF-O`). Do it BEFORE installing the RF switch, add some bodge wire to manually switch the VHF and UHF filters to establish a corretly working BPF.
+* Then, inject signal at u.FL connector `1` (marked `INP`) and measure S21 with port `2` (marked `BPF-O`). Add some bodge wire at the RF swich footprint (requires good eyes and hands)  to manually switch the VHF and UHF filters to establish a correctly working BPF.
 
-* Next up, solder the voltage regulation session and ensure that you have a valid 3V output at test point `TP3V`. Solder all the components on the `VHF` input line and the 13.8V fuse/choke/1000pF cap. Do the finger test and ensure that your fuse isn't overheating.
+* Next up, solder the voltage regulation section and ensure that you have a valid 3V output at test point `TP3V`. Solder all the components on the `VHF` input line and the 13.8V fuse/choke/1000pF cap. Do the finger test and ensure that the fuse isn't overheating.
 
 * Then, solder the RF switches of the BPF section and test points 1 and 2 again. Inject 3V in pin `VHF` and ensure that you don't have significant losses between `INP` and `BPF-O`, and of course, establish a working RF switch, checking the band of interest performance for each test points.
 
-* Now, solder the `LNA` section and the remaining ancillary circuits: `LNA CTRL` and `RELAY CTRL`. DO NOT solder the `SW-IS` isolation rf switches. When powering up, ensure that your fuse isn't heading with your digital body temperature sensor. 
+* Now, solder the `LNA` section and the remaining ancillary circuits: `LNA CTRL` and `RELAY CTRL`. DO NOT solder the `SW-IS` isolation rf switches. When powering up, ensure that the fuse isn't heating with your digital body temperature sensor. 
 
 * Now, inject signal on `BPF-O` and ensure that you are obtaining a good signal at the connector `3` (marked `AMP-O`) on amp off (no connection) and ~15 dB of gain when 3V feeding on `AMP_ON` pin.
 
 * Moving further, solder the `SW-IS` RF switches, the 390 pF decoupling between `1` and `4` and the static/mitigation components. 
 
-* Test points 4 and 5 aren't marked, but the relay footprint is just PERFECT to solder a u.FL connector. Notice the small TVS near to connector `5`.
+* Test points `4` and `5` aren't marked, but the relay footprint is just PERFECT to solder a u.FL connector. Notice the small TVS near to connector `5`.
 
-* Inject signal between test points `4` and `5` (the signal input when measuring S21 should be at `4`). Measure again your gain and when the amplifier is disconnected.
+* Inject signal between test points `4` and `5` (the signal input when measuring S21 should be at `4`). Measure again your gain with the amplified turned off.
 
 * When grounding `TX_GND`, all relays should be off, the `IS` RF switches will isolate. The same result is yielded when feeding 3V to the `BYPASS` port.
 
@@ -48,6 +48,7 @@ Yea, it would be just easier if you bought that 300 EUR filter ;-)
 * First `IS` RF switch, pSemi 4259-63 (all of them are the same model). When in TX mode, any incoming signal is shunted to ground. In RX, move forward.
 * `INP` u.FL test port
 * Second RF switch, selects between VHF or UHF bandpass filter
+* Enters the selected BPF
 * Third RF switch, the exit section from the bandpass filter
 * `BPF-O` test port
 * Fourth RF switch, selects between the LNA section or bypass it, no amplification
