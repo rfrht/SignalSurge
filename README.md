@@ -42,16 +42,13 @@ Rev. B finished board:
 ### Why the large exposed pads around the BPF/LNA?
 The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
 
-# BPF performance
+# BPF & Amplifier performance
 Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
-
-# Amplifier performance
-Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) page.
 
 # Relay Logic
 Check the [relay logic](https://github.com/rfrht/SignalSurge/blob/main/others/relay-logic.md) page.
 
-# Test & troubleshooting steps
+# Test, troubleshooting steps & Specs
 Yes - I have provided a [step by step testing and troubleshooting](https://github.com/rfrht/SignalSurge/blob/main/others/testing.md) guide!
 
 # KNOWN ISSUES
