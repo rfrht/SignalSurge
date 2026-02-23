@@ -7,9 +7,9 @@
 
 * Next up, solder the voltage regulation session and ensure that you have a valid 3V output at test point `TP3V`. Solder all the components on the `VHF` input line and the 13.8V fuse/choke/1000pF cap. Do the finger test and ensure that your fuse isn't overheating.
 
-* Then, solder the RF switches of the BPF section and test points 1 and 2 again. Inject 3V in pin `VHF` and ensure that you don't have significant losses between `INP and `BPF-O`, and of course, establish a working RF switch, checking the band of interest performance for each test points.
+* Then, solder the RF switches of the BPF section and test points 1 and 2 again. Inject 3V in pin `VHF` and ensure that you don't have significant losses between `INP` and `BPF-O`, and of course, establish a working RF switch, checking the band of interest performance for each test points.
 
-* Now, solder the `LNA` section and the remaining ancillary circuits: `LNA CTRL` and `RELAY CTRL. DO NOT solder the `SW-IS` isolation rf switches. When powering up, ensure that your fuse isn't heading with your digital body temperature sensor. 
+* Now, solder the `LNA` section and the remaining ancillary circuits: `LNA CTRL` and `RELAY CTRL`. DO NOT solder the `SW-IS` isolation rf switches. When powering up, ensure that your fuse isn't heading with your digital body temperature sensor. 
 
 * Now, inject signal on `BPF-O` and ensure that you are obtaining a good signal at the connector `3` (marked `AMP-O`) on amp off (no connection) and ~15 dB of gain when 3V feeding on `AMP_ON` pin.
 
@@ -29,4 +29,4 @@
 
 If you have any further questions, get in touch or file an issue.
 
-Yea, you should have bought that 300 EUR filter ;-)
+Yea, it would be just easier if you bought that 300 EUR filter ;-)
