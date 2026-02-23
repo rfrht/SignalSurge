@@ -51,6 +51,9 @@ Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-perfo
 # Relay Logic
 Check the [relay logic](https://github.com/rfrht/SignalSurge/blob/main/others/relay-logic.md) page.
 
+# Test & troubleshooting steps
+Yes - I have provided a [step by step testing and troubleshooting](https://github.com/rfrht/SignalSurge/blob/main/others/testing.md) guide!
+
 # KNOWN ISSUES
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
