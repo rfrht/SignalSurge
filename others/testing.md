@@ -34,8 +34,8 @@ Yea, it would be just easier if you bought that 300 EUR filter ;-)
 # Specifications
 ## Power
 * 1.3 mA in TX mode, no loaded relays.
-* Without the relays, in RX and activating the amplifier, the power consumption jumps to 10 mA.
-* RX mode, no relays and no amp, the board consumes around 3 mA.
+* RX mode (relays on) and activating the amplifier, the power consumption jumps to 39 mA.
+* RX mode, no relays (`BYPASS` mode) and no amp, the board consumes around 3 mA.
 * The board has a PTC fuse rated 50 mA.
 
 ## Signal routing
@@ -68,12 +68,11 @@ Yea, it would be just easier if you bought that 300 EUR filter ;-)
 
 ## Radio Frequency Performance
 ### VHF
-All data, except when noted otherwise, are with amplifier off. Data measured after traversing the full signal chain.
-* Start of band gain: 144 MHz, -5.8 dB
-* Best gain: 146.5 MHz, -4.7 dB
-* End of band gain: 148 MHz, -5.1 dB
+All data, except when noted otherwise, are with amplifier off. Data measured after traversing the full signal chain, from SMA-to-SMA.
+* Start of band gain: 144 MHz, -6.3 dB
+* End of band gain: 148 MHz, -4 dB
 
-#### FM Broadcast rejection
+#### FM Broadcast rejection (in VHF mode)
 * 76 MHz: -55 dB
 * 108 MHz: -33 dB
 
@@ -81,8 +80,9 @@ All data, except when noted otherwise, are with amplifier off. Data measured aft
 * Add 16 dB to the numbers.
 
 ### UHF
-* Start of band gain: 430 MHz, -12.2 dB
-* End of band gain: 440 MHz, -7.5 dB
+* Start of band gain: 430 MHz, -10.6 dB
+* Peak frequency and gain: 437 MHz, -9.2 dB
+* End of band gain: 440 MHz, -9.6 dB
 
 #### Amplifier gain:
 * Add 16 dB to the numbers.

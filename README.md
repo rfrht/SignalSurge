@@ -55,6 +55,8 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
 # JOURNEY
+* Feb 28 - Found the need of a pulldown resistor in the VHF switch line. Refactored the CPW between the relays, hoping this tackle the high VSWR in 70 cm band.
+* Feb 27 - Finished the board soldering, added the relays and SMA connectors. First back-to-back gain tests. First VSWR tests.
 * Feb 22 - Pushing Rev. D
 * Feb 20 - Finished BPF and LNA tests
 * Feb/2026 - Got the Rev. C boards
@@ -75,7 +77,7 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
-* Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pins, small tweak in UHF filter (caps changed to 20 pF)
+* Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pin order, small tweak in UHF filter (caps changed to 20 pF). Added pulldown to VHF switch line. Rounded bypass CPW layout. Extra silkscreen. Removed exposed pads for shielding (might capacity couple with the components)
 * Rev. C: New VHF BPF topology, added a test UHF BPF on the back of the board, improved the LNA board layout, fixed capacitor pads (was too small)
 * Rev. B: Added test points, changed connectors to SMA (big signal) and U.FL (small signal and test)
 * Rev. A: Initial release

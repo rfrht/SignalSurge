@@ -2687,12 +2687,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="L15" library="aarf" deviceset="L-0805" device="" value="56nH"/>
 <part name="L16" library="aarf" deviceset="L-0805" device="" value="5.6nH"/>
 <part name="L17" library="aarf" deviceset="L-0805" device="" value="5.6nH"/>
-<part name="X6" library="adafruit" deviceset="ANTENNA_U.FL" device=""/>
-<part name="X7" library="adafruit" deviceset="ANTENNA_U.FL" device=""/>
+<part name="X2B" library="adafruit" deviceset="ANTENNA_U.FL" device=""/>
+<part name="X2A" library="adafruit" deviceset="ANTENNA_U.FL" device=""/>
 <part name="GND42" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R14" library="aarf" deviceset="R-1206" device="" value="100kΩ"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R17" library="aarf" deviceset="R-1206" device="" value="100kΩ"/>
+<part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3262,11 +3264,11 @@ ISOLATION</text>
 <attribute name="NAME" x="346.964" y="48.006" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="345.694" y="52.578" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="X6" gate="G$1" x="358.14" y="45.72" smashed="yes" rot="R180">
+<instance part="X2B" gate="G$1" x="358.14" y="45.72" smashed="yes" rot="R180">
 <attribute name="NAME" x="360.68" y="42.418" size="1.27" layer="95" rot="R180"/>
 <attribute name="VALUE" x="360.68" y="55.88" size="1.27" layer="96" rot="R180"/>
 </instance>
-<instance part="X7" gate="G$1" x="292.1" y="45.72" smashed="yes" rot="MR180">
+<instance part="X2A" gate="G$1" x="292.1" y="45.72" smashed="yes" rot="MR180">
 <attribute name="NAME" x="289.56" y="42.418" size="1.27" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="289.56" y="55.88" size="1.27" layer="96" rot="MR180"/>
 </instance>
@@ -3277,6 +3279,11 @@ ISOLATION</text>
 <attribute name="VALUE" x="94.234" y="97.282" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND13" gate="1" x="99.06" y="88.9" smashed="yes"/>
+<instance part="R17" gate="G$1" x="91.44" y="78.74" smashed="yes" rot="R180">
+<attribute name="NAME" x="93.218" y="77.2414" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="94.234" y="82.042" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND44" gate="1" x="83.82" y="73.66" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -3543,12 +3550,16 @@ ISOLATION</text>
 <junction x="175.26" y="177.8"/>
 <pinref part="FB5" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="177.8" x2="101.6" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="177.8" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
 <label x="101.6" y="129.54" size="1.778" layer="95" rot="R270" xref="yes"/>
 <label x="71.12" y="71.12" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="TP-VHF-ON" gate="G$1" pin="TP"/>
+<wire x1="101.6" y1="78.74" x2="101.6" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="208.28" x2="231.14" y2="205.74" width="0.1524" layer="91"/>
 <junction x="231.14" y="205.74"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="78.74" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
+<junction x="101.6" y="78.74"/>
 </segment>
 </net>
 <net name="LNA_ON" class="0">
@@ -4304,23 +4315,23 @@ ISOLATION</text>
 <wire x1="360.68" y1="76.2" x2="360.68" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X7" gate="G$1" pin="GND@1"/>
+<pinref part="X2A" gate="G$1" pin="GND@1"/>
 <pinref part="GND43" gate="1" pin="GND"/>
 <wire x1="289.56" y1="53.34" x2="287.02" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="53.34" x2="286.004" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="286.004" y1="53.34" x2="286.004" y2="47.752" width="0.1524" layer="91"/>
-<pinref part="X7" gate="G$1" pin="GND@0"/>
+<pinref part="X2A" gate="G$1" pin="GND@0"/>
 <wire x1="289.56" y1="50.8" x2="287.02" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="50.8" x2="287.02" y2="53.34" width="0.1524" layer="91"/>
 <junction x="287.02" y="53.34"/>
 </segment>
 <segment>
-<pinref part="X6" gate="G$1" pin="GND@0"/>
+<pinref part="X2B" gate="G$1" pin="GND@0"/>
 <pinref part="GND42" gate="1" pin="GND"/>
 <wire x1="360.68" y1="50.8" x2="365.76" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="50.8" x2="367.284" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="367.284" y1="50.8" x2="367.284" y2="47.752" width="0.1524" layer="91"/>
-<pinref part="X6" gate="G$1" pin="GND@1"/>
+<pinref part="X2B" gate="G$1" pin="GND@1"/>
 <wire x1="360.68" y1="53.34" x2="365.76" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="53.34" x2="365.76" y2="50.8" width="0.1524" layer="91"/>
 <junction x="365.76" y="50.8"/>
@@ -4330,6 +4341,12 @@ ISOLATION</text>
 <pinref part="GND13" gate="1" pin="GND"/>
 <wire x1="96.52" y1="93.98" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="93.98" x2="99.06" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="78.74" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="GND44" gate="1" pin="GND"/>
+<wire x1="83.82" y1="78.74" x2="83.82" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BLEED" class="0">
@@ -4570,7 +4587,7 @@ ISOLATION</text>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="X7" gate="G$1" pin="SIGNAL"/>
+<pinref part="X2A" gate="G$1" pin="SIGNAL"/>
 <pinref part="L15" gate="G$1" pin="1"/>
 <wire x1="297.18" y1="45.72" x2="298.704" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="298.704" y1="45.72" x2="298.704" y2="47.752" width="0.1524" layer="91"/>
@@ -4578,7 +4595,7 @@ ISOLATION</text>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="X6" gate="G$1" pin="SIGNAL"/>
+<pinref part="X2B" gate="G$1" pin="SIGNAL"/>
 <wire x1="353.06" y1="45.72" x2="349.504" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="L14" gate="G$1" pin="2"/>
 <wire x1="349.504" y1="45.72" x2="349.504" y2="47.752" width="0.1524" layer="91"/>

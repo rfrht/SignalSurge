@@ -2,7 +2,7 @@
 ![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/dut.jpg)
 
 # Power Consumption
-The board consumes around 1.3 mA in TX mode, no loaded relays. Without the relays, in RX and activating the amplifier, the power consumption jumps to 10 mA. RX mode, no relays and no amp, the board consumes around 3 mA. The board has a PTC fuse set at 50 mA.
+The board consumes around 1.3 mA in TX mode, no loaded relays. In RX mode (relays on) and activating the amplifier, the power consumption jumps to around 40 mA. RX mode, no relays and no amp, the board consumes around 3 mA. The board has a PTC fuse set at 50 mA.
 
 # RF Performance
 The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-type bandpass filter, direct-coupled, Series Inductor.
@@ -36,6 +36,38 @@ And here is what the UHF filter delivered on a sweep from 300-600 MHz:
 Zooming on UHF range, you can see the highest gain range at the end of the band - which is my region of interest, the repeater output at 439 MHz.
 
 ![70 cm band VNA sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-70cm-2026-02-22-430-440.png)
+
+## Gain and VSWR, end-to-end (SMA-to-SMA)
+### VSWR figures
+The VSWR tests were performed by injecting signal in `ANTENNA` SMA connector and terminating with a 50 ohm load at the `RADIO` SMA port. 
+
+![60-500 MHz VSWR sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/vswr-60-500.png)
+
+This is a VSWR sweep from 60 to 500 MHz (Revision C).
+
+![2m amateur band VSWR sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/vswr-144-148.png)
+
+The above image is the VSWR performance in 2m (VHF) amateur band.
+
+![70cm amateur band VSWR sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/vswr-430-440.png)
+
+The above image is the VSWR performance in 70cm (UHF) amateur band.
+
+
+### Gain figures
+The gain figures were measured by the VNA in S21 mode, injecting signal (Port 1) in `ANTENNA` SMA connector and the receiving (Port 2) in `RADIO` connector.
+
+#### VHF, no amplifier
+![VHF gain, end to end, no amplifier](https://github.com/rfrht/SignalSurge/blob/main/others/test/e2e-2m-amp-off.png)
+
+#### VHF, amplified
+![VHF gain, end to end, amplifier on](https://github.com/rfrht/SignalSurge/blob/main/others/test/e2e-2m-amp-on.png)
+
+#### UHF, no amplifier
+![UHF gain, end to end, no amplifier](https://github.com/rfrht/SignalSurge/blob/main/others/test/e2e-70cm-amp-off.png)
+
+#### UHF, amplified
+![UHF gain, end to end, amplifier on](https://github.com/rfrht/SignalSurge/blob/main/others/test/e2e-70cm-amp-on.png)
 
 ## Isolation performance
 When the board is on TX or bypass mode, the amplifier is disabled, and there's a front-end RF switch right after the relay, adding extra signal isolation during transmission and high power voltages. This is the isolation figure during TX/Bypass mode. 10-500 MHz sweep.
