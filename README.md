@@ -17,7 +17,7 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * Two selectable amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#vhf) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
 * High performance and selectable [low noise 15 dB amplifier](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
 * The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage. 
-* Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB). On top of it, also contains a [RF switch isolating](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#isolation-performance) the small signal part of the board during the TX for added protection.
+* Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB).
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
 * [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn't positioned
 * Static bleeding and small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
@@ -55,6 +55,7 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
 # JOURNEY
+* Mar 19 - Removed two unneeded RF switches at the front-end: extra cost, complexity and insertion loss - unnecessarily, as the RF stage is handsomely isolated - and powered off during high power operations.
 * Feb 28 - Found the need of a pulldown resistor in the VHF switch line. Refactored the CPW between the relays, hoping this tackle the high VSWR in 70 cm band.
 * Feb 27 - Finished the board soldering, added the relays and SMA connectors. First back-to-back gain tests. First VSWR tests.
 * Feb 22 - Pushing Rev. D
@@ -77,7 +78,7 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
-* Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pin order, small tweak in UHF filter (caps changed to 20 pF). Added pulldown to VHF switch line. Rounded bypass CPW layout. Extra silkscreen. Removed exposed pads for shielding (might capacitive couple with the components)
+* Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pin order, small tweak in UHF filter (caps changed to 20 pF). Added pulldown to VHF switch line. Rounded bypass CPW layout. Extra silkscreen. Removed exposed pads for shielding (might capacitive couple with the components). Removed unnecessary RF switches at the front-end.
 * Rev. C: New VHF BPF topology, added a test UHF BPF on the back of the board, improved the LNA board layout, fixed capacitor pads (was too small)
 * Rev. B: Added test points, changed connectors to SMA (big signal) and U.FL (small signal and test)
 * Rev. A: Initial release
