@@ -55,6 +55,9 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
 # JOURNEY
+* May 04 - Replaced 3V regulator (was above its maximum rated) with a MIC5205. Removed a pulldown resistor in VHF line. Unified pulldowns on 10k and pulled lines limiters at 1k. Removed a pulldown between the NOR and AND logic ICs.
+* May 03 - Vibe-coded a new UHF filter with Gemini. Refactored the board, the filters, waveguides, soldermask, signal path.
+* May 01 - Starting Revision E. Vibe-coded a new VHF filter with Gemini.
 * Mar 19 - Removed two unneeded RF switches at the front-end: extra cost, complexity and insertion loss - unnecessarily, as the RF stage is handsomely isolated - and powered off during high power operations.
 * Feb 28 - Found the need of a pulldown resistor in the VHF switch line. Refactored the CPW between the relays, hoping this tackle the high VSWR in 70 cm band.
 * Feb 27 - Finished the board soldering, added the relays and SMA connectors. First back-to-back gain tests. First VSWR tests.
@@ -78,6 +81,7 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
+* Rev. E: Complete rewrite of VHF BPF to a proper 3-pole, improved UHF filter performance significantly, implemented a proper 50 ohm GCPW setup, re-added soldermask into the signal path, added a two-pole and three-pole test pad at the back of the board. Fixed u.FL connectors lacking connection to ground in one side. Added keep-out zones for inductors. Replaced the 3V regulator. Separated the top ground plane on north/south: The north (RF) section doesn't have any thermal relief in GND pads. The south (ancillary) section contains thermal relief GND pads.
 * Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pin order, small tweak in UHF filter (caps changed to 20 pF). Added pulldown to VHF switch line. Rounded bypass CPW layout. Extra silkscreen. Removed exposed pads for shielding (might capacitive couple with the components). Removed unnecessary RF switches at the front-end.
 * Rev. C: New VHF BPF topology, added a test UHF BPF on the back of the board, improved the LNA board layout, fixed capacitor pads (was too small)
 * Rev. B: Added test points, changed connectors to SMA (big signal) and U.FL (small signal and test)
