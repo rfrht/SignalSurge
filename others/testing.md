@@ -84,3 +84,40 @@ All data, except when noted otherwise, are with amplifier off. Data measured aft
 
 #### Amplifier gain:
 * Add 16 dB to the numbers.
+
+## SPECIFICATIONS
+
+**Overview**
+The SignalSurge Rev. E is a high-performance, safe RF front-end and pre-selector designed to sit inline between a transceiver (e.g., Yaesu FT-991A) and the antenna system. It provides high-Q bandpass filtering, low-noise amplification, and an isolated 50-Watt hardware bypass.
+
+**RF Path & Switching**
+* **Architecture:** 50-ohm Coplanar Waveguide over Ground (GCPW) on 1.6 mm FR4.
+* **Master T/R Switching:** TE Connectivity HF3 Mechanical Relays (~80 dB isolation).
+* **Internal Routing:** pSemi PE4259 Solid-State RF Switches (0.5 dB insertion loss).
+* **High-Power Bypass:** 1.5 mm GCPW traces capable of handling 50 Watts RF without heating.
+* **Fail-Safe Routing:** Hardware logic defaults relays to the NC (Normally Closed) 50W Bypass path upon power loss or transmission.
+
+**Filtering (Pre-Selectors)**
+* **Topology:** 2-Pole, Capacitively Top-Coupled Bandpass Filters.
+* **VHF Band (146 MHz):** High-Q wirewound inductors (68 nH) with orthogonal placement and ground-plane keep-outs to eliminate parasitic coupling.
+* **UHF Band (439 MHz):** VNA-tuned tank circuit (8.2 nH / 8.2 pF) optimized for maximum out-of-band rejection and minimal insertion loss.
+
+**Active Stage (Low Noise Amplifier)**
+* **Component:** Infineon BFP460 SiGe RF Transistor.
+* **Topology:** Broadband Resistive-Feedback network for unconditional stability across VHF/UHF.
+* **Gain:** ~13 to 15 dB (damped for optimal dynamic range and receiver overload protection).
+* **Biasing:** Highly linear voltage-collector feedback operating at ~4.5 mA / 3.0V ($V_{CE}$).
+
+**Logic & Control**
+* **Control Core:** SN74AHC CMOS Logic (AND/NOR interlocking).
+* **Trigger Levels:** 3V logic thresholds with 1k series / 10k pulldown RFI filtering on all external jumper inputs.
+* **Inputs:** Radio TX (Ground-to-TX via MMBTRA104SS pre-biased PNP), Force Bypass (3V), LNA Enable (3V), Band Select (3V).
+* **Relay Drivers:** UMD5N Dual Digital Transistor (High-Side switching configuration).
+
+**Power & Protection**
+* **Input Power:** 13.8V DC (Fused via 100 mA PTC).
+* **Regulation:** MIC5205 3.0V LDO (16V Max Input) for logic; TCR1HF50 5.0V LDO for the LNA.
+* **ESD Protection:** Eaton 0603ESDA-TR2 Polymer TVS Diodes (0.05 pF ultra-low capacitance) on the RX path.
+* **Static Bleed:** Continuous precipitation static drain via 1000 µH / 1k resistor network.
+* **Transient Protection:** Snubbed flyback catch diode (1N4148 + 0.1 µF) shunted to ground on the relay coils to protect logic from -200V inductive spikes.
+* **Radio Protection:** TX Inhibit line to avoid radio transmission if the relays aren't properly positioned.
