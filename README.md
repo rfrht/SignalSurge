@@ -33,14 +33,11 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 # Board layout
-[Rev. D board layout](https://github.com/rfrht/SignalSurge/blob/main/others/SS.png)
+[Rev. C populated board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board-finished.jpg)
 
-Rev. B finished board:
+Rev. E blank:
 
-![Rev B Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
-
-### Why the large exposed pads around the BPF/LNA?
-The objective is to test an isolation layer, by covering the components with Kapton tape and covering it with copper tape, to mitigate external interferences.
+![Rev E Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
 # BPF & Amplifier performance
 Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
@@ -55,9 +52,10 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
 # JOURNEY
-* May 04 - Replaced 3V regulator (was above its maximum rated) with a MIC5205. Removed a pulldown resistor in VHF line. Unified pulldowns on 10k and pulled lines limiters at 1k. Removed a pulldown between the NOR and AND logic ICs.
-* May 03 - Vibe-coded a new UHF filter with Gemini. Refactored the board, the filters, waveguides, soldermask, signal path.
-* May 01 - Starting Revision E. Vibe-coded a new VHF filter with Gemini.
+* May 28 - Fixed a gross error where a via shorted the VHF BPF final coupling stage. Removed ground pad on inductors at the detachable VHF BPF. Improved the radio signal trace at the first RF relay input. Updated component values for the 3-pole VHF filter (*in vivo* performed differently than the *in vitro*)
+* May 04 - Replaced 3V regulator (was above its maximum rated) with a MIC5205. Removed a pulldown resistor in VHF line. Unified pulldowns on 10k and pulled lines limiters at 1k. Removed a pulldown between the NOR and AND logic ICs
+* May 03 - Vibe-coded a new UHF filter with Gemini. Refactored the board, the filters, waveguides, soldermask, signal path
+* May 01 - Starting Revision E. Vibe-coded a new VHF filter with Gemini
 * Mar 19 - Removed two unneeded RF switches at the front-end: extra cost, complexity and insertion loss - unnecessarily, as the RF stage is handsomely isolated - and powered off during high power operations.
 * Feb 28 - Found the need of a pulldown resistor in the VHF switch line. Refactored the CPW between the relays, hoping this tackle the high VSWR in 70 cm band.
 * Feb 27 - Finished the board soldering, added the relays and SMA connectors. First back-to-back gain tests. First VSWR tests.

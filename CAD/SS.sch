@@ -2550,7 +2550,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </library>
 </libraries>
 <attributes>
-<attribute name="REVISION" value="E"/>
+<attribute name="REVISION" value="E1"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -2570,10 +2570,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SW_BPF-OUT" library="aarf" deviceset="PE4259" device="" value="PE4259"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
 <part name="L1" library="aarf" deviceset="L-0805" device="" value="56nH"/>
-<part name="L2" library="aarf" deviceset="L-0805" device="" value="56nH"/>
+<part name="L2" library="aarf" deviceset="L-0805" device="" value="47nH"/>
 <part name="L3" library="aarf" deviceset="L-0805" device="" value="56nH"/>
-<part name="C1" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
-<part name="C2" library="aarf" deviceset="C-0805" device="" value="15pF"/>
+<part name="C1" library="aarf" deviceset="C-0805" device="" value="5.6pF"/>
+<part name="C2" library="aarf" deviceset="C-0805" device="" value="11.5pF"/>
 <part name="C34" library="aarf" deviceset="C-0805" device="" value="1.5pF"/>
 <part name="C35" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
 <part name="C6" library="aarf" deviceset="C-0805" device="" value="8.2pF"/>
@@ -2672,8 +2672,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="5V" library="aarf" deviceset="JUMPER-1" device="" value="5V"/>
 <part name="3V" library="aarf" deviceset="JUMPER-1" device="" value="3V"/>
 <part name="C3" library="aarf" deviceset="C-0805" device="" value="18pF"/>
-<part name="C4" library="aarf" deviceset="C-0805" device="" value="15pF"/>
-<part name="C5" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
+<part name="C4" library="aarf" deviceset="C-0805" device="" value="11.5pF"/>
+<part name="C5" library="aarf" deviceset="C-0805" device="" value="5.6pF"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -2699,13 +2699,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R15" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="GND38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="L4" library="aarf" deviceset="L-0805" device="" value="56nH"/>
-<part name="L5" library="aarf" deviceset="L-0805" device="" value="56nH"/>
+<part name="L5" library="aarf" deviceset="L-0805" device="" value="47nH"/>
 <part name="L12" library="aarf" deviceset="L-0805" device="" value="56nH"/>
-<part name="C26" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
-<part name="C27" library="aarf" deviceset="C-0805" device="" value="15pF"/>
+<part name="C26" library="aarf" deviceset="C-0805" device="" value="5.6pF"/>
+<part name="C27" library="aarf" deviceset="C-0805" device="" value="11.5pF"/>
 <part name="C28" library="aarf" deviceset="C-0805" device="" value="18pF"/>
-<part name="C29" library="aarf" deviceset="C-0805" device="" value="15pF"/>
-<part name="C30" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
+<part name="C29" library="aarf" deviceset="C-0805" device="" value="11.5pF"/>
+<part name="C30" library="aarf" deviceset="C-0805" device="" value="5.6pF"/>
 <part name="GND35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -2726,10 +2726,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R17" library="aarf" deviceset="R-1206" device="" value="10kΩ"/>
 <part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C36" library="aarf" deviceset="C-0805" device="" value="1.5pF"/>
-<part name="C37" library="aarf" deviceset="C-0805" device="" value="1.5pF"/>
-<part name="C38" library="aarf" deviceset="C-0805" device="" value="1.5pF"/>
-<part name="C39" library="aarf" deviceset="C-0805" device="" value="1.5pF"/>
+<part name="C36" library="aarf" deviceset="C-0805" device="" value="2.4pF"/>
+<part name="C37" library="aarf" deviceset="C-0805" device="" value="2.4pF"/>
+<part name="C38" library="aarf" deviceset="C-0805" device="" value="2.4pF"/>
+<part name="C39" library="aarf" deviceset="C-0805" device="" value="2.4pF"/>
 <part name="X3A" library="adafruit" deviceset="ANTENNA_U.FL" device=""/>
 <part name="C40" library="aarf" deviceset="C-0805" device="" value="Cin"/>
 <part name="C41" library="aarf" deviceset="C-0805" device="" value="Ct1"/>
@@ -2775,7 +2775,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="109.22" y="149.86" size="2.54" layer="95">VOLTAGE REGULATORS</text>
 <text x="344.17" y="32.766" size="2.54" layer="94">SignalSurge by PY2RAF</text>
 <text x="374.142" y="17.526" size="2.54" layer="94">R.:</text>
-<text x="380.238" y="17.526" size="2.54" layer="94">&gt;REVISION</text>
+<text x="378.968" y="17.526" size="2.54" layer="94">&gt;REVISION</text>
 <text x="289.56" y="35.56" size="2.794" layer="94" align="top-left">VHF and UHF Bandpass filter
 with selectable amplifier,
 sequencer and By-Pass</text>
