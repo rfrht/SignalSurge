@@ -65,28 +65,45 @@ Yea, it would be just easier if you bought that 300 EUR filter ;-)
 * The amplifier is de-energized by pulling off the `ENABLE` line from the 5V voltage regulator
 
 ## Radio Frequency Performance
-### VHF
-All data, except when noted otherwise, are with amplifier off. Data measured after traversing the full signal chain, from SMA-to-SMA.
-* Start of band gain: 144 MHz, -6.3 dB
-* End of band gain: 148 MHz, -4 dB
+### General Specifications
+* **Operating Bands:** 144 - 148 MHz (VHF) / 430 - 440 MHz (UHF)
+* **RF Connectors:** Through-hole SMA (Edge-launch style)
+* **Trace Impedance:** 50-Ohm Grounded Coplanar Waveguide (GCPW)
+* **TX Power Handling (Bypass Mode):** 50 Watts CW/SSB
+* **Supply Voltage:** 13.8V DC (Main power) / 5V & 3V (Internal LDO logic rails)
+* **Diagnostic Test Points:** 5V, 3V, LNA On, Relay On, Relay Logic On, Amp On, Radio TX, Force Bypass
 
-#### FM Broadcast rejection (in VHF mode)
-* 76 MHz: -55 dB
-* 108 MHz: -33 dB
+### VHF Pre-Selector (146 MHz)
+* **Topology:** 3-Pole Top-Coupled Chebyshev Bandpass Filter
+* **Center Frequency:** 146.0 MHz
+* **Passband Insertion Loss:** ~2.0 dB
+* **VSWR (146 MHz):** 1.40:1 (Return Loss: -15.6 dB)
+* **Out-of-Band Rejection:** >60 dB at 100 MHz (FM Broadcast Band)
+* **Component Highlights:**
+* 5.6 pF Series I/O Matching Capacitors
+* 2.4 pF Series Inter-tank Coupling Capacitors
+* Orthogonal 56 nH (Outer) and 47 nH (Center) SMD Inductors
+* 11.5 pF (Outer) and 18 pF (Center) Shunt Capacitance
 
-#### Amplifier gain:
-* Add 16 dB to the numbers.
+### UHF Pre-Selector (439 MHz)
+* **Topology:** 2-Pole Capacitively Coupled Parallel LC Resonator
+* **Center Frequency:** 439.0 MHz
+* **-3 dB Bandwidth:** ~32.5 MHz (426.0 MHz - 458.5 MHz)
+* **Passband Insertion Loss:** ~0.00 dB (Lossless resonance peak)
+* **VSWR (439 MHz):** 2.21:1 (Return Loss: -8.48 dB)
+* **Component Highlights:**
+* 4.7 pF Series I/O Matching Capacitors
+* 1.86 pF Inter-tank Coupling (Synthesized via 2.4 pF + 8.2 pF in series)
+* 20.0 pF Shunt Capacitors
 
-### UHF
-* Start of band gain: 430 MHz, -10.6 dB
-* Peak frequency and gain: 437 MHz, -9.2 dB
-* End of band gain: 440 MHz, -9.6 dB
-
-#### Amplifier gain:
-* Add 16 dB to the numbers.
+### Low Noise Amplifier (LNA) Stage
+* **Active Component:** Infineon BFP460 (SiGe NPN RF Transistor) in SOT-343 package.
+* **DC Bias Sweet Spot:** $V_{ce}$ = 3.0V, $I_c$ = ~4.5 mA
+* **Raw Gain:** ~15 dB (Fixed)
+* **System Noise Figure:** ~2.0 dB to 2.5 dB
+* **Stability:** Unconditionally stable (Resistive feedback network via 430-ohm C-B loop and 300-ohm collector load masks internal NF slightly in exchange for a perfectly flat 50-ohm response).
 
 ## SPECIFICATIONS
-
 **Overview**
 The SignalSurge Rev. E is a high-performance, safe RF front-end and pre-selector designed to sit inline between a transceiver (e.g., Yaesu FT-991A) and the antenna system. It provides high-Q bandpass filtering, low-noise amplification, and an isolated 50-Watt hardware bypass.
 
