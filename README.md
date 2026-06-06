@@ -52,6 +52,7 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
 # JOURNEY
+* Jun 06 - Improved UHF filter, making it narrower (50 to 30 MHz wide) and less lossy. Added another component in UHF schematic/board in order to allow for a fine tune capacitance of the coupling stage.
 * May 28 - Fixed a gross error where a via shorted the VHF BPF final coupling stage. Removed ground pad on inductors at the detachable VHF BPF. Improved the radio signal trace at the first RF relay input. Updated component values for the 3-pole VHF filter (*in vivo* performed differently than the *in vitro*)
 * May 04 - Replaced 3V regulator (was above its maximum rated) with a MIC5205. Removed a pulldown resistor in VHF line. Unified pulldowns on 10k and pulled lines limiters at 1k. Removed a pulldown between the NOR and AND logic ICs
 * May 03 - Vibe-coded a new UHF filter with Gemini. Refactored the board, the filters, waveguides, soldermask, signal path
@@ -79,7 +80,7 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
-* Rev. E: Complete rewrite of VHF BPF to a proper 3-pole, improved UHF filter performance significantly, implemented a proper 50 ohm GCPW setup, re-added soldermask into the signal path, added a two-pole and three-pole test pad at the back of the board. Fixed u.FL connectors lacking connection to ground in one side. Added keep-out zones for inductors. Replaced the 3V regulator. Separated the top ground plane on north/south: The north (RF) section doesn't have any thermal relief in GND pads. The south (ancillary) section contains thermal relief GND pads.
+* Rev. E: Complete rewrite of VHF BPF to a proper 3-pole, improved UHF filter performance significantly, implemented a proper 50 ohm GCPW setup, re-added soldermask into the signal path, added a two-pole and three-pole test pad at the back of the board. Fixed u.FL connectors lacking connection to ground in one side. Added keep-out zones for inductors. Replaced the 3V regulator. Separated the top ground plane on north/south: The north (RF) section doesn't have any thermal relief in GND pads. The south (ancillary) section contains thermal relief GND pads. Improved UHF BPF.
 * Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pin order, small tweak in UHF filter (caps changed to 20 pF). Added pulldown to VHF switch line. Rounded bypass CPW layout. Extra silkscreen. Removed exposed pads for shielding (might capacitive couple with the components). Removed unnecessary RF switches at the front-end.
 * Rev. C: New VHF BPF topology, added a test UHF BPF on the back of the board, improved the LNA board layout, fixed capacitor pads (was too small)
 * Rev. B: Added test points, changed connectors to SMA (big signal) and U.FL (small signal and test)

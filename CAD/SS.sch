@@ -2574,10 +2574,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="L3" library="aarf" deviceset="L-0805" device="" value="56nH"/>
 <part name="C1" library="aarf" deviceset="C-0805" device="" value="5.6pF"/>
 <part name="C2" library="aarf" deviceset="C-0805" device="" value="11.5pF"/>
-<part name="C34" library="aarf" deviceset="C-0805" device="" value="1.5pF"/>
+<part name="C34" library="aarf" deviceset="C-0805" device="" value="2.4pF"/>
 <part name="C35" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
-<part name="C6" library="aarf" deviceset="C-0805" device="" value="8.2pF"/>
-<part name="C7" library="aarf" deviceset="C-0805" device="" value="8.2pF"/>
+<part name="C6" library="aarf" deviceset="C-0805" device="" value="20pF"/>
+<part name="C7" library="aarf" deviceset="C-0805" device="" value="20pF"/>
 <part name="C8" library="aarf" deviceset="C-0805" device="" value="390pF"/>
 <part name="R1" library="aarf" deviceset="R-1206" device="" value="82kΩ"/>
 <part name="R2" library="aarf" deviceset="R-1206" device="" value="430Ω"/>
@@ -2665,8 +2665,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C33" library="aarf" deviceset="C-0805" device="" value="4.7pF"/>
-<part name="L10" library="aarf" deviceset="L-0805" device="" value="8.2nH"/>
-<part name="L11" library="aarf" deviceset="L-0805" device="" value="8.2nH"/>
+<part name="L10" library="aarf" deviceset="L-0805" device="" value="3.9nH"/>
+<part name="L11" library="aarf" deviceset="L-0805" device="" value="3.9nH"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="5V" library="aarf" deviceset="JUMPER-1" device="" value="5V"/>
@@ -2748,6 +2748,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="D4" library="aarf" deviceset="0603ESDA2" device=""/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="Q3" library="aarf" deviceset="MIC5205" device="" package3d_urn="urn:adsk.eagle:package:2406/1"/>
+<part name="C47" library="aarf" deviceset="C-0805" device="" value="8.2pF"/>
 </parts>
 <sheets>
 <sheet>
@@ -2850,9 +2851,9 @@ ISOLATION</text>
 <attribute name="NAME" x="221.346" y="137.589" size="1.778" layer="95"/>
 <attribute name="VALUE" x="221.664" y="142.779" size="1.778" layer="96"/>
 </instance>
-<instance part="C34" gate="G$1" x="248.92" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="253.492" y="189.992" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="254.254" y="196.85" size="1.778" layer="96" rot="R180"/>
+<instance part="C34" gate="G$1" x="241.3" y="193.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="245.872" y="189.992" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="246.634" y="196.85" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C35" gate="G$1" x="279.4" y="193.04" smashed="yes" rot="R90">
 <attribute name="NAME" x="283.718" y="189.992" size="1.778" layer="95" rot="R180"/>
@@ -3363,6 +3364,10 @@ ISOLATION</text>
 <instance part="Q3" gate="G$1" x="129.54" y="142.24" smashed="yes">
 <attribute name="NAME" x="122.174" y="135.128" size="1.778" layer="95"/>
 <attribute name="VALUE" x="119.38" y="132.08" size="1.778" layer="96"/>
+</instance>
+<instance part="C47" gate="G$1" x="251.46" y="193.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="256.032" y="189.992" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="256.794" y="196.85" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -4438,31 +4443,31 @@ ISOLATION</text>
 <net name="UHF-P1" class="1">
 <segment>
 <pinref part="C33" gate="G$1" pin="2"/>
-<pinref part="C34" gate="G$1" pin="1"/>
 <wire x1="220.98" y1="193.04" x2="226.06" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="226.06" y1="193.04" x2="236.22" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="193.04" x2="246.38" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="185.42" x2="226.06" y2="193.04" width="0.1524" layer="91"/>
 <junction x="226.06" y="193.04"/>
 <pinref part="L10" gate="G$1" pin="1"/>
 <wire x1="236.22" y1="190.5" x2="236.22" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="C34" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="193.04" x2="238.76" y2="193.04" width="0.1524" layer="91"/>
 <junction x="236.22" y="193.04"/>
 </segment>
 </net>
 <net name="UHF-P2" class="1">
 <segment>
-<pinref part="C34" gate="G$1" pin="2"/>
 <pinref part="C35" gate="G$1" pin="1"/>
-<wire x1="254" y1="193.04" x2="259.08" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="259.08" y1="193.04" x2="269.24" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="269.24" y1="193.04" x2="276.86" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="185.42" x2="259.08" y2="193.04" width="0.1524" layer="91"/>
-<junction x="259.08" y="193.04"/>
 <pinref part="L11" gate="G$1" pin="1"/>
 <wire x1="269.24" y1="190.5" x2="269.24" y2="193.04" width="0.1524" layer="91"/>
 <junction x="269.24" y="193.04"/>
+<pinref part="C47" gate="G$1" pin="2"/>
+<wire x1="256.54" y1="193.04" x2="259.08" y2="193.04" width="0.1524" layer="91"/>
+<junction x="259.08" y="193.04"/>
 </segment>
 </net>
 <net name="FEED-RB" class="0">
@@ -4769,6 +4774,13 @@ ISOLATION</text>
 <wire x1="144.78" y1="139.7" x2="142.24" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="C23" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="137.16" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="1.86PF" class="1">
+<segment>
+<pinref part="C34" gate="G$1" pin="2"/>
+<pinref part="C47" gate="G$1" pin="1"/>
+<wire x1="246.38" y1="193.04" x2="248.92" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
