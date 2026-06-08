@@ -1,14 +1,7 @@
-# Device under Test
-![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/dut.jpg)
-
-# Power Consumption
-The board consumes around 1.3 mA in TX mode, no loaded relays. In RX mode (relays on) and activating the amplifier, the power consumption jumps to around 40 mA. RX mode, no relays and no amp, the board consumes around 3 mA. The board has a PTC fuse set at 50 mA.
-
 # RF Performance
-The VHF filter is a 3-pole crafted by Gemini. The UHF design employs a Bessel-type bandpass filter, direct-coupled, Series Inductor.
 
 ## VHF Filter (Rev. E1)
-Originally, this is the simulated filter performance, modeled by LTSpice:
+The VHF filter is a 3-Pole Top-Coupled Chebyshev Bandpass Filter. This is the first stab, simulated filter performance, modeled by LTSpice:
 
 ![Theoretical VHF filter](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
 
@@ -25,7 +18,7 @@ And this is a insertion loss sweep in the broadcast band, which is my key pain -
 ![FM Broadcast filter performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-noamp-66-108.png)
 
 ## UHF filter (Rev. E1)
-Here is the theoretical projected filter performance:
+The UHF filter is a 2-Pole Capacitively Coupled Parallel LC Resonator. Here is the theoretical projected filter performance:
 
 ![Theoretical UHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf.png)
 
@@ -36,12 +29,6 @@ And here is what the UHF filter delivered on a sweep from 10-600 MHz:
 And this is how it is performing on 70 cm band (insertion loss and VSWR):
 
 ![70 cm band S11 and S21](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-420-440.png)
-
-
-## Isolation performance
-When the board is on TX or bypass mode, the amplifier is disabled, and there's a front-end RF switch right after the relay, adding extra signal isolation during transmission and high power voltages. This is the isolation figure during TX/Bypass mode. 10-500 MHz sweep.
-
-![Isolation performance from RF switches](https://github.com/rfrht/SignalSurge/blob/main/others/test/isolation-2026-02-20-10-500.png)
 
 
 ## Amplifier performance

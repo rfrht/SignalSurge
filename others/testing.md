@@ -1,9 +1,12 @@
+# Device under Test
+![OOB VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/dut.jpg)
+
 # Test sequence
 ![Board picture - test sequence](https://github.com/rfrht/SignalSurge/blob/main/others/test-sequence.jpg)
 
 * Start soldering the highlighted u.FL connectors and the VHF/UHF BPF **discretes (caps & inductors) only**. Do not solder the RF switch yet.
--
-* Then, inject signal at u.FL connector `1` (marked `INP`) and measure S21 with port `2` (marked `BPF-O`). Add some bodge wire at the RF swich footprint (requires good eyes and hands)  to manually switch the VHF and UHF filters to establish a correctly working BPF.
+
+* Then, inject signal at u.FL connector `1` (marked `INP`) and measure S21 with port `2` (marked `BPF-O`). Add some bodge wire at the RF swich footprint (requires good eyes and hands) to manually switch the VHF and UHF filters to establish a correctly working BPF.
 
 * Next up, solder the voltage regulation section and ensure that you have a valid 3V output at test point `TP3V`. Solder all the components on the `VHF` input line and the 13.8V fuse/choke/1000pF cap. Do the finger test and ensure that the fuse isn't overheating.
 
@@ -31,6 +34,9 @@ If you have any further questions, get in touch or file an issue.
 
 Yea, it would be just easier if you bought that 300 EUR filter ;-)
 
+## Power Consumption
+The board consumes around 1.3 mA in TX mode, no loaded relays. In RX mode (relays on) and activating the amplifier, the power consumption jumps to around 40 mA. RX mode, no relays and no amp, the board consumes around 3 mA. The board has a PTC fuse set at 50 mA.
+
 # Specifications
 ## Power
 * 1.3 mA in TX mode, no loaded relays.
@@ -53,7 +59,6 @@ Yea, it would be just easier if you bought that 300 EUR filter ;-)
 * Fourth RF switch, selects between the LNA section or bypass it, no amplification
 * Fifth RF switch, LNA/bypass exit
 * `AMP-O` test port
-* Sixth RF switch, another relay isolation. When in TX, shunted to ground. In RX, move forward
 * Second Axicom HF3 relay, duly protected by 1N4148 flywheel
 * Exit to radio port via SMA connector
 
