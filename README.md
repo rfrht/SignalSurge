@@ -21,7 +21,7 @@ I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-ban
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
 * [TX Inhibit](https://github.com/rfrht/FT-991A/blob/master/understanding-ft-991a-tx-inhibit.md) functionality to prevent the radio transmitting if the relay isn't properly positioned
 * Static bleeding and small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
-* [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
+* [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control, low loss and great RF performance
 * A [detachable miniature](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter-board.jpg) VHF BPF filter that [fits perfectly](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter.jpg) in [RTL-SDR](https://www.rtl-sdr.com/rtl-sdr-com-broadcast-fm-band-stop-filter-88-108-mhz-reject-now-for-sale/) [FM bandstop cases](https://github.com/rfrht/SignalSurge/blob/main/others/encased-miniature-filter.jpg). **NOTE:** This filter DOES NOT withstand TX power; it will **fry** the inductor! Do not transmit on it.
 
 ## Library
