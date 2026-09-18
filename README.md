@@ -35,10 +35,6 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 # Board layout
 [Rev. E1 populated board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board-finished.jpg)
 
-Rev. E1 blank:
-
-![Rev E1 Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
-
 # BPF & Amplifier performance
 Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
 

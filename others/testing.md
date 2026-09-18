@@ -30,6 +30,8 @@
 
 * Solder the BPF RF switches. Establish a working setup between the u.FL connectors `INP` and `BPF-O`. Flip the switches by toggling the `VHF` line with 5V. Tip: You can tap 5V from the board header by turning on the amp by feeding 3V to the `AMP_ON` header.
 
+* Solder the remaining parts at the UPPER SECTION of the board: First the SMD components, then the SMA port and finally the relays.
+
 ## Operational tests:
 
 * When grounding `TX_GND`, all relays should be off. The same result is yielded when feeding 3V to the `BYPASS` port.

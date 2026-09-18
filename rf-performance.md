@@ -11,7 +11,7 @@ This is how the filter on 10 MHz - 300 MHZ VNA sweep of the VHF BPF - this was t
 
 This is the VSWR and insertion loss sweep of the 2m amateur band - tested with a fully assembled board, SMA-to-SMA:
 
-![2m VHF BPF SWR performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-vswr-140-150.png)
+![2m VHF BPF SWR performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-s11-s21-144-148.png)
 
 And this is a insertion loss sweep in the broadcast band, which is my key pain - Almost the entire band under -60 dB:
 
@@ -24,11 +24,11 @@ The UHF filter is a 2-Pole Capacitively Coupled Parallel LC Resonator. Here is t
 
 And here is what the UHF filter delivered on a sweep from 10-600 MHz (testing it right at the BPF, without any extra insertion loss):
 
-![UHF filter wide sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-10-600.png)
+![UHF filter wide sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-10-800.png)
 
 And this is how it is performing on 70 cm band, measuring insertion loss and VSWR in a fully assembled board, at the SMA connectors:
 
-![70 cm band S11 and S21](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-420-440.png)
+![70 cm band S11 and S21](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-s11-s21-420-440.png)
 
 
 ## Amplifier performance
