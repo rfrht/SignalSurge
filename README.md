@@ -1,28 +1,29 @@
 # SignalSurge
-This is an open source (check licensing [here](https://github.com/rfrht/SignalSurge/blob/main/LICENSE)) Bandpass filter for VHF and UHF amateur radio bands, with a selectable LNA and a sequencer. Projected using Eagle CAD 9.
+This is an open source (check licensing [here](https://github.com/rfrht/SignalSurge/blob/main/LICENSE)) Bandpass filter for VHF and UHF amateur radio bands, with a selectable LNA and a sequencer. Designed using Eagle CAD 9.
 
 # Why?
-I live in a metropolitan area and **very** RF-polluted. One of these days, only FFS I have added a FM bandstop filter and I found that, contrary to my belief, my reception was **way better**! That means:
+I live in a highly RF-polluted metropolitan area. One of these days, only FFS I have added a FM bandstop filter and I found that, contrary to my belief, my reception was **way better**! That means:
 
 1. The front-end radio filtering is less than great (even being an expensive FT-991A)
 2. Strong out of amateur band signals (and there's **plenty** of them) will desensitize your radio
 3. By filtering out unwanted signals, you give more **dynamic range** to your radio, improving your reception.
 4. [See for yourself here](https://www.reddit.com/r/amateurradio/comments/1gxahma/noticeable_improvement_in_ft991a_2m_rx_when_using/).
 
-That said, the objective of this project is to remove as much as possible signals outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else inbetween), ensuring that the precious front-end gain on the radio built-in amplifier focus on amateur band signals **only**.
+That said, the objective of this project is to remove as much as possible signals outside 2m and 70 cm bands (like: FM broadcasts, air band, commercial VHF & UHF, and everything else inbetween), ensuring that the precious front-end gain on the radio's built-in amplifier focuses on amateur band signals as much as possible.
 
-I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time and parts to build one?
+I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not spend €3,000 worth of my own man-hours and parts to build one?
 
 # Features
-* Two selectable amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only. That can be automated by making use of the Band Data (`TUN/LIN` port, pins `4` or `5`). Requires menu config 141 (`TUNER SELECT`) to be set as `LAMP`.
-* High performance and selectable [low noise 15 dB amplifier](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
-* The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage. 
-* Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB).
-* Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
-* [TX Inhibit](https://github.com/rfrht/FT-991A/blob/master/understanding-ft-991a-tx-inhibit.md) functionality to prevent the radio transmitting if the relay isn't properly positioned
-* Static bleeding and small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
-* [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control, low loss and great RF performance
-* A [detachable miniature](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter-board.jpg) VHF BPF filter that [fits perfectly](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter.jpg) in [RTL-SDR](https://www.rtl-sdr.com/rtl-sdr-com-broadcast-fm-band-stop-filter-88-108-mhz-reject-now-for-sale/) [FM bandstop cases](https://github.com/rfrht/SignalSurge/blob/main/others/encased-miniature-filter.jpg). **NOTE:** This filter DOES NOT withstand TX power; it will **fry** the inductor! Do not transmit on it.
+* Two **selectable** amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) weeds out signals, ensuring that the transceiver front-end focus its gain figures on inband signals only. That can be automated by making use of the Band Data (`TUN/LIN` port, pins `4` or `5`). Requires menu config 141 (`TUNER SELECT`) to be set as `LAMP`.
+* **High performance** and selectable [low noise 15 dB amplifier](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) (Infineon BFP460) after the bandpass filter, adding some oomph to weak signals
+* Nearly **-70 dB of rejection** against the FM broadcast band
+* The amplifier is **shut down when the radio is transmitting** by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage. 
+* Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with **low loss**, while keeping **[unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) (north of 60 dB)** to the downstream components
+* Relay **default state (NC) is to bypass** radio directly to antenna, allowing the board to be safely powered off
+* [TX Inhibit](https://github.com/rfrht/FT-991A/blob/master/understanding-ft-991a-tx-inhibit.md) logic outputs +13.8V to the FT-991A's TUN/LIN port whenever the delicate BPF/LNA chain is active, **preventing accidental** 50W transmissions into the low-power solid-state switches and filter chain
+* **Static bleeding and small [surge protection]**(https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
+* [Via-Stitched Grounded Coplanar Waveguides (GCPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) ensures strictly controlled 50-ohm impedance and suppresses parasitic radiative modes. Real-world proof: the board effortlessly handles **50 Watts** (+47 dBm) of 70cm RF on an open bench **without radiating** into the room or causing the dreaded "speaker buzz" in nearby unshielded subwoofers.
+* A **[detachable miniature]**(https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter-board.jpg) VHF BPF filter that [fits perfectly](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter.jpg) in [RTL-SDR](https://www.rtl-sdr.com/rtl-sdr-com-broadcast-fm-band-stop-filter-88-108-mhz-reject-now-for-sale/) [FM bandstop cases](https://github.com/rfrht/SignalSurge/blob/main/others/encased-miniature-filter.jpg). **NOTE:** This filter DOES NOT withstand TX power; it will **fry** the inductor! Do not transmit on it.
 
 ## Library
 Eagle custom component library [here](https://github.com/rfrht/FT991A-PAT/blob/master/Schematic/aarf.lbr). Ensure to **also** fetch the latest library version (and update in your Eagle) when checking out new code.
