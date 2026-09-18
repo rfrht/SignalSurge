@@ -5,11 +5,11 @@ The VHF filter is a 3-Pole Top-Coupled Chebyshev Bandpass Filter. This is the fi
 
 ![Theoretical VHF filter](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
 
-This is how the filter fared in the real world with a 10 MHz - 300 MHZ VNA sweep of the VHF BPF. It provides a very decent isolation for the lower bands, FM broadcast and other general out-of-band signals.
+This is how the filter on 10 MHz - 300 MHZ VNA sweep of the VHF BPF - this was tapped right at the BPF stage, without any extra other insertion loss (switches, amps, etc). It provided a very decent isolation for the lower bands, FM broadcast and other general out-of-band signals.
 
 ![Out of box VHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-noamp-10-300.png)
 
-This is the VSWR sweep of the 2m amateur band:
+This is the VSWR and insertion loss sweep of the 2m amateur band - tested with a fully assembled board, SMA-to-SMA:
 
 ![2m VHF BPF SWR performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-vswr-140-150.png)
 
@@ -22,24 +22,26 @@ The UHF filter is a 2-Pole Capacitively Coupled Parallel LC Resonator. Here is t
 
 ![Theoretical UHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf.png)
 
-And here is what the UHF filter delivered on a sweep from 10-600 MHz:
+And here is what the UHF filter delivered on a sweep from 10-600 MHz (testing it right at the BPF, without any extra insertion loss):
 
 ![UHF filter wide sweep](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-10-600.png)
 
-And this is how it is performing on 70 cm band (insertion loss and VSWR):
+And this is how it is performing on 70 cm band, measuring insertion loss and VSWR in a fully assembled board, at the SMA connectors:
 
 ![70 cm band S11 and S21](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-noamp-420-440.png)
 
 
 ## Amplifier performance
-Here's the theoretical [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures as per the application notes:
+Here's the [BFP460](https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp460/) gain figures, measuring solely the amplifier stage, without any extra insertion loss:
 
-![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bfp460-gain-fig.png)
+![Amplifier performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/amp-broadband-performance.png)
 
-The filter delivered approx. 16 dB of gain, nicely, neatly and linearly. Check the results for VHF and UHF amplification:
+The filter delivered approx. 10 dB of gain. 
+
+Individual fully assembled board results, with signal travesrsing the BPF, connectors, switchetc etc, for VHF and UHF bands:
 
 ### VHF
-![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-amp-noamp-2026-02-22-10-300.png)
+![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-1amp-100-200.png)
 
 ### UHF
-![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-amp-noamp-2026-02-22-300-600.png)
+![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-1amp-300-600.png)

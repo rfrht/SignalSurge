@@ -4,42 +4,71 @@
 # Test sequence
 ![Board picture - test sequence](https://github.com/rfrht/SignalSurge/blob/main/others/test-sequence.jpg)
 
-* Start soldering the highlighted u.FL connectors and the VHF/UHF BPF **discretes (caps & inductors) only**. Do not solder the RF switch yet.
+* Start soldering the u.FL connectors `1` and `2`. Then the VHF/UHF BPF **discretes (caps & inductors) only**. Do not solder the RF switch just yet.
 
-* Then, inject signal at u.FL connector `1` (marked `INP`) and measure S21 with port `2` (marked `BPF-O`). Add some bodge wire at the RF swich footprint (requires good eyes and hands) to manually switch the VHF and UHF filters to establish a correctly working BPF.
+* Start testing with your VHF filter. Solder a bodge wire at the BPF RF switches footprints: They are `SW_BPF_IN` AND `SW_BPF_OUT` - requires good eyes and hands - to manually switch the VHF and UHF filters. Start bridging the u.FL with the VHF BPF.
 
-* Next up, solder the voltage regulation section and ensure that you have a valid 3V output at test point `TP3V`. Solder all the components on the `VHF` input line and the 13.8V fuse/choke/1000pF cap. Do the finger test and ensure that the fuse isn't overheating.
+* Now, let's measure the BPF performance. Inject signal from VNA Port 1 (Source) into the `INP` port (marked 1 in the image) and connect the VNA port 2 at the port `BPF-O`.
+
+* Change your bodge wire to switch it manually to UHF. Redo the above test. Ensure that you have results similar to my [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md).
+
+* Next up, solder the LOWER SECTION of the board: everything south of the BPF. Ensure that you have a solid 3V output at test point `TP3V`. Ensure that your fuse or any components (try with your fingers) aren't overheating.
+
+* Now let's test your LNA performance. Remove the bodge wire from the `SW_BPF` RF switches. You might want to use solder wick to make your component footprint plain and remove excess solder. 
+
+* Now Solder a bodge wire at the `SW_LNA_IN` and `SW_LNA_OUT` pads, to bridge the U.FL lines `2` and `3` with the LNA stage.
+
+* Feed 3V to the line `AMP_ON` header
+
+* Inject signal from VNA Port 1 (Source) into the `BPF-O` connector, and measure the amplified output using VNA Port 2 (Receiver) at the `AMP-O` connector to correctly read S21 forward gain. Ensure that you are obtaining a good gain. If you mix the port order you will have a WRONG read! VNA port ordering is key here: Port 1 at `BPF-O`, Port 2 at `AMP-O`! Compare with my tests. If you aren't getting any amplification, ensure that you didn't mix the VNA ports, have powered the LNA by powering the header `AMP_ON`, check the testpoint `TP_LNA_ON` have 3V and if your 5V regulator is throwing out a 5V output. And finally, ensure you soldered properly your BFP460.
 
 * Then, solder the RF switches of the BPF section and test points 1 and 2 again. Inject 3V in pin `VHF` and ensure that you don't have significant losses between `INP` and `BPF-O`, and of course, establish a working RF switch, checking the band of interest performance for each test points.
 
-* Now, solder the `LNA` section and the remaining ancillary circuits: `LNA CTRL` and `RELAY CTRL`. When powering up, ensure that the fuse isn't heating with your digital body temperature sensor. 
+* Remove the bodge wires. You may now solder the LNA RF switches. 
 
-* Now, inject signal on `BPF-O` and ensure that you are obtaining a good signal at the connector `3` (marked `AMP-O`) on amp off (no connection) and ~15 dB of gain when 3V feeding on `AMP_ON` pin.
+* Redo the tests between the U.FL `BPF-O` and `AMP-O`, both ways: Amplifying and on bypass mode. Validate our outputs to establish a correctly working RF switch. NOTICE: they are FRAGILE! I damaged a number of them with a hot iron.
 
-* Moving further, solder the 390 pF decoupling between `1` and `4` and the static/mitigation components. 
+* Solder the BPF RF switches. Establish a working setup between the u.FL connectors `INP` and `BPF-O`. Flip the switches by toggling the `VHF` line with 5V. Tip: You can tap 5V from the board header by turning on the amp by feeding 3V to the `AMP_ON` header.
 
-* Test points `4` and `5` aren't marked, but the relay footprint is just PERFECT to solder a u.FL connector. Notice the small TVS near to connector `5`.
-
-* Inject signal between test points `4` and `5` (the signal input when measuring S21 should be at `4`). Measure again your gain with the amplified turned off.
+## Operational tests:
 
 * When grounding `TX_GND`, all relays should be off. The same result is yielded when feeding 3V to the `BYPASS` port.
 
-* When injecting 3V to `AMP_ON`, you turn on the amplifier. The presence of a `TX_GND` or `BYPASS` turns it off.
+* When injecting 3V to `AMP_ON`, you turn on the amplifier. The presence of a `TX_GND` or `BYPASS` overrides and turns it off.
 
-* The test point `TP5V` should be only on when `AMP_ON` is powered. Otherwise, it is off.
+* The test point `TP5V` should be on only when `AMP_ON` has 3V at the header. Otherwise, it is off.
 
-* The line `TX_INH` sends 12V when `TX_GND` is asserted.
+* The line `TX_INH` sends 13.8V when the board is in RX mode (BPF/LNA engaged). When `TX_GND` or `BYPASS` are asserted, the board falls back to hardware bypass and the `TX_INH` line drops to 0V, safely allowing the radio to transmit.
+
+* At the back of the board, there are the following tools: 2 pole filter, 3 pole filter and u.FL SOLT calibration pads.
 
 If you have any further questions, get in touch or file an issue.
 
-Yea, it would be just easier if you bought that 300 EUR filter ;-)
+Yea, it'd be just easier if you bought that 300 EUR filter ;-)
 
-## Power Consumption
-The board consumes around 1.3 mA in TX mode, no loaded relays. In RX mode (relays on) and activating the amplifier, the power consumption jumps to around 40 mA. RX mode, no relays and no amp, the board consumes around 3 mA. The board has a PTC fuse set at 50 mA.
+## Power Consumption & Expected Current Draw
+When troubleshooting the SignalSurge board, a standard multimeter placed in series with the main 13.8V power supply is your best diagnostic tool. The board operates at very low currents, making it easy to spot a blown component, a dead short, or a failed logic gate just by reading the milliamp (mA) draw.
+
+The board is protected by a 50 mA PTC resettable fuse. If your board draws significantly more than the values below, immediately disconnect power and check for solder bridges/blobs/shorts or reversed diodes.
+
+### Baseline Current Measurements
+| Operational State | Expected Draw | Diagnostic Meaning |
+| --- | --- | --- |
+| **TX Mode / Manual Bypass** | **~0.5 mA** | **Quiescent State.** The Axicom HF3 relays are de-energized (hardware bypass) and the 5V regulator is either in shutdown or drawing minimal quiescent current. If this reads 0 mA, check your primary power connection. If it reads more than 1 mA, check the relay flyback diodes for leakage or shorts. |
+| **RX Mode (BPF Only)** | **~18 mA** | **Relays Engaged.** The BCD logic has successfully commanded the board to listen. The ~17.5 mA jump is the coil current required to physically hold the two Axicom HF3 relays open, routing the RF signal through the PE4259 switch matrix and passive filters. |
+| **RX Mode (BPF + LNA)** | **~24 mA** | **Full Active System.** The BFP460 amplifier is energized. The difference between this and the previous state is **~6 mA**. This perfectly aligns with the LNA's DC bias network (roughly 4 mA of collector current plus the voltage divider overhead). If the current jumps to > 30 mA here, the BFP460 is likely damaged or oscillating. |
+
+### Being pedantic about power modes
+* **Logic Override Test (`AMP_ON` + `TX_GND`):**
+If `AMP_ON` is enabled and you trigger `TX_GND`, the current should instantly drop from **24 mA back to around 1 mA**.
+* **VHF vs. UHF Logic Test:**
+Toggling the FT-991A from 2-meters to 70cm (triggering BCD Pin 4) DOES NOT change the current draw. Switching between the PE4259 routing paths should result in a statistically zero difference in current (microamps). If you see a noticeable mA jump when switching bands, one of the RF switches is likely shorted to ground.
+* **`TX_INH` Load Test:**
+When connecting `TX_INH` to the radio, the `TX_INH` line sends +13.8V back to the radio and the total board current rises by around 1 mA when physically connected to the transceiver.
 
 # Specifications
 ## Power
-* 1.3 mA in TX mode, no loaded relays.
+* 0.5 mA in TX mode, no loaded relays.
 * RX mode (relays on) and activating the amplifier, the power consumption jumps to 39 mA.
 * RX mode, no relays (`BYPASS` mode) and no amp, the board consumes around 3 mA.
 * The board has a PTC fuse rated 50 mA.
@@ -47,99 +76,77 @@ The board consumes around 1.3 mA in TX mode, no loaded relays. In RX mode (relay
 ## Signal routing
 ### RX
 * The signal enters the SMA Antenna connector
-* Enters the first Axicom HF3 relay, duly protected by 1N4148 flywheel
-* Finds a Eaton TVS PolySurg surge protector
+* Enters the first Axicom HF3 relay
+* Finds a Eaton TVS PolySurge surge protector
 * Static draining via a 1 kohm and 1000 µH inductor
 * Encounters a 390 pF decoupling capacitor
 * `INP` u.FL test port
-* Second RF switch, selects between VHF or UHF bandpass filter
+* First RF switch, selects between VHF or UHF bandpass filter
 * Enters the selected BPF
-* Third RF switch, the exit section from the bandpass filter
+* Second RF switch, the exit section from the bandpass filter
 * `BPF-O` test port
-* Fourth RF switch, selects between the LNA section or bypass it, no amplification
-* Fifth RF switch, LNA/bypass exit
+* Third RF switch, selects between the LNA section or bypass it, no amplification
+* Fourth RF switch, LNA/bypass exit
 * `AMP-O` test port
-* Second Axicom HF3 relay, duly protected by 1N4148 flywheel
+* Finds a Eaton TVS PolySurge surge protector
+* Second Axicom HF3 relay
 * Exit to radio port via SMA connector
 
+All relays are protected by a 100 ohm current limiter resistor, a 1N4148 flywheel diode and a 0.1µF capacitor.
+
 ### TX
+* The amplifier is de-energized by pulling off the `ENABLE` line from the 5V voltage regulator when detecting the `TX_GND` signal
 * The signal enters the board via the SMA Radio connector
-* Enters the first Axicom HF3 relay, duly protected by 1N4148 flywheel
-* The signal is moved to the second Axicom HF3 relay, duly protected by 1N4148 flywheel
+* Enters the first Axicom HF3 relay
+* The signal is moved to the second Axicom HF3 relay
 * Exit to the antenna
-* The amplifier is de-energized by pulling off the `ENABLE` line from the 5V voltage regulator
+
 
 ## Radio Frequency Performance
 ### General Specifications
-* **Operating Bands:** 144 - 148 MHz (VHF) / 430 - 440 MHz (UHF)
-* **RF Connectors:** Through-hole SMA (Edge-launch style)
-* **Trace Impedance:** 50-Ohm Grounded Coplanar Waveguide (GCPW)
-* **TX Power Handling (Bypass Mode):** 50 Watts CW/SSB
-* **Supply Voltage:** 13.8V DC (Main power) / 5V & 3V (Internal LDO logic rails)
-* **Diagnostic Test Points:** 5V, 3V, LNA On, Relay On, Relay Logic On, Amp On, Radio TX, Force Bypass
+* **System Impedance:** 50 ohms
+* **RF Switching Matrix:** Four cascaded pSemi PE4259 ultra-high isolation RF switches
+* **Switch Matrix Insertion Loss (Bypass Mode):** ~1.5 dB at 144 MHz; ~3.0 dB to 4.1 dB at 440 MHz
+* **System Architecture:** Independent electronic selection for VHF/UHF filter paths and LNA amplification, backed by a hardware-level transmit ground (`TX_GND`) fail-safe bypass
 
-### VHF Pre-Selector (146 MHz)
-* **Topology:** 3-Pole Top-Coupled Chebyshev Bandpass Filter
-* **Center Frequency:** 146.0 MHz
-* **Passband Insertion Loss:** ~2.0 dB
-* **VSWR (146 MHz):** 1.40:1 (Return Loss: -15.6 dB)
-* **Out-of-Band Rejection:** >60 dB at 100 MHz (FM Broadcast Band)
-* **Component Highlights:**
-* 5.6 pF Series I/O Matching Capacitors
-* 2.4 pF Series Inter-tank Coupling Capacitors
-* Orthogonal 56 nH (Outer) and 47 nH (Center) SMD Inductors
-* 11.5 pF (Outer) and 18 pF (Center) Shunt Capacitance
+### VHF Bandpass Filter (2-Meter Band)
+* **Topology:** 3-pole capacitively-coupled LC bandpass filter built with Johanson High-Q wirewound inductors and C0G low-ESR capacitors
+* **Center Frequency Target:** 144.0 MHz – 148.0 MHz
+* **Passband Insertion Loss:** 1.33 dB at 144.9 MHz
+* **Passband Return Loss (S11):** Better than -10 dB, dipping to -23.7 dB (VSWR 1.13:1)
+* **FM Broadcast Rejection (88–108 MHz):** -59 dB to -69.4 dB attenuation. This extreme low-side skirt prevents local 100 kW commercial FM transmitters from driving the active stage into non-linear intermodulation.
+* **Aviation Band Rejection (110–130 MHz):** >45 dB of attenuation below 110 MHz
 
-### UHF Pre-Selector (439 MHz)
-* **Topology:** 2-Pole Capacitively Coupled Parallel LC Resonator
-* **Center Frequency:** 439.0 MHz
-* **-3 dB Bandwidth:** ~32.5 MHz (426.0 MHz - 458.5 MHz)
-* **Passband Insertion Loss:** ~0.00 dB (Lossless resonance peak)
-* **VSWR (439 MHz):** 2.21:1 (Return Loss: -8.48 dB)
-* **Component Highlights:**
-* 4.7 pF Series I/O Matching Capacitors
-* 1.86 pF Inter-tank Coupling (Synthesized via 2.4 pF + 8.2 pF in series)
-* 20.0 pF Shunt Capacitors
+### UHF Bandpass Filter (70-Centimeter Band)
+* **Topology:** 2-pole capacitively-coupled LC bandpass filter using Johanson High-Q components
+* **Center Frequency Target:** 439.0 MHz (Optimized for Brazilian repeater outputs)
+* **Passband Insertion Loss:** 1.05 dB to 1.12 dB at 439.0 MHz
+* **Absolute Peak Insertion Loss:** 0.90 dB near 444.0 MHz
+* **Impedance Matching:** Utilizes 8.2 pF input/output series matching capacitors to overcome the inherently low characteristic impedance of the 3.9 nH core tanks. This ensures that the ~1 dB of measured loss is strictly reflective mismatch rather than absorptive thermal dissipation, preserving signal integrity before amplification.
 
 ### Low Noise Amplifier (LNA) Stage
-* **Active Component:** Infineon BFP460 (SiGe NPN RF Transistor) in SOT-343 package.
-* **DC Bias Sweet Spot:** $V_{ce}$ = 3.0V, $I_c$ = ~4.5 mA
-* **Raw Gain:** ~15 dB (Fixed)
-* **System Noise Figure:** ~2.0 dB to 2.5 dB
-* **Stability:** Unconditionally stable (Resistive feedback network via 430-ohm C-B loop and 300-ohm collector load masks internal NF slightly in exchange for a perfectly flat 50-ohm response).
+* **Active Component:** Infineon BFP460 wideband NPN RF transistor
+* **Topology:** Wideband shunt-shunt feedback LNA with a passive resistor-divider bias network
+* **DC Operating Point:** Conservatively biased at approximately 4 mA Collector Current (Ic) and 3.2V Collector-Emitter Voltage (Vce). This low-power state ensures absolute unconditional stability and preserves the transistor's low intrinsic noise figure (~1.1 dB).
+* **Raw Active Gain:** +15 dB to +16 dB broadband gain across both VHF and UHF frequencies
+* **Net System Gain (Filter + Matrix + LNA):** +11.97 dB at 144 MHz and +11.90 dB at 439 MHz. The amplifier completely overcomes the combined insertion losses of the passive filters and the 4-stage switch matrix.
 
-## SPECIFICATIONS
-**Overview**
-The SignalSurge Rev. E is a high-performance, safe RF front-end and pre-selector designed to sit inline between a transceiver (e.g., Yaesu FT-991A) and the antenna system. It provides high-Q bandpass filtering, low-noise amplification, and an isolated 50-Watt hardware bypass.
+## System Protections & Operational Logic
 
-**RF Path & Switching**
-* **Architecture:** 50-ohm Coplanar Waveguide over Ground (GCPW) on 1.6 mm FR4.
-* **Master T/R Switching:** TE Connectivity HF3 Mechanical Relays (~80 dB isolation).
-* **Internal Routing:** pSemi PE4259 Solid-State RF Switches (0.5 dB insertion loss).
-* **High-Power Bypass:** 1.5 mm GCPW traces capable of handling 50 Watts RF without heating.
-* **Fail-Safe Routing:** Hardware logic defaults relays to the NC (Normally Closed) 50W Bypass path upon power loss or transmission.
+### Hardware & Transmit Protections
+SignalSurge is designed to sit directly in the primary RF path of a 50W transceiver. To prevent accidental destruction of the highly sensitive receive components, the board employs multiple layers of hardware-level protection:
 
-**Filtering (Pre-Selectors)**
-* **Topology:** 2-Pole, Capacitively Top-Coupled Bandpass Filters.
-* **VHF Band (146 MHz):** High-Q wirewound inductors (68 nH) with orthogonal placement and ground-plane keep-outs to eliminate parasitic coupling.
-* **UHF Band (439 MHz):** VNA-tuned tank circuit (8.2 nH / 8.2 pF) optimized for maximum out-of-band rejection and minimal insertion loss.
+* **Fail-Safe RX Architecture:** The primary signal path is controlled by robust Axicom HF3 mechanical relays. Their unpowered, default state is a direct hardware bypass (Antenna -> Radio), ensuring the transceiver can safely transmit even if the board loses power.
+* **Transmit Inhibit (`TX_INH`):** When the active RX chain (filters and LNA) is engaged, the board outputs a continuous +13.8V signal to the Yaesu FT-991A's TUN/LIN port. This physically inhibits the radio from transmitting, ensuring 50W of RF is never dumped into the pSemi PE4259 switches (which have a maximum rating of 2W / +33 dBm).
+* **Absolute TX Override (`TX_GND`):** Grounding the `TX_GND` line forces the Axicom relays into bypass mode and actively pulls the `ENABLE` line on the 5V regulator low, instantly de-energizing the BFP460 amplifier. This signal trumps all other board logic.
+* **ESD & Static Drainage:** Both the antenna and radio ports are guarded by Eaton TVS PolySurge protectors. The antenna port also features a 1 kR resistor and 1000 µH inductor network to bleed off atmospheric static charge before it can reach the solid-state switching matrix.
+* **Relay Coil Suppression:** Every mechanical relay coil is isolated with a 100 R current limiting resistor, a parallel 1N4148 flyback diode, and a 0.1 µF decoupling capacitor to suppress inductive voltage spikes during switching.
+* **Overcurrent Defense:** The main power rail is protected by a PTC resettable fuse to guard against dead shorts.
 
-**Active Stage (Low Noise Amplifier)**
-* **Component:** Infineon BFP460 SiGe RF Transistor.
-* **Topology:** Broadband Resistive-Feedback network for unconditional stability across VHF/UHF.
-* **Gain:** ~13 to 15 dB (damped for optimal dynamic range and receiver overload protection).
-* **Biasing:** Highly linear voltage-collector feedback operating at ~4.5 mA / 3.0V ($V_{CE}$).
+### Automated Band Logic & Routing
+The board utilizes a hybrid switching approach to maximize both power handling and receive isolation.
 
-**Logic & Control**
-* **Control Core:** SN74AHC CMOS Logic (AND/NOR interlocking).
-* **Trigger Levels:** 3V logic thresholds with 1k series / 10k pulldown RFI filtering on all external jumper inputs.
-* **Inputs:** Radio TX (Ground-to-TX via MMBTRA104SS pre-biased PNP), Force Bypass (3V), LNA Enable (3V), Band Select (3V).
-* **Relay Drivers:** UMD5N Dual Digital Transistor (High-Side switching configuration).
+* **Solid-State RX Routing:** While the Axicom relays handle the high-power TX bypass, the internal receive path is entirely governed by four pSemi PE4259 RF switches. These provide ultra-high isolation between the VHF filter, UHF filter, and LNA stages without the mechanical wear or contact bounce of traditional relays.
+* **Yaesu BCD Integration:** SignalSurge achieves "set-and-forget" automation by reading the BCD encoder outputs from the FT-991A's TUN/LIN port. By monitoring Pin 4 (Band Data B), the board automatically flips the internal solid-state switches between the 144 MHz and 430 MHz bandpass filters exactly as you change bands on the radio dial.
+* **Manual Overrides:** Independent +3V header lines for `AMP_ON` and `BYPASS` allow the operator to manually force the LNA on or drop the entire board into hardware bypass.
 
-**Power & Protection**
-* **Input Power:** 13.8V DC (Fused via 100 mA PTC).
-* **Regulation:** MIC5205 3.0V LDO (16V Max Input) for logic; TCR1HF50 5.0V LDO for the LNA.
-* **ESD Protection:** Eaton 0603ESDA-TR2 Polymer TVS Diodes (0.05 pF ultra-low capacitance) on the RX path.
-* **Static Bleed:** Continuous precipitation static drain via 1000 µH / 1k resistor network.
-* **Transient Protection:** Snubbed flyback catch diode (1N4148 + 0.1 µF) shunted to ground on the relay coils to protect logic from -200V inductive spikes.
-* **Radio Protection:** TX Inhibit line to avoid radio transmission if the relays aren't properly positioned.

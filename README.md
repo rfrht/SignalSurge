@@ -14,12 +14,12 @@ That said, the objective of this project is to remove as much as possible signal
 I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time and parts to build one?
 
 # Features
-* Two selectable amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#vhf) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only
+* Two selectable amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#vhf) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only. That can be automated by making use of the Band Data (`TUN/LIN` port, pins `4` or `5`). Requires menu config 141 (`TUNER SELECT`) to be set as `LAMP`.
 * High performance and selectable [low noise 15 dB amplifier](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
 * The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage. 
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB).
 * Relay default state (NC) is to bypass radio directly to antenna, allowing the board to be safely powered off
-* [TX Inhibit](https://iw0ffk.wordpress.com/2018/09/21/tx-inhibit-how-to-simplify-the-tx-rx-sequencing/) functionality to prevent the radio to transmit while the relay isn't positioned
+* [TX Inhibit](https://github.com/rfrht/FT-991A/blob/master/understanding-ft-991a-tx-inhibit.md) functionality to prevent the radio transmitting if the relay isn't properly positioned
 * Static bleeding and small [surge protection](https://www.digikey.com/en/products/detail/eaton-electronics-division/0603ESDA2-TR2/3681416) when switched to BPF/AMP
 * [Co-Planar Waveguide (CPW)](https://resources.altium.com/p/pros-and-cons-of-different-high-frequency-transmission-line-types) design on RF lines for impedance control and good RF performance
 * A [detachable miniature](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter-board.jpg) VHF BPF filter that [fits perfectly](https://github.com/rfrht/SignalSurge/blob/main/others/miniature-filter.jpg) in [RTL-SDR](https://www.rtl-sdr.com/rtl-sdr-com-broadcast-fm-band-stop-filter-88-108-mhz-reject-now-for-sale/) [FM bandstop cases](https://github.com/rfrht/SignalSurge/blob/main/others/encased-miniature-filter.jpg). **NOTE:** This filter DOES NOT withstand TX power; it will **fry** the inductor! Do not transmit on it.
@@ -33,11 +33,11 @@ Bill of Materials (CSV format, DigiKey format) [here](https://github.com/rfrht/S
 ![Schematic SignalSurge](https://github.com/rfrht/SignalSurge/blob/main/others/schematic.png)
 
 # Board layout
-[Rev. C populated board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board-finished.jpg)
+[Rev. E1 populated board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board-finished.jpg)
 
-Rev. E blank:
+Rev. E1 blank:
 
-![Rev E Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
+![Rev E1 Signal Surge finished board](https://github.com/rfrht/SignalSurge/blob/main/others/ss-board.jpg)
 
 # BPF & Amplifier performance
 Check the [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) page.
@@ -52,6 +52,9 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 **Ensure** to check the [Issues backlog](https://github.com/rfrht/SignalSurge/issues)
 
 # JOURNEY
+* Sep 18 - Updating the test figures. Successfully used the [TX INH](https://github.com/rfrht/FT-991A/blob/master/understanding-ft-991a-tx-inhibit.md) functionality at the radio. Released Rev. F.
+* Sep 14 - Starting Rev. F. Changed "Bypass" and "VHF/UHF" selectors to input 5V in order to be able to use the [BCD decoders from FT-991 band data](https://hf5l.pl/en/1472-2/) at the TUN/LIN port. Added u.FL calibration pads.
+* Sep 12 - Assembled board Rev. E1. Documented RF performance.
 * Jun 06 - Improved UHF filter, making it narrower (50 to 30 MHz wide) and less lossy. Added another component in UHF schematic/board in order to allow for a fine tune capacitance of the coupling stage.
 * May 28 - Fixed a gross error where a via shorted the VHF BPF final coupling stage. Removed ground pad on inductors at the detachable VHF BPF. Improved the radio signal trace at the first RF relay input. Updated component values for the 3-pole VHF filter (*in vivo* performed differently than the *in vitro*)
 * May 04 - Replaced 3V regulator (was above its maximum rated) with a MIC5205. Removed a pulldown resistor in VHF line. Unified pulldowns on 10k and pulled lines limiters at 1k. Removed a pulldown between the NOR and AND logic ICs
@@ -80,7 +83,8 @@ Yes - I have provided a [step by step testing and troubleshooting](https://githu
 * Jan/2025 - Reached the "minimally lovable project" stage.
 
 # CHANGELOG
-* Rev. E: Complete rewrite of VHF BPF to a proper 3-pole, improved UHF filter performance significantly, implemented a proper 50 ohm GCPW setup, re-added soldermask into the signal path, added a two-pole and three-pole test pad at the back of the board. Fixed u.FL connectors lacking connection to ground in one side. Added keep-out zones for inductors. Replaced the 3V regulator. Separated the top ground plane on north/south: The north (RF) section doesn't have any thermal relief in GND pads. The south (ancillary) section contains thermal relief GND pads. Improved UHF BPF.
+* Rev. F: Improved UHF BPF. Changed "Bypass" and "VHF/UHF" input selectors from 3V to 5V via resisitive divisors. Added u.FL calibration pads.
+* Rev. E: Complete rewrite of VHF BPF to a proper 3-pole, improved UHF filter performance significantly, implemented a proper 50 ohm GCPW setup, re-added soldermask into the signal path, added a two-pole and three-pole test pad at the back of the board. Fixed u.FL connectors lacking connection to ground in one side. Added keep-out zones for inductors. Replaced the 3V regulator. Separated the top ground plane on north/south: The north (RF) section doesn't have any thermal relief in GND pads. The south (ancillary) section contains thermal relief GND pads.
 * Rev. D: Changed 74XX pulldown lines to 100k, fixed UMD5N pin order, small tweak in UHF filter (caps changed to 20 pF). Added pulldown to VHF switch line. Rounded bypass CPW layout. Extra silkscreen. Removed exposed pads for shielding (might capacitive couple with the components). Removed unnecessary RF switches at the front-end.
 * Rev. C: New VHF BPF topology, added a test UHF BPF on the back of the board, improved the LNA board layout, fixed capacitor pads (was too small)
 * Rev. B: Added test points, changed connectors to SMA (big signal) and U.FL (small signal and test)
