@@ -1,6 +1,6 @@
 # RF Performance
 
-## VHF Filter (Rev. E1)
+## VHF BPF
 The VHF filter is a 3-Pole Top-Coupled Chebyshev Bandpass Filter. This is the first stab, simulated filter performance, modeled by LTSpice:
 
 ![Theoretical VHF filter](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-gemini-2025-12-29-10-300-ltspice.png)
@@ -17,7 +17,7 @@ And this is a insertion loss sweep in the broadcast band, which is my key pain -
 
 ![FM Broadcast filter performance](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-noamp-66-108.png)
 
-## UHF filter (Rev. E1)
+## UHF BPF
 The UHF filter is a 2-Pole Capacitively Coupled Parallel LC Resonator. Here is the theoretical projected filter performance:
 
 ![Theoretical UHF BPF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf.png)
@@ -40,8 +40,8 @@ The filter delivered approx. 10 dB of gain.
 
 Individual fully assembled board results, with signal travesrsing the BPF, connectors, switchetc etc, for VHF and UHF bands:
 
-### VHF
+### VHF Gain
 ![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-vhf-1amp-100-200.png)
 
-### UHF
+### UHF Gain
 ![Amplifier performance - VHF](https://github.com/rfrht/SignalSurge/blob/main/others/test/bpf-uhf-1amp-300-600.png)

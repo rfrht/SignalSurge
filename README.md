@@ -14,7 +14,7 @@ That said, the objective of this project is to remove as much as possible signal
 I could buy a [300 EUR filter](https://antennas-amplifiers.com/double-2x200w-bandpass-filter-144-148mhz-430-450mhz/), but... man, that's expensive. So why not expend EUR3,000 man hour-worth of my time and parts to build one?
 
 # Features
-* Two selectable amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#vhf) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only. That can be automated by making use of the Band Data (`TUN/LIN` port, pins `4` or `5`). Requires menu config 141 (`TUNER SELECT`) to be set as `LAMP`.
+* Two selectable amateur band (2m and 70 cm) [bandpass filter](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md) weeds off signals, ensuring that the transceiver front-end focus its gain figures on inband signals only. That can be automated by making use of the Band Data (`TUN/LIN` port, pins `4` or `5`). Requires menu config 141 (`TUNER SELECT`) to be set as `LAMP`.
 * High performance and selectable [low noise 15 dB amplifier](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md#amplifier-performance) after the bandpass filter, adding some oomph to weak signals
 * The amplifier is shut down when the radio is transmitting by powering off its 5V rail (by cutting the regulator "Enable" line) to prevent any artifacts/ringing and damage. 
 * Specialty RF relay allowing 50W in VHF/UHF frequencies to flow to the antenna with low loss, while keeping [unparalleled isolation](https://www.reddit.com/r/rfelectronics/comments/1h5mthn/comment/m0de8n7/) to the downstream components (north of 60 dB).
