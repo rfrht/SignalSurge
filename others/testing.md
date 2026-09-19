@@ -6,29 +6,29 @@
 
 * Start soldering the u.FL connectors `1` and `2`. Then the VHF/UHF BPF **discretes (caps & inductors) only**. Do not solder the RF switch just yet.
 
-* Start testing with your VHF filter. Solder a bodge wire at the BPF RF switches footprints: They are `SW_BPF_IN` AND `SW_BPF_OUT` - requires good eyes and hands - to manually switch the VHF and UHF filters. Start bridging the u.FL with the VHF BPF.
+* Start testing with your VHF filter. Solder a bodge wire at the BPF RF switches footprints: They are `SW_BPF_IN` AND `SW_BPF_OUT` - requires good eyes and hands - to manually switch the VHF and UHF filters. Start bridging the u.FL with the **VHF BPF**.
 
-* Now, let's measure the BPF performance. Inject signal from VNA Port 1 (Source) into the `INP` port (marked 1 in the image) and connect the VNA port 2 at the port `BPF-O`.
+* Now, measure the BPF performance. Inject signal from VNA Port 1 (Source) into the `INP` port (marked 1 in the image) and connect the VNA port 2 at the port `BPF-O`. Ensure that you have results similar to my [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md).
 
-* Change your bodge wire to switch it manually to UHF. Redo the above test. Ensure that you have results similar to my [test results](https://github.com/rfrht/SignalSurge/blob/main/rf-performance.md).
+* When all is fine, change your bodge wire to **switch it manually to UHF**. Redo the above test.
 
-* Next up, solder the LOWER SECTION of the board: everything south of the BPF. Ensure that you have a solid 3V output at test point `TP3V`. Ensure that your fuse or any components (try with your fingers) aren't overheating.
+* When all is fine, remove the bodge wire from the `SW_BPF` RF switches. You might want to use solder wick to make your component footprint plain and remove excess solder. 
 
-* Now let's test your LNA performance. Remove the bodge wire from the `SW_BPF` RF switches. You might want to use solder wick to make your component footprint plain and remove excess solder. 
+* Next up, solder the LOWER SECTION of the board: everything south of the BPF.
 
-* Now Solder a bodge wire at the `SW_LNA_IN` and `SW_LNA_OUT` pads, to bridge the U.FL lines `2` and `3` with the LNA stage.
+* Ensure that you have a solid 3V output at test point `TP3V`. Ensure that your fuse or any components (try with your fingers) aren't overheating.
 
-* Feed 3V to the line `AMP_ON` header
+* Feed 3V to the line `AMP_ON` header. Check the testpoint `TP_LNA_ON` have 3V and if your 5V regulator is throwing out a 5V output at the `TP5V` test point or the 5V terminal.
 
-* Inject signal from VNA Port 1 (Source) into the `BPF-O` connector, and measure the amplified output using VNA Port 2 (Receiver) at the `AMP-O` connector to correctly read S21 forward gain. Ensure that you are obtaining a good gain. If you mix the port order you will have a WRONG read! VNA port ordering is key here: Port 1 at `BPF-O`, Port 2 at `AMP-O`! Compare with my tests. If you aren't getting any amplification, ensure that you didn't mix the VNA ports, have powered the LNA by powering the header `AMP_ON`, check the testpoint `TP_LNA_ON` have 3V and if your 5V regulator is throwing out a 5V output. And finally, ensure you soldered properly your BFP460.
+* Moving to the LNA. Solder a bodge wire at the `SW_LNA_IN` and `SW_LNA_OUT` pads, to bridge the U.FL lines `2` and `3` with the LNA stage.
 
-* Then, solder the RF switches of the BPF section and test points 1 and 2 again. Inject 3V in pin `VHF` and ensure that you don't have significant losses between `INP` and `BPF-O`, and of course, establish a working RF switch, checking the band of interest performance for each test points.
+* Inject signal from VNA Port 1 (Source) into the `BPF-O` connector, and measure the amplified output using VNA Port 2 (Receiver) at the `AMP-O` connector to correctly read S21 forward gain. Ensure that you are obtaining a good gain. If you mix the port order you will have a WRONG read! VNA port ordering is key here: Port 1 at `BPF-O`, Port 2 at `AMP-O`! Compare with my tests. And finally, ensure you soldered properly your BFP460. If you aren't getting any amplification, ensure that you didn't mix the VNA ports, have powered the LNA by powering the header `AMP_ON`.
 
-* Remove the bodge wires. You may now solder the LNA RF switches. 
+* Remove the bodge wires. You may now solder the LNA RF switches.
 
 * Redo the tests between the U.FL `BPF-O` and `AMP-O`, both ways: Amplifying and on bypass mode. Validate our outputs to establish a correctly working RF switch. NOTICE: they are FRAGILE! I damaged a number of them with a hot iron.
 
-* Solder the BPF RF switches. Establish a working setup between the u.FL connectors `INP` and `BPF-O`. Flip the switches by toggling the `VHF` line with 5V. Tip: You can tap 5V from the board header by turning on the amp by feeding 3V to the `AMP_ON` header.
+* Solder the BPF RF switches. Establish a working BPF switching between the u.FL connectors `INP` and `BPF-O`. Flip the switches by toggling the `VHF` line with 5V. Tip: You can tap 5V from the board header by turning on the amp by feeding 3V to the `AMP_ON` header.
 
 * Solder the remaining parts at the UPPER SECTION of the board: First the SMD components, then the SMA port and finally the relays.
 
@@ -38,7 +38,7 @@
 
 * When injecting 3V to `AMP_ON`, you turn on the amplifier. The presence of a `TX_GND` or `BYPASS` overrides and turns it off.
 
-* The test point `TP5V` should be on only when `AMP_ON` has 3V at the header. Otherwise, it is off.
+* The test point `TP5V` should be on only when `AMP_ON` has 3V at the header. Otherwise, it should be off.
 
 * The line `TX_INH` sends 13.8V when the board is in RX mode (BPF/LNA engaged). When `TX_GND` or `BYPASS` are asserted, the board falls back to hardware bypass and the `TX_INH` line drops to 0V, safely allowing the radio to transmit.
 
@@ -57,8 +57,8 @@ The board is protected by a 50 mA PTC resettable fuse. If your board draws signi
 | Operational State | Expected Draw | Diagnostic Meaning |
 | --- | --- | --- |
 | **TX Mode / Manual Bypass** | **~0.5 mA** | **Quiescent State.** The Axicom HF3 relays are de-energized (hardware bypass) and the 5V regulator is either in shutdown or drawing minimal quiescent current. If this reads 0 mA, check your primary power connection. If it reads more than 1 mA, check the relay flyback diodes for leakage or shorts. |
-| **RX Mode (BPF Only)** | **~18 mA** | **Relays Engaged.** The BCD logic has successfully commanded the board to listen. The ~17.5 mA jump is the coil current required to physically hold the two Axicom HF3 relays open, routing the RF signal through the PE4259 switch matrix and passive filters. |
-| **RX Mode (BPF + LNA)** | **~24 mA** | **Full Active System.** The BFP460 amplifier is energized. The difference between this and the previous state is **~6 mA**. This perfectly aligns with the LNA's DC bias network (roughly 4 mA of collector current plus the voltage divider overhead). If the current jumps to > 30 mA here, the BFP460 is likely damaged or oscillating. |
+| **RX Mode (BPF Only)** | **~18 mA** | **Relays Engaged.** The relay logic has successfully commanded the board to listen. The ~17.5 mA jump is the coil current required to physically hold the relays open, routing the RF signal through the PE4259 switch matrix and passive filters. |
+| **RX Mode (BPF + LNA)** | **~24 mA** | **Full Active System.** The BFP460 amplifier is energized. The difference between this and the previous state is **~6 mA**. If the current jumps to > 30 mA here, the BFP460 is likely damaged or oscillating. |
 
 ### Being pedantic about power modes
 * **Logic Override Test (`AMP_ON` + `TX_GND`):**
@@ -69,12 +69,6 @@ Toggling the FT-991A from 2-meters to 70cm (triggering BCD Pin 4) DOES NOT chang
 When connecting `TX_INH` to the radio, the `TX_INH` line sends +13.8V back to the radio and the total board current rises by around 1 mA when physically connected to the transceiver.
 
 # Specifications
-## Power
-* 0.5 mA in TX mode, no loaded relays.
-* RX mode (relays on) and activating the amplifier, the power consumption jumps to 39 mA.
-* RX mode, no relays (`BYPASS` mode) and no amp, the board consumes around 3 mA.
-* The board has a PTC fuse rated 50 mA.
-
 ## Signal routing
 ### RX
 * The signal enters the SMA Antenna connector
@@ -137,7 +131,6 @@ All relays are protected by a 100 ohm current limiter resistor, a 1N4148 flywhee
 
 ### Hardware & Transmit Protections
 SignalSurge is designed to sit directly in the primary RF path of a 50W transceiver. To prevent accidental destruction of the highly sensitive receive components, the board employs multiple layers of hardware-level protection:
-
 * **Fail-Safe RX Architecture:** The primary signal path is controlled by robust Axicom HF3 mechanical relays. Their unpowered, default state is a direct hardware bypass (Antenna -> Radio), ensuring the transceiver can safely transmit even if the board loses power.
 * **Transmit Inhibit (`TX_INH`):** When the active RX chain (filters and LNA) is engaged, the board outputs a continuous +13.8V signal to the Yaesu FT-991A's TUN/LIN port. This physically inhibits the radio from transmitting, ensuring 50W of RF is never dumped into the pSemi PE4259 switches (which have a maximum rating of 2W / +33 dBm).
 * **Absolute TX Override (`TX_GND`):** Grounding the `TX_GND` line forces the Axicom relays into bypass mode and actively pulls the `ENABLE` line on the 5V regulator low, instantly de-energizing the BFP460 amplifier. This signal trumps all other board logic.
@@ -147,7 +140,6 @@ SignalSurge is designed to sit directly in the primary RF path of a 50W transcei
 
 ### Automated Band Logic & Routing
 The board utilizes a hybrid switching approach to maximize both power handling and receive isolation.
-
 * **Solid-State RX Routing:** While the Axicom relays handle the high-power TX bypass, the internal receive path is entirely governed by four pSemi PE4259 RF switches. These provide ultra-high isolation between the VHF filter, UHF filter, and LNA stages without the mechanical wear or contact bounce of traditional relays.
 * **Yaesu BCD Integration:** SignalSurge achieves "set-and-forget" automation by reading the BCD encoder outputs from the FT-991A's TUN/LIN port. By monitoring Pin 4 (Band Data B), the board automatically flips the internal solid-state switches between the 144 MHz and 430 MHz bandpass filters exactly as you change bands on the radio dial.
 * **Manual Overrides:** Independent +3V header lines for `AMP_ON` and `BYPASS` allow the operator to manually force the LNA on or drop the entire board into hardware bypass.
